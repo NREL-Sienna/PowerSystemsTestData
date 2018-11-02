@@ -11,12 +11,12 @@ nodes5    = [Bus(1,"nodeA", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
              Bus(5,"nodeE", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
         ];
 
-branches5 = [Line("1", true, (from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 400.0, (min = -45.0, max = 45.0)),
-             HVDCLine("2", true, (from=nodes5[1],to=nodes5[4]), (min=3000.0, max=-3000.0), (min=3000, max=3000), (min=-300.0, max=300.0), (min=-300.0, max=300.0), (l0=0.0, l1=0.01)),
-             Line("3", true, (from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18812.0, (min = -45.0, max = 45.0)),
-             Line("4", true, (from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11148.0, (min = -45.0, max = 45.0)),
-             Line("5", true, (from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 4053.0, (min = -45.0, max = 45.0)),
-             Line("6", true, (from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 240.0, (min = -45.0, max = 45.0))
+branches5 = [Line("1", true, (from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 2.0, (min = -0.7, max = 0.7)),
+             Line("2", true, (from=nodes5[1],to=nodes5[4]), 0.00304, 0.0304, (from=0.00329, to=0.00329), 2.0, (min = -0.7, max = 0.7)),
+             Line("3", true, (from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
+             Line("4", true, (from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
+             Line("5", true, (from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
+             Line("6", true, (from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 2.00, (min = -0.7, max = 0.7))
 ];
 
 solar_ts_DA = [0
@@ -70,34 +70,43 @@ wind_ts_DA = [0.985205412
            0.069569628]
 
 generators5 = [  ThermalDispatch("Alta", true, nodes5[1],
-                    TechThermal(40.0, (min=0.0, max=40.0), 10.0, (min = -30.0, max = 30.0), nothing, nothing),
-                    EconThermal(40.0, x -> x*14.0, 0.0, 0.0, 0.0, nothing)
+                    TechThermal(0.40, (min=0.0, max=0.40), 0.010, (min = -0.30, max = 0.30), nothing, nothing),
+                    EconThermal(0.40, x -> x*14.0, 0.0, 4.0, 2.0, nothing)
+                    #EconThermal(40.0, x -> x*14.0, 4.0, 4.0, 2.0, nothing)
+
                 ),
                 ThermalDispatch("Park City", true, nodes5[1],
-                    TechThermal(170.0, (min=0.0, max=170.0), 20.0, (min =-127.5, max=127.5), nothing, nothing),
-                    EconThermal(170.0, x -> x*15.0, 0.0, 0.0, 0.0, nothing)
+                    TechThermal(1.70, (min=0.0, max=1.70), 0.20, (min =-1.275, max=1.275),nothing, nothing),# (up=5.0, down=5.0), (up=2.0, down=1.0)),
+                    EconThermal(1.70, x -> x*15.0, 0.0, 1.5, 0.75, nothing)
+                    #EconThermal(170.0, x -> x*15.0, 1.5, 1.5, 0.75, nothing)
+
                 ),
                 ThermalDispatch("Solitude", true, nodes5[3],
-                    TechThermal(520.0, (min=0.0, max=520.0), 100.0, (min =-390.0, max=390.0), nothing, nothing),
-                    EconThermal(520.0, x -> x*30.0, 0.0, 0.0, 0.0, nothing)
+                    TechThermal(5.20, (min=0.0, max=5.20), 1.00, (min =-3.90, max=3.90),nothing, nothing),# (up=52.0, down=52.0), (up=3.0, down=2.0)),
+                    EconThermal(5.20, x -> x*30.0, 0.0, 3.0, 1.5, nothing)
+                    #EconThermal(520.0, x -> x*30.0, 3.0, 3.0, 1.5, nothing)
+
                 ),
                 ThermalDispatch("Sundance", true, nodes5[4],
-                    TechThermal(200.0, (min=0.0, max=200.0), 40.0, (min =-150.0, max=150.0), nothing, nothing),
-                    EconThermal(200.0, x -> x*40.0, 0.0, 0.0, 0.0, nothing)
+                    TechThermal(2.0, (min=0.0, max=2.0), 0.40, (min =-1.5, max=1.5),nothing, nothing),# (up=5.0, down=5.0), (up=2.0, down=1.0)),
+                    EconThermal(2.0, x -> x*40.0, 0.0, 4.0, 2.0, nothing)
+                    #EconThermal(200.0, x -> x*40.0, 4.0, 4.0, 2.0, nothing)
+
                 ),
                 ThermalDispatch("Brighton", true, nodes5[5],
-                    TechThermal(600.0, (min=0.0, max=600.0), 150.0, (min =-450.0, max=450.0), nothing, nothing),
-                    EconThermal(600.0, [(0.0, 0.0), (450.0, 8.0), (600.0, 10.0)], 0.0, 0.0, 0.0, nothing)
-                ),
+                    TechThermal(6.0, (min=0.0, max=6.0), 1.50, (min =-4.50, max=4.50),nothing, nothing),# (up=60.0, down=60.0), (up=5.0, down=3.0)),
+                    #EconThermal(600.0, [(0.0, 0.0), (450.0, 8.0), (600.0, 10.0)], 0.0, 0.0, 0.0, nothing)
+                    EconThermal(6.0, x -> x*10.0, 0.0, 0.0, 0.0, nothing)
+                )#=,
                 RenewableFix("SolarBusC", true, nodes5[3],
-                    60.0,
+                    0.60,
                     TimeSeries.TimeArray(DayAhead,solar_ts_DA)
                 ),
                 RenewableCurtailment("WindBusA", true, nodes5[5],
                     120.0,
                     EconRenewable(22.0, nothing),
                     TimeSeries.TimeArray(DayAhead,wind_ts_DA)
-                )
+                )=#
             ];
 
 loadbus2_ts_DA = [ 0.792729978
@@ -175,10 +184,10 @@ loadbus4_ts_DA = [ 0.871297342
                 0.771004923
                 0.717847996]
 
-loads5_DA = [ StaticLoad("Bus2", true, nodes5[2], "P", 300.0, 98.61, TimeArray(DayAhead, loadbus2_ts_DA)),
-            StaticLoad("Bus3", true, nodes5[3], "P", 300.0, 98.61, TimeArray(DayAhead, loadbus3_ts_DA)),
-            StaticLoad("Bus4", true, nodes5[4], "P", 400.0, 131.47, TimeArray(DayAhead, loadbus4_ts_DA)),
-            InterruptibleLoad("IloadBus4", true, nodes5[4], "P",100.0, 0.0,  2400.0, TimeArray(DayAhead, loadbus4_ts_DA))
+loads5_DA = [ StaticLoad("Bus2", true, nodes5[2], "P", 3.0, 0.9861, TimeArray(DayAhead, loadbus2_ts_DA)),
+            StaticLoad("Bus3", true, nodes5[3], "P", 3.0, 0.9861, TimeArray(DayAhead, loadbus3_ts_DA)),
+            StaticLoad("Bus4", true, nodes5[4], "P", 4.0, 1.3147, TimeArray(DayAhead, loadbus4_ts_DA))#,
+            #InterruptibleLoad("IloadBus4", true, nodes5[4], "P",10.0, 0.0,  2400.0, TimeArray(DayAhead, loadbus4_ts_DA))
         ]
 
-reserve5 = StaticReserve("test_reserve",generators5[1:5],60.0,[gen.tech for gen in generators5[1:5]])
+reserve5 = StaticReserve("test_reserve",generators5[1:5],0.6,[gen.tech for gen in generators5[1:5]])
