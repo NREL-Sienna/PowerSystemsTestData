@@ -89,7 +89,7 @@ generators5 = [  ThermalDispatch("Alta", true, nodes5[1],
                     TechThermal(600.0, (min=0.0, max=600.0), 150.0, (min =-450.0, max=450.0), nothing, nothing),
                     #EconThermal(600.0, [(0.0, 0.0), (450.0, 8.0), (600.0, 10.0)], 0.0, 0.0, 0.0, nothing)
                     EconThermal(600.0, x -> x*10.0, 0.0, 0.0, 0.0, nothing)
-                )#=,
+                ),
                 RenewableFix("SolarBusC", true, nodes5[3],
                     60.0,
                     TimeSeries.TimeArray(DayAhead,solar_ts_DA)
@@ -98,7 +98,7 @@ generators5 = [  ThermalDispatch("Alta", true, nodes5[1],
                     120.0,
                     EconRenewable(22.0, nothing),
                     TimeSeries.TimeArray(DayAhead,wind_ts_DA)
-                )=#
+                )
             ];
 
 loadbus2_ts_DA = [ 0.792729978

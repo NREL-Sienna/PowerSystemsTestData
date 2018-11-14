@@ -11,12 +11,12 @@ nodes5    = [Bus(1,"nodeA", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
              Bus(5,"nodeE", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
         ];
 
-branches5 = [Line("1", true, (from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 400.0, (min = -45.0, max = 45.0)),
-             Line("2", true, (from=nodes5[1],to=nodes5[4]), 0.00304, 0.0304, (from=0.00329, to=0.00329), 3960.0, (min = -45.0, max = 45.0)),
-             Line("3", true, (from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18812.0, (min = -45.0, max = 45.0)),
+branches5 = [Line("1", true, (from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 200.0, (min = -45.0, max = 45.0)),
+             Line("2", true, (from=nodes5[1],to=nodes5[4]), 0.00304, 0.0304, (from=0.00329, to=0.00329), 200.0, (min = -45.0, max = 45.0)),
+             Line("3", true, (from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 1000.0, (min = -45.0, max = 45.0)),
              Line("4", true, (from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11148.0, (min = -45.0, max = 45.0)),
              Line("5", true, (from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 4053.0, (min = -45.0, max = 45.0)),
-             Line("6", true, (from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 240.0, (min = -45.0, max = 45.0))
+             Line("6", true, (from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 200.0, (min = -45.0, max = 45.0))
 ];
 
 solar_ts_DA = [0
@@ -82,12 +82,12 @@ generators5 = [  ThermalDispatch("Alta", true, nodes5[1],
                     EconThermal(520.0, x -> x*30.0, 0.0, 0.0, 0.0, nothing)
                 ),
                 ThermalDispatch("Sundance", true, nodes5[4],
-                    TechThermal(200.0, (min=0.0, max=200.0), 40.0, (min =-150.0, max=150.0), nothing, nothing),
+                    TechThermal(200.0, (min=0.0, max=500.0), 40.0, (min =-150.0, max=150.0), nothing, nothing),
                     EconThermal(200.0, x -> x*40.0, 0.0, 0.0, 0.0, nothing)
                 ),
                 ThermalDispatch("Brighton", true, nodes5[5],
                     TechThermal(600.0, (min=0.0, max=600.0), 150.0, (min =-450.0, max=450.0), nothing, nothing),
-                    EconThermal(600.0, [(0.0, 0.0), (450.0, 8.0), (600.0, 10.0)], 0.0, 0.0, 0.0, nothing)
+                    EconThermal(600.0, [(0.0, 0.0), (8.0,450.0), (10.0,600.0)], 0.0, 0.0, 0.0, nothing)
                 ),
                 RenewableFix("SolarBusC", true, nodes5[3],
                     60.0,
