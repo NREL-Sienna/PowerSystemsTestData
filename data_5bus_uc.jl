@@ -175,9 +175,9 @@ loadbus4_ts_DA = [ 0.871297342
                 0.771004923
                 0.717847996]
 
-loads5_DA = [ PowerLoad("Bus2", true, nodes5[2], "P", 300.0, 98.61, TimeArray(DayAhead, loadbus2_ts_DA)),
-            PowerLoad("Bus3", true, nodes5[3], "P", 300.0, 98.61, TimeArray(DayAhead, loadbus3_ts_DA)),
-            PowerLoad("Bus4", true, nodes5[4], "P", 400.0, 131.47, TimeArray(DayAhead, loadbus4_ts_DA)),
+loads5_DA = [ PowerLoad("Bus2", true, nodes5[2], 300.0, 98.61, TimeArray(DayAhead, loadbus2_ts_DA)),
+            PowerLoad("Bus3", true, nodes5[3], 300.0, 98.61, TimeArray(DayAhead, loadbus3_ts_DA)),
+            PowerLoad("Bus4", true, nodes5[4], 400.0, 131.47, TimeArray(DayAhead, loadbus4_ts_DA)),
             InterruptibleLoad("IloadBus4", true, nodes5[4], "P",100.0, 0.0,  2400.0, TimeArray(DayAhead, loadbus4_ts_DA))
         ]
 
