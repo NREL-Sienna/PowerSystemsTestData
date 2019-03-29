@@ -90,13 +90,11 @@ generators5 = [  ThermalDispatch("Alta", true, nodes5[1],
                     EconThermal(600.0, [(0.0, 0.0), (8.0,450.0), (10.0,600.0)], 0.0, 0.0, 0.0, nothing)
                 ),
                 RenewableFix("SolarBusC", true, nodes5[3],
-                    60.0,
-                    TimeSeries.TimeArray(DayAhead,solar_ts_DA)
+                    60.0
                 ),
                 RenewableCurtailment("WindBusA", true, nodes5[5],
                     120.0,
-                    EconRenewable(22.0, nothing),
-                    TimeSeries.TimeArray(DayAhead,wind_ts_DA)
+                    EconRenewable(22.0, nothing)
                 )
             ];
 
@@ -175,8 +173,16 @@ loadbus4_ts_DA = [ 0.871297342
                 0.771004923
                 0.717847996]
 
-loads5_DA = [ StaticLoad("Bus2", true, nodes5[2], "P", 300.0, 98.61, TimeArray(DayAhead, loadbus2_ts_DA)),
-            StaticLoad("Bus3", true, nodes5[3], "P", 300.0, 98.61, TimeArray(DayAhead, loadbus3_ts_DA)),
-            StaticLoad("Bus4", true, nodes5[4], "P", 400.0, 131.47, TimeArray(DayAhead, loadbus4_ts_DA)),
-            InterruptibleLoad("IloadBus4", true, nodes5[4], "P",100.0, 0.0,  2400.0, TimeArray(DayAhead, loadbus4_ts_DA))
+loads5_DA = [ PowerLoad("Bus2", true, nodes5[2], 300.0, 98.61),
+            PowerLoad("Bus3", true, nodes5[3], 300.0, 98.61),
+            PowerLoad("Bus4", true, nodes5[4], 400.0, 131.47),
+            InterruptibleLoad("IloadBus4", true, nodes5[4],"P",100.0, 0.0,  2400.0)
+        ]
+
+forecasts5 = [ Deterministic(generators5[6],"scalingfactor",TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
+            Deterministic(generators5[7],"scalingfactor",TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
+            Deterministic(loads5_DA[1],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus2_ts_DA)),
+            Deterministic(loads5_DA[2],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus3_ts_DA)),
+            Deterministic(loads5_DA[3],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA)),
+            Deterministic(loads5_DA[4],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA))
         ]
