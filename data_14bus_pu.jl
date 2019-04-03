@@ -142,15 +142,15 @@ loadz3_ts = [ 0.871297342
               0.771004923
               0.717847996]
 
-loads14 = [StaticLoad("Bus2", true, nodes14[2], "P", 0.217, 0.127, TimeArray(dates, loadz1_ts)),
-          StaticLoad("Bus3", true, nodes14[3], "P", 0.942, 0.19, TimeArray(dates, loadz1_ts)),
-          StaticLoad("Bus4", true, nodes14[4], "P", 0.478, -0.039, TimeArray(dates, loadz3_ts)),
-          StaticLoad("Bus5", true, nodes14[5], "P", 0.076, 0.016, TimeArray(dates, loadz1_ts)),
-          StaticLoad("Bus6", true, nodes14[6], "P", 0.112, 0.075, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus9", true, nodes14[9], "P", 0.295, 0.166, TimeArray(dates, loadz3_ts)),
-          StaticLoad("Bus10", true, nodes14[10], "P", 0.09, 0.058, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus11", true, nodes14[11], "P", 0.035, 0.018, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus12", true, nodes14[12], "P", 0.061, 0.016, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus13", true, nodes14[13], "P", 0.135, 0.058, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus14", true, nodes14[14], "P", 0.149, 0.050, TimeArray(dates, loadz2_ts))
+loads14 = [PowerLoad("Bus2", true, nodes14[2], 0.217, 0.127, TimeArray(dates, loadz1_ts)),
+          PowerLoad("Bus3", true, nodes14[3], 0.942, 0.19, TimeArray(dates, loadz1_ts)),
+          PowerLoad("Bus4", true, nodes14[4], 0.478, -0.039, TimeArray(dates, loadz3_ts)),
+          PowerLoad("Bus5", true, nodes14[5], 0.076, 0.016, TimeArray(dates, loadz1_ts)),
+          PowerLoad("Bus6", true, nodes14[6], 0.112, 0.075, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus9", true, nodes14[9], 0.295, 0.166, TimeArray(dates, loadz3_ts)),
+          PowerLoad("Bus10", true, nodes14[10], 0.09, 0.058, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus11", true, nodes14[11], 0.035, 0.018, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus12", true, nodes14[12], 0.061, 0.016, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus13", true, nodes14[13], 0.135, 0.058, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus14", true, nodes14[14], 0.149, 0.050, TimeArray(dates, loadz2_ts))
           ]

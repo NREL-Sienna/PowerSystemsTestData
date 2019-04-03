@@ -142,15 +142,15 @@ loadz3_ts = [ 0.871297342
               0.771004923
               0.717847996]
 
-loads14 = [StaticLoad("Bus2", true, nodes14[2], "P", 21.7, 12.7, TimeArray(dates, loadz1_ts)),
-          StaticLoad("Bus3", true, nodes14[3], "P", 94.2, 19, TimeArray(dates, loadz1_ts)),
-          StaticLoad("Bus4", true, nodes14[4], "P", 47.8, -3.9, TimeArray(dates, loadz3_ts)),
-          StaticLoad("Bus5", true, nodes14[5], "P", 7.6, 1.6, TimeArray(dates, loadz1_ts)),
-          StaticLoad("Bus6", true, nodes14[6], "P", 11.2, 7.5, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus9", true, nodes14[9], "P", 29.5, 16.6, TimeArray(dates, loadz3_ts)),
-          StaticLoad("Bus10", true, nodes14[10], "P", 9, 5.8, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus11", true, nodes14[11], "P", 3.5, 1.8, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus12", true, nodes14[12], "P", 6.1, 1.6, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus13", true, nodes14[13], "P", 13.5, 5.8, TimeArray(dates, loadz2_ts)),
-          StaticLoad("Bus14", true, nodes14[14], "P", 14.9, 5.0, TimeArray(dates, loadz2_ts))
+loads14 = [PowerLoad("Bus2", true, nodes14[2], 21.7, 12.7, TimeArray(dates, loadz1_ts)),
+          PowerLoad("Bus3", true, nodes14[3], 94.2, 19, TimeArray(dates, loadz1_ts)),
+          PowerLoad("Bus4", true, nodes14[4], 47.8, -3.9, TimeArray(dates, loadz3_ts)),
+          PowerLoad("Bus5", true, nodes14[5], 7.6, 1.6, TimeArray(dates, loadz1_ts)),
+          PowerLoad("Bus6", true, nodes14[6], 11.2, 7.5, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus9", true, nodes14[9], 29.5, 16.6, TimeArray(dates, loadz3_ts)),
+          PowerLoad("Bus10", true, nodes14[10], 9, 5.8, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus11", true, nodes14[11], 3.5, 1.8, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus12", true, nodes14[12], 6.1, 1.6, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus13", true, nodes14[13], 13.5, 5.8, TimeArray(dates, loadz2_ts)),
+          PowerLoad("Bus14", true, nodes14[14], 14.9, 5.0, TimeArray(dates, loadz2_ts))
           ]
