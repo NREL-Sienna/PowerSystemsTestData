@@ -184,10 +184,15 @@ loadbus4_ts_DA = [ 0.871297342
                 0.771004923
                 0.717847996]
 
-loads5_DA = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861, TimeArray(DayAhead, loadbus2_ts_DA)),
-            PowerLoad("Bus3", true, nodes5[3], 3.0, 0.9861, TimeArray(DayAhead, loadbus3_ts_DA)),
-            PowerLoad("Bus4", true, nodes5[4], 4.0, 1.3147, TimeArray(DayAhead, loadbus4_ts_DA))#,
+loads5_DA = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
+            PowerLoad("Bus3", true, nodes5[3], 3.0, 0.9861),
+            PowerLoad("Bus4", true, nodes5[4], 4.0, 1.3147)#,
             #InterruptibleLoad("IloadBus4", true, nodes5[4], "P",10.0, 0.0,  2400.0, TimeArray(DayAhead, loadbus4_ts_DA))
         ]
 
 reserve5 = StaticReserve("test_reserve",generators5[1:5],0.6,[gen.tech for gen in generators5[1:5]])
+
+forecast_DA = [Deterministic(nodes5[2], "scalingfactor", TimeArray(DayAhead, loadbus2_ts_DA)),
+                Deterministic(nodes5[3], "scalingfactor", TimeArray(DayAhead, loadbus3_ts_DA)),
+                Deterministic(nodes5[4], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA))
+                ];
