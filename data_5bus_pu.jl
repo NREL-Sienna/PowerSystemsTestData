@@ -97,14 +97,14 @@ generators5 = [  ThermalDispatch("Alta", true, nodes5[1],
                     TechThermal(6.0, (min=0.0, max=6.0), 1.50, (min =-4.50, max=4.50),nothing, nothing),# (up=60.0, down=60.0), (up=5.0, down=3.0)),
                     #EconThermal(600.0, [(0.0, 0.0), (450.0, 8.0), (600.0, 10.0)], 0.0, 0.0, 0.0, nothing)
                     EconThermal(6.0, x -> x*10.0, 0.0, 0.0, 0.0, nothing)
-                )#=,
+                ),
                 RenewableFix("SolarBusC", true, nodes5[3],
                     0.60
                 ),
                 RenewableCurtailment("WindBusA", true, nodes5[5],
                     120.0,
                     EconRenewable(22.0, nothing)
-                )=#
+                )
             ];
 
 loadbus2_ts_DA = [ 0.792729978
@@ -190,9 +190,9 @@ loads5 = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
 
 reserve5 = StaticReserve("test_reserve",generators5[1:5],0.6,[gen.tech for gen in generators5[1:5]])
 
-forecast_DA = [Deterministic(loads5[2], "scalingfactor", TimeArray(DayAhead, loadbus2_ts_DA)),
-                Deterministic(loads5[3], "scalingfactor", TimeArray(DayAhead, loadbus3_ts_DA)),
-                Deterministic(loads5[4], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA)) #,
-                #Deterministic(generators5[6], "scalingfactor", TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
-                #Deterministic(generators5[7], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA))
+forecast_DA = [Deterministic(loads5[1], "scalingfactor", TimeArray(DayAhead, loadbus2_ts_DA)),
+                Deterministic(loads5[2], "scalingfactor", TimeArray(DayAhead, loadbus3_ts_DA)),
+                Deterministic(loads5[3], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA)) ,
+                Deterministic(generators5[6], "scalingfactor", TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
+                Deterministic(generators5[7], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA))
                 ];
