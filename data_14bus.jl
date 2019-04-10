@@ -142,15 +142,28 @@ loadz3_ts = [ 0.871297342
               0.771004923
               0.717847996]
 
-loads14 = [PowerLoad("Bus2", true, nodes14[2], 21.7, 12.7, TimeArray(dates, loadz1_ts)),
-          PowerLoad("Bus3", true, nodes14[3], 94.2, 19, TimeArray(dates, loadz1_ts)),
-          PowerLoad("Bus4", true, nodes14[4], 47.8, -3.9, TimeArray(dates, loadz3_ts)),
-          PowerLoad("Bus5", true, nodes14[5], 7.6, 1.6, TimeArray(dates, loadz1_ts)),
-          PowerLoad("Bus6", true, nodes14[6], 11.2, 7.5, TimeArray(dates, loadz2_ts)),
-          PowerLoad("Bus9", true, nodes14[9], 29.5, 16.6, TimeArray(dates, loadz3_ts)),
-          PowerLoad("Bus10", true, nodes14[10], 9, 5.8, TimeArray(dates, loadz2_ts)),
-          PowerLoad("Bus11", true, nodes14[11], 3.5, 1.8, TimeArray(dates, loadz2_ts)),
-          PowerLoad("Bus12", true, nodes14[12], 6.1, 1.6, TimeArray(dates, loadz2_ts)),
-          PowerLoad("Bus13", true, nodes14[13], 13.5, 5.8, TimeArray(dates, loadz2_ts)),
-          PowerLoad("Bus14", true, nodes14[14], 14.9, 5.0, TimeArray(dates, loadz2_ts))
+loads14 = [PowerLoad("Bus2", true, nodes14[2], 21.7, 12.7),
+          PowerLoad("Bus3", true, nodes14[3], 94.2, 19),
+          PowerLoad("Bus4", true, nodes14[4], 47.8, -3.9),
+          PowerLoad("Bus5", true, nodes14[5], 7.6, 1.6),
+          PowerLoad("Bus6", true, nodes14[6], 11.2, 7.5),
+          PowerLoad("Bus9", true, nodes14[9], 29.5, 16.6),
+          PowerLoad("Bus10", true, nodes14[10], 9, 5.8),
+          PowerLoad("Bus11", true, nodes14[11], 3.5, 1.8),
+          PowerLoad("Bus12", true, nodes14[12], 6.1, 1.6),
+          PowerLoad("Bus13", true, nodes14[13], 13.5, 5.8),
+          PowerLoad("Bus14", true, nodes14[14], 14.9, 5.0)
           ]
+
+forecast_DA = [Deterministic(loads14[1], "scalingfactor", TimeArray(dates, loadz1_ts)),
+               Deterministic(loads14[2], "scalingfactor", TimeArray(dates, loadz1_ts)),
+               Deterministic(loads14[3], "scalingfactor", TimeArray(dates, loadz3_ts)),
+               Deterministic(loads14[4], "scalingfactor", TimeArray(dates, loadz1_ts)),
+               Deterministic(loads14[5], "scalingfactor", TimeArray(dates, loadz2_ts)),
+               Deterministic(loads14[6], "scalingfactor", TimeArray(dates, loadz3_ts)),
+               Deterministic(loads14[7], "scalingfactor", TimeArray(dates, loadz2_ts)),
+               Deterministic(loads14[8], "scalingfactor", TimeArray(dates, loadz2_ts)),
+               Deterministic(loads14[9], "scalingfactor", TimeArray(dates, loadz2_ts)),
+               Deterministic(loads14[10], "scalingfactor", TimeArray(dates, loadz2_ts)),
+               Deterministic(loads14[11], "scalingfactor", TimeArray(dates, loadz2_ts))
+];
