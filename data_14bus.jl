@@ -167,3 +167,5 @@ forecast_DA = [Deterministic(loads14[1], "scalingfactor", TimeArray(dates, loadz
                Deterministic(loads14[10], "scalingfactor", TimeArray(dates, loadz2_ts)),
                Deterministic(loads14[11], "scalingfactor", TimeArray(dates, loadz2_ts))
 ];
+
+forecasts14 = Dict{Symbol,Vector{<:Forecast}}(:DA=>forecast_DA);

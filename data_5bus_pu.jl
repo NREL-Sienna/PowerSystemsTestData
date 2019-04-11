@@ -196,3 +196,5 @@ forecast_DA = [Deterministic(loads5[1], "scalingfactor", TimeArray(DayAhead, loa
                 Deterministic(generators5[6], "scalingfactor", TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
                 Deterministic(generators5[7], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA))
                 ];
+
+forecasts5 = Dict{Symbol,Vector{<:Forecast}}(:DA=>forecast_DA);

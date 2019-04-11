@@ -179,10 +179,12 @@ loads5_DA = [ PowerLoad("Bus2", true, nodes5[2], 300.0, 98.61),
             InterruptibleLoad("IloadBus4", true, nodes5[4],"P",100.0, 0.0,  2400.0)
         ]
 
-forecasts5 = [ Deterministic(generators5[6],"scalingfactor",TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
+forecast_DA = [ Deterministic(generators5[6],"scalingfactor",TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
             Deterministic(generators5[7],"scalingfactor",TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
             Deterministic(loads5_DA[1],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus2_ts_DA)),
             Deterministic(loads5_DA[2],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus3_ts_DA)),
             Deterministic(loads5_DA[3],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA)),
             Deterministic(loads5_DA[4],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA))
         ]
+
+forecasts5 = Dict{Symbol,Vector{<:Forecast}}(:DA=>forecast_DA);
