@@ -1,5 +1,6 @@
 using PowerSystems
 using TimeSeries
+using Dates
 
 
 dates  = collect(DateTime("1/1/2024  0:00:00", "d/m/y  H:M:S"):Hour(1):DateTime("1/1/2024  23:00:00", "d/m/y  H:M:S"))
@@ -44,26 +45,26 @@ branches14 = [
                 Line("Line15", true, (from=nodes14[13],to=nodes14[14]), 0.17093, 0.34802, (from=0.0, to=0.0), 10.213, 1.04)
             ]
 
-generators14 = [ThermalDispatch("Bus1", true, nodes14[1],
-                TechThermal(2.0, (min=0.0, max=2.0), -0.169, (min=-990.0, max=990.0), nothing, nothing),
-                EconThermal(0.40, x -> 0.04303*x^2 + 20*x, 0.0, 0.0, 0.0, nothing)
-                ),
-                ThermalDispatch("Bus2", true, nodes14[2],
-                TechThermal(0.40, (min=0.0, max=1.40), 0.42, (min=-990.0, max=990.0), nothing, nothing),
-                EconThermal(1.40, x -> 0.25*x^2 + 20*x, 0.0, 0.0, 0.0, nothing)
-                ),
-                ThermalDispatch("Bus3", true, nodes14[3],
-                TechThermal(0.50, (min=0.0, max=1.0), 0.23, (min=-990.0, max=990.0), nothing, nothing),
-                EconThermal(1.0, x -> 0.01*x^2 + 40*x, 0.0, 0.0, 0.0, nothing)
-                ),
-                ThermalDispatch("Bus6", true, nodes14[6],
-                TechThermal(0.0, (min=0.0, max=1.0), 0.12, (min=-990.0, max=990.0), nothing, nothing),
-                (EconThermal(1.0, x -> 0.01*x^2 + 40*x, 0.0, 0.0, 0.0, nothing))
-                ),
-                ThermalDispatch("Bus8", true, nodes14[8],
-                TechThermal(0.0, (min=0.0, max=1.0), 0.174, (min=-990.0, max=990.0), nothing, nothing),
-                EconThermal(1.0, x -> 0.01*x^2 + 40*x, 0.0, 0.0, 0.0, nothing)
-                )
+themal_generators = [ThermalDispatch("Bus1", true, nodes14[1],
+                    TechThermal(2.0, (min=0.0, max=2.0), -0.169, (min=-990.0, max=990.0), nothing, nothing),
+                    EconThermal(0.40, (0.04303,20.0), 0.0, 0.0, 0.0, nothing)
+                    ),
+                    ThermalDispatch("Bus2", true, nodes14[2],
+                    TechThermal(0.40, (min=0.0, max=1.40), 0.42, (min=-990.0, max=990.0), nothing, nothing),
+                    EconThermal(1.40, (0.25, 20.0), 0.0, 0.0, 0.0, nothing)
+                    ),
+                    ThermalDispatch("Bus3", true, nodes14[3],
+                    TechThermal(0.50, (min=0.0, max=1.0), 0.23, (min=-990.0, max=990.0), nothing, nothing),
+                    EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing)
+                    ),
+                    ThermalDispatch("Bus6", true, nodes14[6],
+                    TechThermal(0.0, (min=0.0, max=1.0), 0.12, (min=-990.0, max=990.0), nothing, nothing),
+                    (EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing))
+                    ),
+                    ThermalDispatch("Bus8", true, nodes14[8],
+                    TechThermal(0.0, (min=0.0, max=1.0), 0.174, (min=-990.0, max=990.0), nothing, nothing),
+                    EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing)
+                    )
             ];
 
 
