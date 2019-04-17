@@ -45,7 +45,7 @@ branches14 = [
                 Line("Line15", true, (from=nodes14[13],to=nodes14[14]), 0.17093, 0.34802, (from=0.0, to=0.0), 10.213, 1.04)
             ]
 
-themal_generators = [ThermalDispatch("Bus1", true, nodes14[1],
+themal_generators14 = [ThermalDispatch("Bus1", true, nodes14[1],
                     TechThermal(2.0, (min=0.0, max=2.0), -0.169, (min=-990.0, max=990.0), nothing, nothing),
                     EconThermal(0.40, (0.04303,20.0), 0.0, 0.0, 0.0, nothing)
                     ),
@@ -155,7 +155,7 @@ loads14 = [PowerLoad("Bus2", true, nodes14[2], 0.217, 0.127),
           PowerLoad("Bus13", true, nodes14[13], 0.135, 0.058),
           PowerLoad("Bus14", true, nodes14[14], 0.149, 0.050)]
 
-forecast_DA = [Deterministic(loads14[1], "scalingfactor", TimeArray(dates, loadz1_ts)),
+forecast_DA14 = [Deterministic(loads14[1], "scalingfactor", TimeArray(dates, loadz1_ts)),
                Deterministic(loads14[2], "scalingfactor", TimeArray(dates, loadz1_ts)),
                Deterministic(loads14[3], "scalingfactor", TimeArray(dates, loadz3_ts)),
                Deterministic(loads14[4], "scalingfactor", TimeArray(dates, loadz1_ts)),
@@ -168,4 +168,4 @@ forecast_DA = [Deterministic(loads14[1], "scalingfactor", TimeArray(dates, loadz
                Deterministic(loads14[11], "scalingfactor", TimeArray(dates, loadz2_ts))
 ];
 
-forecasts14 = Dict{Symbol,Vector{<:Forecast}}(:DA=>forecast_DA);
+forecasts14 = Dict{Symbol,Vector{<:Forecast}}(:DA=>forecast_DA14);

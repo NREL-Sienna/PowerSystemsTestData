@@ -70,7 +70,7 @@ wind_ts_DA = [0.985205412
            0.099302656
            0.069569628]
 
-thermal_generators = [ThermalDispatch("Alta", true, nodes5[1],
+thermal_generators5 = [ThermalDispatch("Alta", true, nodes5[1],
            TechThermal(0.40, (min=0.0, max=0.40), 0.010, (min = -0.30, max = 0.30), nothing, nothing),
            EconThermal(0.40, (0.0, 14.0), 0.0, 4.0, 2.0, nothing)
            ),
