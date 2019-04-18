@@ -196,7 +196,7 @@ loads5 = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
 
 interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, 2400.0)]        
 
-reserve5 = StaticReserve("test_reserve", thermal_generators, 0.6, [gen.tech for gen in thermal_generators])
+reserve5 = StaticReserve("test_reserve", thermal_generators5, 0.6, [gen.tech for gen in thermal_generators5])
 
 load_forecast_DA = [Deterministic(loads5[1], "scalingfactor", TimeArray(DayAhead, loadbus2_ts_DA)),
                     Deterministic(loads5[2], "scalingfactor", TimeArray(DayAhead, loadbus3_ts_DA)),

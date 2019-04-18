@@ -45,7 +45,7 @@ branches14 = [
                 Line("Line15", true, (from=nodes14[13],to=nodes14[14]), 0.17093, 0.34802, (from=0.0, to=0.0), 10.213, 1.04)
             ]
 
-themal_generators14 = [ThermalDispatch("Bus1", true, nodes14[1],
+thermal_generators14 = [ThermalDispatch("Bus1", true, nodes14[1],
                     TechThermal(2.0, (min=0.0, max=2.0), -0.169, (min=-990.0, max=990.0), nothing, nothing),
                     EconThermal(0.40, (0.04303,20.0), 0.0, 0.0, 0.0, nothing)
                     ),
