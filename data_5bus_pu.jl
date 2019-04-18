@@ -95,7 +95,7 @@ renewable_generators = [RenewableCurtailment("WindBusA", true, nodes5[5], 120.0,
                         RenewableCurtailment("WindBusB", true, nodes5[4], 120.0, EconRenewable(22.0, nothing)),
                         RenewableCurtailment("WindBusC", true, nodes5[3], 120.0, EconRenewable(22.0, nothing))];        
                         
-hydro_generators = [
+hydro_generators5 = [
                     HydroFix("HydroFix", true, nodes5[2],
                         TechHydro(0.600, 0.150, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), nothing, nothing)
                     ),
