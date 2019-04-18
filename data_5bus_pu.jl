@@ -103,7 +103,7 @@ hydro_generators = [
                         TechHydro(0.600, 0.100, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), (up = 10.0, down = 10.0), nothing), 150.0)
                     ];                         
 
-battery = [GenericBattery(name = "Bat",
+battery5 = [GenericBattery(name = "Bat",
                             status = true,
                             bus = nodes5[1],
                             activepower = 10.0,

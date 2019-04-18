@@ -169,3 +169,14 @@ forecast_DA14 = [Deterministic(loads14[1], "scalingfactor", TimeArray(dates, loa
 ];
 
 forecasts14 = Dict{Symbol,Vector{<:Forecast}}(:DA=>forecast_DA14);
+
+battery14 = [GenericBattery(name="Bat",
+            status=true,
+            bus=nodes14[2],
+            activepower=10.0,
+            energy=5.0,
+            capacity=(min=0.0, max=0.0),
+            inputactivepowerlimits=(min=0.0, max=50.0),
+            outputactivepowerlimits=(min=0.0, max=50.0),
+            efficiency=(in=0.90, out=0.80),
+            )]
