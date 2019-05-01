@@ -88,7 +88,7 @@ thermal_generators5 = [ThermalDispatch("Alta", true, nodes5[1],
            ),
            ThermalDispatch("Brighton", true, nodes5[5],
                TechThermal(6.0, (min=0.0, max=6.0), 1.50, (min =-4.50, max=4.50), (up=0.50, down=0.50), (up=5.0, down=3.0)),
-               EconThermal(6.0, [(0.0, 0.0), (4.50, 8.0), (6.0, 10.0)], 0.0, 1.5, 0.75, nothing)
+               EconThermal(6.0, (0.0, 10.0), 0.0, 1.5, 0.75, nothing)
            )];
 
 renewable_generators = [RenewableCurtailment("WindBusA", true, nodes5[5], 120.0, EconRenewable(22.0, nothing)),
