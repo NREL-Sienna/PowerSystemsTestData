@@ -91,7 +91,7 @@ thermal_generators5 = [ThermalDispatch("Alta", true, nodes5[1],
                EconThermal(6.0, (0.0, 10.0), 0.0, 1.5, 0.75, nothing)
            )];
 
-renewable_generators = [RenewableCurtailment("WindBusA", true, nodes5[5], 120.0, EconRenewable(22.0, nothing)),
+renewable_generators5 = [RenewableCurtailment("WindBusA", true, nodes5[5], 120.0, EconRenewable(22.0, nothing)),
                         RenewableCurtailment("WindBusB", true, nodes5[4], 120.0, EconRenewable(22.0, nothing)),
                         RenewableCurtailment("WindBusC", true, nodes5[3], 120.0, EconRenewable(22.0, nothing))];        
                         
