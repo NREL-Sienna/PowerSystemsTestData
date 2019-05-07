@@ -202,8 +202,8 @@ load_forecast_DA = [Deterministic(loads5[1], "scalingfactor", TimeArray(DayAhead
                     Deterministic(loads5[2], "scalingfactor", TimeArray(DayAhead, loadbus3_ts_DA)),
                     Deterministic(loads5[3], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA))]
 
-ren_forecast_DA = [Deterministic(renewable_generators[1], "scalingfactor", TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
-                   Deterministic(renewable_generators[2], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA))
+ren_forecast_DA = [Deterministic(renewable_generators5[1], "scalingfactor", TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
+                   Deterministic(renewable_generators5[2], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA))
                   ];
 
 forecasts5 = Dict{Symbol,Vector{<:Forecast}}(:DA=>vcat(load_forecast_DA, ren_forecast_DA));
