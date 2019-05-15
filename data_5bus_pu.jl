@@ -111,7 +111,7 @@ battery5 = [GenericBattery(name = "Bat",
                             capacity = (min = 5.0, max = 100.0),
                             inputactivepowerlimits = (min = 0.0, max = 50.0),
                             outputactivepowerlimits = (min = 0.0, max = 50.0),
-                            reactivepowerlimits = (min = -50.0, max = 50.0)
+                            reactivepowerlimits = (min = -50.0, max = 50.0),
                             efficiency = (in = 0.80, out = 0.90),
                             )];                    
 
