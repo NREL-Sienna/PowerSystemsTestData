@@ -108,10 +108,11 @@ battery5 = [GenericBattery(name = "Bat",
                             bus = nodes5[1],
                             activepower = 10.0,
                             energy = 5.0,
-                            capacity = (min = 0.0, max = 0.0),
+                            capacity = (min = 5.0, max = 100.0),
                             inputactivepowerlimits = (min = 0.0, max = 50.0),
                             outputactivepowerlimits = (min = 0.0, max = 50.0),
-                            efficiency = (in = 0.90, out = 0.80),
+                            reactivepowerlimits = (min = -50.0, max = 50.0)
+                            efficiency = (in = 0.80, out = 0.90),
                             )];                    
 
 loadbus2_ts_DA = [ 0.792729978
