@@ -62,7 +62,7 @@ thermal_generators14 = [ThermalDispatch("Bus1", true, nodes14[1],
                     (EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing))
                     ),
                     ThermalDispatch("Bus8", true, nodes14[8],
-                    TechThermal(1.0. 0.0, (min=0.0, max=1.0), 0.174, (min=-990.0, max=990.0), nothing, nothing),
+                    TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.174, (min=-990.0, max=990.0), nothing, nothing),
                     EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing)
                     )
             ];
