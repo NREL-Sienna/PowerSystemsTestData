@@ -75,19 +75,19 @@ thermal_generators5 = [ThermalDispatch("Alta", true, nodes5[1],
            EconThermal(0.40, (0.0, 14.0), 0.0, 4.0, 2.0, nothing)
            ),
            ThermalDispatch("Park City", true, nodes5[1],
-               TechThermal(2.2125, 1.70, (min=0.0, max=1.70), 0.20, (min =-1.275, max=1.275), (up=0.50, down=0.50), (up=2.0, down=1.0)),
+               TechThermal(2.2125, 1.70, (min=0.0, max=1.70), 0.20, (min =-1.275, max=1.275), (up=0.05, down=0.05), (up=2.0, down=1.0)),
                EconThermal(1.70, (0.0, 15.0), 0.0, 1.5, 0.75, nothing)
            ),
            ThermalDispatch("Solitude", true, nodes5[3],
-               TechThermal(6.5, 5.20, (min=0.0, max=5.20), 1.00, (min =-3.90, max=3.90), (up=0.520, down=0.520), (up=3.0, down=2.0)),
+               TechThermal(6.5, 5.20, (min=0.0, max=5.20), 1.00, (min =-3.90, max=3.90), (up=0.052, down=0.052), (up=3.0, down=2.0)),
                EconThermal(5.20, (0.0, 30.0), 0.0, 3.0, 1.5, nothing)
            ),
            ThermalDispatch("Sundance", true, nodes5[4],
-               TechThermal(2.5, 2.0, (min=0.0, max=2.0), 0.40, (min =-1.5, max=1.5), (up=0.50, down=0.50), (up=2.0, down=1.0)),
+               TechThermal(2.5, 2.0, (min=0.0, max=2.0), 0.40, (min =-1.5, max=1.5), (up=0.05, down=0.05), (up=2.0, down=1.0)),
                EconThermal(2.0, (0.0, 40.0), 0.0, 4.0, 2.0, nothing)
            ),
            ThermalDispatch("Brighton", true, nodes5[5],
-               TechThermal(7.5, 6.0, (min=0.0, max=6.0), 1.50, (min =-4.50, max=4.50), (up=0.50, down=0.50), (up=5.0, down=3.0)),
+               TechThermal(7.5, 6.0, (min=0.0, max=6.0), 1.50, (min =-4.50, max=4.50), (up=0.05, down=0.05), (up=5.0, down=3.0)),
                EconThermal(6.0, (0.0, 10.0), 0.0, 1.5, 0.75, nothing)
            )];
 
