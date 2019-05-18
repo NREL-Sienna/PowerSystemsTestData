@@ -72,23 +72,23 @@ wind_ts_DA = [0.985205412
 
 thermal_generators5 = [ThermalDispatch("Alta", true, nodes5[1],
            TechThermal(0.5, 0.40, (min=0.0, max=0.40), 0.010, (min = -0.30, max = 0.30), nothing, nothing),
-           EconThermal(0.40, (0.0, 14.0), 0.0, 4.0, 2.0, nothing)
+           EconThermal(0.40, (0.0, 1400.0), 0.0, 4.0, 2.0, nothing)
            ),
            ThermalDispatch("Park City", true, nodes5[1],
                TechThermal(2.2125, 1.70, (min=0.0, max=1.70), 0.20, (min =-1.275, max=1.275), (up=0.02, down=0.02), (up=2.0, down=1.0)),
-               EconThermal(1.70, (0.0, 15.0), 0.0, 1.5, 0.75, nothing)
+               EconThermal(1.70, (0.0, 1500.0), 0.0, 1.5, 0.75, nothing)
            ),
            ThermalDispatch("Solitude", true, nodes5[3],
                TechThermal(6.5, 5.20, (min=0.0, max=5.20), 1.00, (min =-3.90, max=3.90), (up=0.012, down=0.012), (up=3.0, down=2.0)),
-               EconThermal(5.20, (0.0, 30.0), 0.0, 3.0, 1.5, nothing)
+               EconThermal(5.20, (0.0, 3000.0), 0.0, 3.0, 1.5, nothing)
            ),
            ThermalDispatch("Sundance", true, nodes5[4],
                TechThermal(2.5, 2.0, (min=0.0, max=2.0), 0.40, (min =-1.5, max=1.5), (up=0.015, down=0.015), (up=2.0, down=1.0)),
-               EconThermal(2.0, (0.0, 40.0), 0.0, 4.0, 2.0, nothing)
+               EconThermal(2.0, (0.0, 4000.0), 0.0, 4.0, 2.0, nothing)
            ),
            ThermalDispatch("Brighton", true, nodes5[5],
                TechThermal(7.5, 6.0, (min=0.0, max=6.0), 1.50, (min =-4.50, max=4.50), (up=0.015, down=0.015), (up=5.0, down=3.0)),
-               EconThermal(6.0, (0.0, 10.0), 0.0, 1.5, 0.75, nothing)
+               EconThermal(6.0, (0.0, 1000.0), 0.0, 1.5, 0.75, nothing)
            )];
 
 renewable_generators5 = [RenewableCurtailment("WindBusA", true, nodes5[5], 120.0, EconRenewable(22.0, nothing)),
