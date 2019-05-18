@@ -46,24 +46,24 @@ branches14 = [
             ]
 
 thermal_generators14 = [ThermalDispatch("Bus1", true, nodes14[1],
-                    TechThermal(2.0, 2.0, (min=0.0, max=2.0), -0.169, (min=-990.0, max=990.0), nothing, nothing),
-                    EconThermal(0.40, (0.04303,20.0), 0.0, 0.0, 0.0, nothing)
+                    TechThermal(2.0, 2.324, (min=0.0, max=3.332), -0.169, (min=0.0, max=0.1), nothing, nothing),
+                    EconThermal(0.40, (430.292599, 2000.0), 0.0, 0.0, 0.0, nothing)
                     ),
                     ThermalDispatch("Bus2", true, nodes14[2],
-                    TechThermal(1.4, 0.40, (min=0.0, max=1.40), 0.42, (min=-990.0, max=990.0), nothing, nothing),
-                    EconThermal(1.40, (0.25, 20.0), 0.0, 0.0, 0.0, nothing)
+                    TechThermal(1.4, 0.40, (min=0.0, max=1.40), 0.42, (min=-0.4, max=0.5), nothing, nothing),
+                    EconThermal(1.40, (250.0, 2000.0), 0.0, 0.0, 0.0, nothing)
                     ),
                     ThermalDispatch("Bus3", true, nodes14[3],
-                    TechThermal(1.0, 0.50, (min=0.0, max=1.0), 0.23, (min=-990.0, max=990.0), nothing, nothing),
-                    EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing)
+                    TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.23, (min=0.0, max=0.4), nothing, nothing),
+                    EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0, nothing)
                     ),
                     ThermalDispatch("Bus6", true, nodes14[6],
-                    TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.12, (min=-990.0, max=990.0), nothing, nothing),
-                    (EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing))
+                    TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.12, (min=-0.06, max=0.24), nothing, nothing),
+                    (EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0, nothing))
                     ),
                     ThermalDispatch("Bus8", true, nodes14[8],
-                    TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.174, (min=-990.0, max=990.0), nothing, nothing),
-                    EconThermal(1.0, (0.01, 40.0), 0.0, 0.0, 0.0, nothing)
+                    TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.174, (min=-0.06, max=0.24), nothing, nothing),
+                    EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0, nothing)
                     )
             ];
 
@@ -180,3 +180,4 @@ battery14 = [GenericBattery(name="Bat",
             outputactivepowerlimits=(min=0.0, max=50.0),
             efficiency=(in=0.90, out=0.80),
             )]
+            
