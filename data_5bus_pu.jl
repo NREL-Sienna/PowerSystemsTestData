@@ -93,15 +93,15 @@ thermal_generators5 = [ThermalDispatch("Alta", true, nodes5[1],
 
 renewable_generators5 = [RenewableCurtailment("WindBusA", true, nodes5[5], 120.0, EconRenewable(22.0, nothing)),
                         RenewableCurtailment("WindBusB", true, nodes5[4], 120.0, EconRenewable(22.0, nothing)),
-                        RenewableCurtailment("WindBusC", true, nodes5[3], 120.0, EconRenewable(22.0, nothing))];        
-                        
+                        RenewableCurtailment("WindBusC", true, nodes5[3], 120.0, EconRenewable(22.0, nothing))];
+
 hydro_generators5 = [
                     HydroFix("HydroFix", true, nodes5[2],
                         TechHydro(0.600, 0.150, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), nothing, nothing)
                     ),
                     HydroCurtailment("HydroCurtailment", true, nodes5[3],
                         TechHydro(0.600, 0.100, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), (up = 10.0, down = 10.0), nothing), 150.0)
-                    ];                         
+                    ];
 
 battery5 = [GenericBattery(name = "Bat",
                             status = true,
@@ -114,7 +114,7 @@ battery5 = [GenericBattery(name = "Bat",
                             outputactivepowerlimits = (min = 0.0, max = 50.0),
                             reactivepowerlimits = (min = -50.0, max = 50.0),
                             efficiency = (in = 0.80, out = 0.90),
-                            )];                    
+                            )];
 
 loadbus2_ts_DA = [ 0.792729978
                     0.723201574
@@ -193,10 +193,10 @@ loadbus4_ts_DA = [ 0.871297342
 
 loads5 = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
            PowerLoad("Bus3", true, nodes5[3], 3.0, 0.9861),
-           PowerLoad("Bus4", true, nodes5[4], 4.0, 1.3147),           
+           PowerLoad("Bus4", true, nodes5[4], 4.0, 1.3147),
         ];
 
-interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, 2400.0)]        
+interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, EconLoad(2400.0, 150.0))]
 
 reserve5 = StaticReserve("test_reserve", thermal_generators5, 0.6, [gen.tech for gen in thermal_generators5])
 
