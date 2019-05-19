@@ -44,23 +44,23 @@ branches14 = [
                 Line("Line15", true, (from=nodes14[13],to=nodes14[14]), 0.17093, 0.34802, (from=0.0, to=0.0), 10.213, 1.04)
             ]
 
-generators14 = [ThermalDispatch("Bus1", true, nodes14[1],
+generators14 = [StandardThermal("Bus1", true, nodes14[1],
                 TechThermal(200.0, (min=0.0, max=200.0), -16.9, (min=-990.0, max=990.0), nothing, nothing),
                 EconThermal(40.0, x -> 0.04303*x^2 + 20*x, 0.0, 0.0, 0.0, nothing)
                 ),
-                ThermalDispatch("Bus2", true, nodes14[2],
+                StandardThermal("Bus2", true, nodes14[2],
                 TechThermal(40.0, (min=0.0, max=140.0), 42.4, (min=-40.0, max=50.0), nothing, nothing),
                 EconThermal(140.0, x -> 0.25*x^2 + 20*x, 0.0, 0.0, 0.0, nothing)
                 ),
-                ThermalDispatch("Bus3", true, nodes14[3],
+                StandardThermal("Bus3", true, nodes14[3],
                 TechThermal(50.0, (min=0.0, max=100.0), 23.4, (min=0.0, max=40.0), nothing, nothing),
                 EconThermal(100.0, x -> 0.01*x^2 + 40*x, 0.0, 0.0, 0.0, nothing)
                 ),
-                ThermalDispatch("Bus6", true, nodes14[6],
+                StandardThermal("Bus6", true, nodes14[6],
                 TechThermal(0.0, (min=0.0, max=100.0), 12.2, (min=-6.0, max=24.0), nothing, nothing),
                 (EconThermal(100.0, x -> 0.01*x^2 + 40*x, 0.0, 0.0, 0.0, nothing))
                 ),
-                ThermalDispatch("Bus8", true, nodes14[8],
+                StandardThermal("Bus8", true, nodes14[8],
                 TechThermal(0.0, (min=0.0, max=100.0), 17.4, (min=-6.0, max=4.0), nothing, nothing),
                 EconThermal(100.0, x -> 0.01*x^2 + 40*x, 0.0, 0.0, 0.0, nothing)
                 )

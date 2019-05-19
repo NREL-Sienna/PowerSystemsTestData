@@ -69,29 +69,29 @@ wind_ts_DA = [0.985205412
            0.099302656
            0.069569628]
 
-generators5 = [  ThermalDispatch("Alta", true, nodes5[1],
+generators5 = [  StandardThermal("Alta", true, nodes5[1],
                     TechThermal(40.0, (min=0.0, max=40.0), 10.0, (min = -30.0, max = 30.0), nothing, nothing),
                     EconThermal(40.0, x -> x*14.0, 0.0, 0.0, 0.0, nothing)
                 ),
-                ThermalDispatch("Park City", true, nodes5[1],
+                StandardThermal("Park City", true, nodes5[1],
                     TechThermal(170.0, (min=0.0, max=170.0), 20.0, (min =-127.5, max=127.5), nothing, nothing),
                     EconThermal(170.0, x -> x*15.0, 0.0, 0.0, 0.0, nothing)
                 ),
-                ThermalDispatch("Solitude", true, nodes5[3],
+                StandardThermal("Solitude", true, nodes5[3],
                     TechThermal(520.0, (min=0.0, max=520.0), 100.0, (min =-390.0, max=390.0), nothing, nothing),
                     EconThermal(520.0, x -> x*30.0, 0.0, 0.0, 0.0, nothing)
                 ),
-                ThermalDispatch("Sundance", true, nodes5[4],
+                StandardThermal("Sundance", true, nodes5[4],
                     TechThermal(200.0, (min=0.0, max=200.0), 40.0, (min =-150.0, max=150.0), nothing, nothing),
                     EconThermal(200.0, x -> x*40.0, 0.0, 0.0, 0.0, nothing)
                 ),
-                ThermalDispatch("Brighton", true, nodes5[5],
+                StandardThermal("Brighton", true, nodes5[5],
                     TechThermal(600.0, (min=0.0, max=600.0), 150.0, (min =-450.0, max=450.0), nothing, nothing),
                     EconThermal(600.0, [(0.0, 0.0), (10.0, 1.0), (600.0, 1.0)], 0.0, 0.0, 0.0, nothing)
                 ),
                 RenewableFix("SolarBusC", true, nodes5[3],
                     60.0),
-                RenewableCurtailment("WindBusA", true, nodes5[5],
+                RenewableDispatch("WindBusA", true, nodes5[5],
                     120.0,
                     EconRenewable(22.0, nothing))
             ];
@@ -176,7 +176,7 @@ loadbus4_ts_DA = [ 0.871297342
                 PowerLoad("Bus4", true, nodes5[4], 400.0, 131.47),
                 InterruptibleLoad("IloadBus4", true, nodes5[4],"P",100.0, 0.0,  2400.0)
             ]
-    
+
     forecast_DA = [ Deterministic(generators5[6],"scalingfactor",TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
                 Deterministic(generators5[7],"scalingfactor",TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
                 Deterministic(loads5_DA[1],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus2_ts_DA)),
@@ -184,5 +184,5 @@ loadbus4_ts_DA = [ 0.871297342
                 Deterministic(loads5_DA[3],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA)),
                 Deterministic(loads5_DA[4],"scalingfactor",TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA))
             ]
-    
+
     forecasts5 = Dict{Symbol,Vector{<:Forecast}}(:DA=>forecast_DA);
