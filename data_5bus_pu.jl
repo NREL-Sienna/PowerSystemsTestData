@@ -104,7 +104,7 @@ hydro_generators5 = [
                     ];
 
 battery5 = [GenericBattery(name = "Bat",
-                            status = true,
+                            available = true,
                             bus = nodes5[1],
                             activepower = 10.0,
                             energy = 5.0,
