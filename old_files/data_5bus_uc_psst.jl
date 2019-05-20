@@ -69,31 +69,31 @@ wind_ts_DA = [0.985205412
            0.099302656
            0.069569628]
 
-generators5 = [  StandardThermal("Alta", true, nodes5[1],
+generators5 = [  ThermalStandard("Alta", true, nodes5[1],
                     TechThermal(40.0, (min=5.0, max=40.0), 10.0, (min = -30.0, max = 30.0), nothing, nothing),
                     EconThermal(40.0, x -> x*14.0, 0.0, 4.0, 2.0, nothing)
                     #EconThermal(40.0, x -> x*14.0, 4.0, 4.0, 2.0, nothing)
 
                 ),
-                StandardThermal("Park City", true, nodes5[1],
+                ThermalStandard("Park City", true, nodes5[1],
                     TechThermal(170.0, (min=85.0, max=170.0), 20.0, (min =-127.5, max=127.5),nothing, nothing),# (up=5.0, down=5.0), (up=2.0, down=1.0)),
                     EconThermal(170.0, x -> x*15.0, 0.0, 1.5, 0.75, nothing)
                     #EconThermal(170.0, x -> x*15.0, 1.5, 1.5, 0.75, nothing)
 
                 ),
-                StandardThermal("Solitude", true, nodes5[3],
+                ThermalStandard("Solitude", true, nodes5[3],
                     TechThermal(520.0, (min=260.0, max=520.0), 100.0, (min =-390.0, max=390.0),nothing, nothing),# (up=52.0, down=52.0), (up=3.0, down=2.0)),
                     EconThermal(520.0, x -> x*30.0, 0.0, 3.0, 1.5, nothing)
                     #EconThermal(520.0, x -> x*30.0, 3.0, 3.0, 1.5, nothing)
 
                 ),
-                StandardThermal("Sundance", true, nodes5[4],
+                ThermalStandard("Sundance", true, nodes5[4],
                     TechThermal(200.0, (min=100.0, max=200.0), 40.0, (min =-150.0, max=150.0),nothing, nothing),# (up=5.0, down=5.0), (up=2.0, down=1.0)),
                     EconThermal(200.0, x -> x*40.0, 0.0, 4.0, 2.0, nothing)
                     #EconThermal(200.0, x -> x*40.0, 4.0, 4.0, 2.0, nothing)
 
                 ),
-                StandardThermal("Brighton", true, nodes5[5],
+                ThermalStandard("Brighton", true, nodes5[5],
                     TechThermal(600.0, (min=300.0, max=600.0), 150.0, (min =-450.0, max=450.0),nothing, nothing),# (up=60.0, down=60.0), (up=5.0, down=3.0)),
                     #EconThermal(600.0, [(0.0, 0.0), (450.0, 8.0), (600.0, 10.0)], 0.0, 0.0, 0.0, nothing)
                     EconThermal(600.0, x -> x*10.0, 0.0, 0.0, 0.0, nothing)
