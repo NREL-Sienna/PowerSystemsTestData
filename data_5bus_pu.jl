@@ -99,7 +99,7 @@ hydro_generators5 = [
                     HydroFix("HydroFix", true, nodes5[2],
                         TechHydro(0.600, 0.150, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), nothing, nothing)
                     ),
-                    HydroCurtailment("HydroCurtailment", true, nodes5[3],
+                    HydroDispatch("HydroDispatch", true, nodes5[3],
                         TechHydro(0.600, 0.100, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), (up = 10.0, down = 10.0), nothing), 150.0)
                     ];
 
