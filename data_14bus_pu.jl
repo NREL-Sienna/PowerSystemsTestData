@@ -51,7 +51,7 @@ thermal_generators14 = [ThermalStandard("Bus1", true, nodes14[1],
                     ),
                     ThermalStandard("Bus2", true, nodes14[2],
                     TechThermal(1.4, 0.40, (min=0.0, max=1.40), 0.42, (min=-0.4, max=0.5), nothing, nothing),
-                    EconThermal(1.40, (250.0, 2000.0), 0.0, 0.0, 0.0, nothing)
+                    EconThermal(1.40, (2500.0, 2000.0), 0.0, 0.0, 0.0, nothing)
                     ),
                     ThermalStandard("Bus3", true, nodes14[3],
                     TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.23, (min=0.0, max=0.4), nothing, nothing),
