@@ -25,8 +25,8 @@ nodes14= [
 branches14_dc = [
                 Line("Line1",  true, (from=nodes14[1],to=nodes14[2]),   0.01938, 0.05917, (from=0.0264, to=0.0264), 18.046, 1.04),
                 Line("Line2",  true, (from=nodes14[1],to=nodes14[5]),   0.05403, 0.22304, (from=0.0246, to=0.0246), 4.896, 1.04),
-                HVDCLine("Line3", true, (from=nodes14[2],to=nodes14[3]), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (l0 = 0.01, l1 = 0.001)),
-                HVDCLine("Line4", true, (from=nodes14[2],to=nodes14[4]), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (l0 = 0.01, l1 = 0.001)),
+                HVDCLine("DCLine3", true, (from=nodes14[2],to=nodes14[3]), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (l0 = 0.01, l1 = 0.001)),
+                HVDCLine("DCLine4", true, (from=nodes14[2],to=nodes14[4]), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (min = -600.0, max = 600), (l0 = 0.01, l1 = 0.001)),
                 #Line("Line3",  true, (from=nodes14[2],to=nodes14[3]),   0.04699, 0.19797, (from=0.0219, to=0.0219), 5.522, 1.04),
                 #Line("Line4",  true, (from=nodes14[2],to=nodes14[4]),   0.05811, 0.17632, (from=0.017,  to=0.017), 6.052, 1.04),
                 Line("Line5",  true, (from=nodes14[2],to=nodes14[5]),   0.05695, 0.17388, (from=0.0173, to=0.0173), 6.140, 1.04),
