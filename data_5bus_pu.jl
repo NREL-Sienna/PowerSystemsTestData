@@ -13,7 +13,7 @@ nodes5    = [Bus(1,"nodeA", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
             ];
 
 branches5_dc = [Line("1", true, (from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 2.0, (min = -0.7, max = 0.7)),
-             HVDCLine("2", true, (from=nodes5[1],to=nodes5[4]), (min=3000.0, max=-3000.0), (min=3000, max=3000), (min=-3000.0, max=3000.0), (min=-3000.0, max=3000.0), (l0=0.0, l1=0.01)),
+             HVDCLine("DCL2", true, (from=nodes5[1],to=nodes5[4]), (min=3000.0, max=-3000.0), (min=3000, max=3000), (min=-3000.0, max=3000.0), (min=-3000.0, max=3000.0), (l0=0.0, l1=0.01)),
              Line("3", true, (from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
              Line("4", true, (from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
              Line("5", true, (from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
