@@ -7,7 +7,7 @@ DayAhead  = collect(DateTime("1/1/2024  0:00:00", "d/m/y  H:M:S"):Hour(1):DateTi
 nodes5    = [Bus(1,"nodeA", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
              Bus(2,"nodeB", "PQ", 0, 1.0, (min = 0.9, max=1.05), 230),
              Bus(3,"nodeC", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
-             Bus(4,"nodeD", "SF", 0, 1.0, (min = 0.9, max=1.05), 230),
+             Bus(4,"nodeD", "REF", 0, 1.0, (min = 0.9, max=1.05), 230),
              Bus(5,"nodeE", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
         ];
 
