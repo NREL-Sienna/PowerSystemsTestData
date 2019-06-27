@@ -140,8 +140,8 @@ DAY_AHEAD,Reserve,Spin_Up_R3,Requirement,./Reserves/DAY_AHEAD_regional_Spin_Up_R
 DAY_AHEAD,LoadZone,1,Requirement,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
 DAY_AHEAD,LoadZone,2,Requirement,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
 DAY_AHEAD,LoadZone,3,Requirement,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
-DAY_AHEAD,Generator,212_CSP_HEAD_STORAGE,Natural_Inflow,../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/DAY_AHEAD_Natural_Inflow.csv
-REAL_TIME,Generator,212_CSP_HEAD_STORAGE,Natural_Inflow,../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/REAL_TIME_Natural_Inflow.csv
+DAY_AHEAD,Generator,212_CSP_1,Natural_Inflow,../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/DAY_AHEAD_Natural_Inflow.csv
+REAL_TIME,Generator,212_CSP_1,Natural_Inflow,../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/REAL_TIME_Natural_Inflow.csv
 REAL_TIME,Generator,122_HYDRO_1,PMax MW,../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv
 REAL_TIME,Generator,122_HYDRO_2,PMax MW,../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv
 REAL_TIME,Generator,122_HYDRO_3,PMax MW,../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv
