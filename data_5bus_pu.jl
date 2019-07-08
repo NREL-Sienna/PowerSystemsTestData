@@ -213,7 +213,7 @@ loads5 = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
            PowerLoad("Bus4", true, nodes5[4], 4.0, 1.3147),
         ];
 
-interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, EconLoad(2400.0, 150.0))]
+interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, TwoPartCost(150.0, 2400.0))]
 Iload_forecast = [Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA))]
 
 reserve5 = StaticReserve("test_reserve", thermal_generators5, 0.6, maximum([gen.tech.activepowerlimits[:max] for gen in thermal_generators5]))
