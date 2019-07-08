@@ -72,23 +72,23 @@ branches14 = [
 
 thermal_generators14 = [ThermalStandard("Bus1", true, nodes14[1],
                     TechThermal(2.0, 2.324, (min=0.0, max=3.332), -0.169, (min=0.0, max=0.1), nothing, nothing),
-                    EconThermal(0.40, (430.292599, 2000.0), 0.0, 0.0, 0.0, nothing)
+                    EconThermal(0.40, (430.292599, 2000.0), 0.0, 0.0, 0.0)
                     ),
                     ThermalStandard("Bus2", true, nodes14[2],
                     TechThermal(1.4, 0.40, (min=0.0, max=1.40), 0.42, (min=-0.4, max=0.5), nothing, nothing),
-                    EconThermal(1.40, (2500.0, 2000.0), 0.0, 0.0, 0.0, nothing)
+                    EconThermal(1.40, (2500.0, 2000.0), 0.0, 0.0, 0.0)
                     ),
                     ThermalStandard("Bus3", true, nodes14[3],
                     TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.23, (min=0.0, max=0.4), nothing, nothing),
-                    EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0, nothing)
+                    EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0)
                     ),
                     ThermalStandard("Bus6", true, nodes14[6],
                     TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.12, (min=-0.06, max=0.24), nothing, nothing),
-                    (EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0, nothing))
+                    EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0)
                     ),
                     ThermalStandard("Bus8", true, nodes14[8],
                     TechThermal(1.0, 0.0, (min=0.0, max=1.0), 0.174, (min=-0.06, max=0.24), nothing, nothing),
-                    EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0, nothing)
+                    EconThermal(1.0, (100.0, 4000.0), 0.0, 0.0, 0.0)
                     )
             ];
 
