@@ -109,7 +109,7 @@ thermal_generators5 = [ThermalStandard("Alta", true, nodes5[1],
 
 renewable_generators5 = [RenewableDispatch("WindBusA", true, nodes5[5], 1.200, TwoPartCost(22.0, 0.0)),
                         RenewableDispatch("WindBusB", true, nodes5[4], 1.200, TwoPartCost(22.0, 0.0)),
-                        RenewableDispatch("WindBusC", true, nodes5[3], TechRenewable(1.20, (min = -0.800, max = 0.800), 1.0), TwoPartCost(22.0, nothing))];
+                        RenewableDispatch("WindBusC", true, nodes5[3], TechRenewable(1.20, (min = -0.800, max = 0.800), 1.0), TwoPartCost(22.0, 0.0))];
 
 hydro_generators5 = [
                     HydroFix("HydroFix", true, nodes5[2],
