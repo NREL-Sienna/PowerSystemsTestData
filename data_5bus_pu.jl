@@ -1,6 +1,7 @@
 using PowerSystems
 using TimeSeries
 using Dates
+using Random
 
 DayAhead  = collect(DateTime("1/1/2024  0:00:00", "d/m/y  H:M:S"):Hour(1):DateTime("1/1/2024  23:00:00", "d/m/y  H:M:S"))
 #Dispatch_11am =  collect(DateTime("1/1/2024  0:11:00", "d/m/y  H:M:S"):Minute(15):DateTime("1/1/2024  12::00", "d/m/y  H:M:S"))
@@ -108,8 +109,8 @@ thermal_generators5 = [ThermalStandard("Alta", true, nodes5[1],
            )];
 
 renewable_generators5 = [RenewableDispatch("WindBusA", true, nodes5[5], 1.200, TwoPartCost(22.0, 0.0)),
-                        RenewableDispatch("WindBusB", true, nodes5[4], 1.200, TwoPartCost(22.0, 0.0)),
-                        RenewableDispatch("WindBusC", true, nodes5[3], TechRenewable(1.20,  0.5, (min = -0.800, max = 0.800),1.0), TwoPartCost(22.0, 0.0))];
+                         RenewableDispatch("WindBusB", true, nodes5[4], 1.200, TwoPartCost(22.0, 0.0)),
+                         RenewableDispatch("WindBusC", true, nodes5[3], TechRenewable(1.20,  0.5, (min = -0.800, max = 0.800),1.0), TwoPartCost(22.0, 0.0))];
 
 hydro_generators5 = [
                     HydroFix("HydroFix", true, nodes5[2],
@@ -214,17 +215,22 @@ loads5 = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
         ];
 
 interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, TwoPartCost(150.0, 2400.0))]
-Iload_forecast = [Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA))]
+Iload_forecast = [Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA)),
+                  Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead+Day(1), loadbus4_ts_DA + 0.1*rand(24))),]
 
 reserve5 = StaticReserve("test_reserve", thermal_generators5, 0.6, maximum([gen.tech.activepowerlimits[:max] for gen in thermal_generators5]))
 
 load_forecast_DA = [Deterministic(loads5[1], "scalingfactor", TimeArray(DayAhead, loadbus2_ts_DA)),
                     Deterministic(loads5[2], "scalingfactor", TimeArray(DayAhead, loadbus3_ts_DA)),
-                    Deterministic(loads5[3], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA))]
+                    Deterministic(loads5[3], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA)),
+                    Deterministic(loads5[1], "scalingfactor", TimeArray(DayAhead+Day(1), rand(24)*0.1 + loadbus2_ts_DA)),
+                    Deterministic(loads5[2], "scalingfactor", TimeArray(DayAhead+Day(1), rand(24)*0.1 + loadbus3_ts_DA)),
+                    Deterministic(loads5[3], "scalingfactor", TimeArray(DayAhead+Day(1), rand(24)*0.1 + loadbus4_ts_DA))]
 
 ren_forecast_DA = [Deterministic(renewable_generators5[1], "scalingfactor", TimeSeries.TimeArray(DayAhead,solar_ts_DA)),
                    Deterministic(renewable_generators5[2], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA)),
-                   Deterministic(renewable_generators5[3], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA))
+                   Deterministic(renewable_generators5[3], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA)),
+                   Deterministic(renewable_generators5[1], "scalingfactor", TimeSeries.TimeArray(DayAhead + Day(1), rand(24)*0.1 + solar_ts_DA)),
+                   Deterministic(renewable_generators5[2], "scalingfactor", TimeSeries.TimeArray(DayAhead + Day(1), rand(24)*0.1 + wind_ts_DA)),
+                   Deterministic(renewable_generators5[3], "scalingfactor", TimeSeries.TimeArray(DayAhead + Day(1), rand(24)*0.1 + wind_ts_DA))
                   ];
-
-forecasts5 = Dict{Symbol,Vector{<:Forecast}}(:DA=>vcat(load_forecast_DA, ren_forecast_DA));
