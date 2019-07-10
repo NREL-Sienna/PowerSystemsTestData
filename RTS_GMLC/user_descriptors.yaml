@@ -115,5 +115,6 @@ timeseries_pointers:
 - {custom_name: Simulation, name: simulation}
 - {custom_name: Object, name: component_name}
 - {custom_name: Parameter, name: label}
+- {custom_name: Parameter Source, name: label_source}
 - {custom_name: Category, name: category}
 - {custom_name: Data File, name: data_file}
