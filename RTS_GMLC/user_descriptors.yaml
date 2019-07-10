@@ -5,7 +5,7 @@ branch:
 - {custom_name: R, name: r}
 - {custom_name: X, name: x}
 - {custom_name: B, name: primary_shunt}
-- {custom_name: Cont Rating, name: rate}
+- {custom_name: Cont Rating, name: rate, system_per_unit: false}
 - {custom_name: Min Angle Limits, name: min_angle_limits}
 - {custom_name: Max Angle Limits, name: max_angle_limits}
 - {custom_name: Tr Ratio, name: tap}
@@ -22,8 +22,8 @@ bus:
 - {custom_name: Voltage Limit Max, name: voltage_limits_max}
 - {custom_name: MW Shunt G, name: mw_shunt_g}
 - {custom_name: MVAR Shunt B, name: mvar_shut_b}
-- {custom_name: MW Load, name: max_active_power}
-- {custom_name: MVAR Load, name: max_reactive_power}
+- {custom_name: MW Load, name: max_active_power, system_per_unit: false}
+- {custom_name: MVAR Load, name: max_reactive_power, system_per_unit: false}
 dc_branch:
 - {custom_name: UID, name: name}
 - {custom_name: From Bus, name: connection_points_from}
@@ -52,15 +52,15 @@ generator:
 - {custom_name: Bus ID, name: bus_id}
 - {custom_name: Fuel, name: fuel}
 - {custom_name: Fuel Price $/MMBTU, name: fuel_price}
-- {custom_name: MW Inj, name: active_power}
-- {custom_name: MVAR Inj, name: reactive_power}
-- {custom_name: PMax MW, name: active_power_limits_max}
-- {custom_name: PMin MW, name: active_power_limits_min}
-- {custom_name: QMax MVAR, name: reactive_power_limits_max}
-- {custom_name: QMin MVAR, name: reactive_power_limits_min}
+- {custom_name: MW Inj, name: active_power, system_per_unit: false}
+- {custom_name: MVAR Inj, name: reactive_power, system_per_unit: false}
+- {custom_name: PMax MW, name: active_power_limits_max, system_per_unit: false}
+- {custom_name: PMin MW, name: active_power_limits_min, system_per_unit: false}
+- {custom_name: QMax MVAR, name: reactive_power_limits_max, system_per_unit: false}
+- {custom_name: QMin MVAR, name: reactive_power_limits_min, system_per_unit: false}
 - {custom_name: Min Down Time Hr, name: min_down_time}
 - {custom_name: Min Up Time Hr, name: min_up_time}
-- {custom_name: Ramp Rate MW/Min, name: ramp_limits}
+- {custom_name: Ramp Rate MW/Min, name: ramp_limits, system_per_unit: false}
 - {custom_name: Start Heat Cold MBTU, name: startup_heat_cold_cost}
 - {custom_name: HR_avg_0, name: heat_rate_avg_0}
 - {custom_name: HR_incr_1, name: heat_rate_avg_1}
@@ -84,6 +84,7 @@ generator:
 - {custom_name: Unit Type, name: unit_type}
 - {custom_name: Category, name: category}
 - {custom_name: Generator Category, name: generator_category}
+load: []
 reserves:
 - {custom_name: Reserve Product, name: name}
 - {custom_name: 'Devices', name: contributing_devices}
@@ -100,15 +101,15 @@ storage:
 - {custom_name: Storage, name: name}
 - {custom_name: BUS ID, name: bus_id}
 - {custom_name: Energy Level, name: energy_level}
-- {custom_name: MW Inj, name: active_power}
-- {custom_name: MVAR Inj, name: reactive_power}
-- {custom_name: Input Power Limits Max, name: input_power_limits_max}
-- {custom_name: Input Power Limits Min, name: input_power_limits_min}
-- {custom_name: Output Power Limits Max, name: output_active_power_limits_max}
-- {custom_name: Output Power Limits Min, name: output_active_power_limits_min}
-- {custom_name: QMax MVAR, name: reactive_power_limits_max}
-- {custom_name: QMin MVAR, name: reactive_power_limits_min}
-- {custom_name: Cont Rating, name: rating}
+- {custom_name: MW Inj, name: active_power, system_per_unit: false}
+- {custom_name: MVAR Inj, name: reactive_power, system_per_unit: false}
+- {custom_name: Input Power Limits Max, name: input_power_limits_max, system_per_unit: false}
+- {custom_name: Input Power Limits Min, name: input_power_limits_min, system_per_unit: false}
+- {custom_name: Output Power Limits Max, name: output_active_power_limits_max, system_per_unit: false}
+- {custom_name: Output Power Limits Min, name: output_active_power_limits_min, system_per_unit: false}
+- {custom_name: QMax MVAR, name: reactive_power_limits_max, system_per_unit: false}
+- {custom_name: QMin MVAR, name: reactive_power_limits_min, system_per_unit: false}
+- {custom_name: Cont Rating, name: rating, system_per_unit: false}
 - {custom_name: efficiency, name: efficiency}
 timeseries_pointers:
 - {custom_name: Simulation, name: simulation}
