@@ -113,6 +113,7 @@ renewable_generators5 = [RenewableDispatch("WindBusA", true, nodes5[5], 0.0, 0.0
                          RenewableDispatch("WindBusC", true, nodes5[3], 0.0, 0.0, TechRenewable(1.20, PowerSystems.WT, (min = -0.800, max = 0.800), 1.0), TwoPartCost(22.0, 0.0))];
 
 
+
 hydro_generators5 = [
                     HydroFix("HydroFix", true, nodes5[2], 0.0, 0.0,
                         TechHydro(0.600, PowerSystems.HY, (min = 0.0, max = 60.0), (min = 0.0, max = 60.0), nothing, nothing)
