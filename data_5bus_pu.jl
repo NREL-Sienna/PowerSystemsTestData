@@ -103,7 +103,7 @@ thermal_generators5 = [ThermalStandard("Alta", true, nodes5[1], 0.40, 0.010,
                TechThermal(2.5, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=2.0), (min =-1.5, max=1.5), (up=0.015, down=0.015), (up=2.0, down=1.0)),
                ThreePartCost((0.0, 4000.0), 0.0, 4.0, 2.0)
            ),
-           ThermalStandard("Brighton", true, nodes5[5], 6.0,1.50,
+           ThermalStandard("Brighton", true, nodes5[5], 6.0, 1.50,
                TechThermal(7.5, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=6.0), (min =-4.50, max=4.50), (up=0.015, down=0.015), (up=5.0, down=3.0)),
                ThreePartCost((0.0, 1000.0), 0.0, 1.5, 0.75)
            )];
@@ -113,21 +113,24 @@ renewable_generators5 = [RenewableDispatch("WindBusA", true, nodes5[5], 0.0, 0.0
                          RenewableDispatch("WindBusC", true, nodes5[3], 0.0, 0.0, TechRenewable(1.20, PowerSystems.WT, (min = -0.800, max = 0.800), 1.0), TwoPartCost(22.0, 0.0))];
 
 
+
 hydro_generators5 = [
-                    HydroFix("HydroFix", true, nodes5[2],
-                        TechHydro(0.600, 0.150, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), nothing, nothing)
+                    HydroFix("HydroFix", true, nodes5[2], 0.0, 0.0,
+                        TechHydro(0.600, PowerSystems.HY, (min = 0.0, max = 60.0), (min = 0.0, max = 60.0), nothing, nothing)
                     ),
-                    HydroDispatch("HydroDispatch", true, nodes5[3],
-                        TechHydro(0.600, 0.100, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), (up = 10.0, down = 10.0), nothing), 150.0)
+                    HydroDispatch("HydroDispatch", true, nodes5[3], 0.0, 0.0,
+                        TechHydro(0.600, PowerSystems.HY, (min = 0.0, max = 60.0), (min = 0.0, max = 60.0), (up = 10.0, down = 10.0), nothing),
+                        TwoPartCost(15.0, 0.0))
                     ];
 
 battery5 = [GenericBattery(name = "Bat",
+                            primemover = PowerSystems.BA,
                             available = true,
                             bus = nodes5[1],
-                            activepower = 10.0,
                             energy = 5.0,
                             capacity = (min = 5.0, max = 100.0),
                             rating = 70,
+                            activepower = 10.0,
                             inputactivepowerlimits = (min = 0.0, max = 50.0),
                             outputactivepowerlimits = (min = 0.0, max = 50.0),
                             reactivepower = 0.0,
@@ -210,12 +213,12 @@ loadbus4_ts_DA = [ 0.871297342
                 0.771004923
                 0.717847996]
 
-loads5 = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
-           PowerLoad("Bus3", true, nodes5[3], 3.0, 0.9861),
-           PowerLoad("Bus4", true, nodes5[4], 4.0, 1.3147),
+loads5 = [ PowerLoad("Bus2", true, nodes5[2], PowerSystems.ConstantPower, 3.0, 0.9861, 3.0, 0.9861),
+           PowerLoad("Bus3", true, nodes5[3], PowerSystems.ConstantPower, 3.0, 0.9861, 3.0, 0.9861),
+           PowerLoad("Bus4", true, nodes5[4], PowerSystems.ConstantPower, 4.0, 1.3147, 4.0, 1.3147),
         ];
 
-interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, TwoPartCost(150.0, 2400.0))]
+interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], PowerSystems.ConstantPower, 0.10, 0.0,  0.10, 0.0, TwoPartCost(150.0, 2400.0))]
 Iload_forecast = [Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA)),
                   Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead+Day(1), loadbus4_ts_DA + 0.1*rand(24))),]
 
