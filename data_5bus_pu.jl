@@ -234,3 +234,6 @@ ren_forecast_DA = [Deterministic(renewable_generators5[1], "scalingfactor", Time
                    Deterministic(renewable_generators5[2], "scalingfactor", TimeSeries.TimeArray(DayAhead + Day(1), rand(24)*0.1 + wind_ts_DA)),
                    Deterministic(renewable_generators5[3], "scalingfactor", TimeSeries.TimeArray(DayAhead + Day(1), rand(24)*0.1 + wind_ts_DA))
                   ];
+
+hydro_forecast_DA = [Deterministic(hydro_generators5[1], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA)),
+                     Deterministic(hydro_generators5[2], "scalingfactor", TimeSeries.TimeArray(DayAhead,wind_ts_DA))]
