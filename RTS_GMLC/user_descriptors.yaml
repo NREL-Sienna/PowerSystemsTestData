@@ -17,7 +17,7 @@ bus:
 - {custom_name: BaseKV, name: base_voltage}
 - {custom_name: Bus Type, name: bus_type}
 - {custom_name: V Mag, name: voltage}
-- {custom_name: V Angle, name: angle}
+- {custom_name: V Angle, name: angle, unit: degree}
 - {custom_name: Voltage Limit Min, name: voltage_limits_min}
 - {custom_name: Voltage Limit Max, name: voltage_limits_max}
 - {custom_name: MW Shunt G, name: mw_shunt_g}
