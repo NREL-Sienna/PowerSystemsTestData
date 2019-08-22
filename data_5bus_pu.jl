@@ -95,7 +95,7 @@ thermal_generators5 = [ThermalStandard("Alta", true, nodes5[1], 0.40, 0.010,
                TechThermal(2.2125, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=1.70), (min =-1.275, max=1.275), (up=0.02, down=0.02), (up=2.0, down=1.0)),
                ThreePartCost((0.0, 1500.0), 0.0, 1.5, 0.75)
            ),
-           ThermalStandard("Solitude", true, nodes5[3], 6.5, 1.00,
+           ThermalStandard("Solitude", true, nodes5[3], 5.2, 1.00,
                TechThermal(5.20, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=5.20), (min =-3.90, max=3.90), (up=0.012, down=0.012), (up=3.0, down=2.0)),
                ThreePartCost((0.0, 3000.0), 0.0, 3.0, 1.5)
            ),
