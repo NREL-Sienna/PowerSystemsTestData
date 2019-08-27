@@ -13,28 +13,28 @@ nodes5    = [Bus(1,"nodeA", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
              Bus(5,"nodeE", "PV", 0, 1.0, (min = 0.9, max=1.05), 230),
             ];
 
-branches5_dc = [Line("1", true, Arch(from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 2.0, (min = -0.7, max = 0.7)),
-             HVDCLine("DCL2", true, Arch(from=nodes5[1],to=nodes5[4]), (min=-3000.0, max=3000.0), (min=-3000, max=3000), (min=-3000.0, max=3000.0), (min=-3000.0, max=3000.0), (l0=0.0, l1=0.01)),
-             Line("3", true, Arch(from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
-             Line("4", true, Arch(from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
-             Line("5", true, Arch(from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
-             Line("6", true, Arch(from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 2.00, (min = -0.7, max = 0.7))
+branches5_dc = [Line("1", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 2.0, (min = -0.7, max = 0.7)),
+             HVDCLine("DCL2", true, 0.0, Arc(from=nodes5[1],to=nodes5[4]), (min=-3000.0, max=3000.0), (min=-3000, max=3000), (min=-3000.0, max=3000.0), (min=-3000.0, max=3000.0), (l0=0.0, l1=0.01)),
+             Line("3", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
+             Line("4", true, 0.0, 0.0, Arc(from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
+             Line("5", true, 0.0, 0.0, Arc(from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
+             Line("6", true, 0.0, 0.0, Arc(from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 2.00, (min = -0.7, max = 0.7))
 ];
 
-branches5 = [Line("1", true, Arch(from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 2.0, (min = -0.7, max = 0.7)),
-             Line("2", true, Arch(from=nodes5[1],to=nodes5[4]), 0.00304, 0.0304, (from=0.00329, to=0.00329), 2.0, (min = -0.7, max = 0.7)),
-             Line("3", true, Arch(from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
-             Line("4", true, Arch(from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
-             Line("5", true, Arch(from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
-             Line("6", true, Arch(from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 2.00, (min = -0.7, max = 0.7))
+branches5 = [Line("1", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), 2.0, (min = -0.7, max = 0.7)),
+             Line("2", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[4]), 0.00304, 0.0304, (from=0.00329, to=0.00329), 2.0, (min = -0.7, max = 0.7)),
+             Line("3", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
+             Line("4", true, 0.0, 0.0, Arc(from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
+             Line("5", true, 0.0, 0.0, Arc(from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
+             Line("6", true, 0.0, 0.0, Arc(from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 2.00, (min = -0.7, max = 0.7))
 ];
 
-branches5_ml = [MonitoredLine("1", true, Arch(from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), (from_to=1.0, to_from=1.0), 2.0, (min = -0.7, max = 0.7)),
-                Line("2", true, Arch(from=nodes5[1],to=nodes5[4]), 0.00304, 0.0304, (from=0.00329, to=0.00329), 2.0, (min = -0.7, max = 0.7)),
-                Line("3", true, Arch(from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
-                Line("4", true, Arch(from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
-                Line("5", true, Arch(from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
-                Line("6", true, Arch(from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 2.00, (min = -0.7, max = 0.7))
+branches5_ml = [MonitoredLine("1", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[2]), 0.00281, 0.0281, (from=0.00356, to=0.00356), (from_to=1.0, to_from=1.0), 2.0, (min = -0.7, max = 0.7)),
+                Line("2", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[4]), 0.00304, 0.0304, (from=0.00329, to=0.00329), 2.0, (min = -0.7, max = 0.7)),
+                Line("3", true, 0.0, 0.0, Arc(from=nodes5[1],to=nodes5[5]), 0.00064, 0.0064, (from=0.01563, to=0.01563), 18.8120, (min = -0.7, max = 0.7)),
+                Line("4", true, 0.0, 0.0, Arc(from=nodes5[2],to=nodes5[3]), 0.00108, 0.0108, (from=0.00926, to=0.00926), 11.1480, (min = -0.7, max = 0.7)),
+                Line("5", true, 0.0, 0.0, Arc(from=nodes5[3],to=nodes5[4]), 0.00297, 0.0297, (from=0.00337, to=0.00337), 40.530, (min = -0.7, max = 0.7)),
+                Line("6", true, 0.0, 0.0, Arc(from=nodes5[4],to=nodes5[5]), 0.00297, 0.0297, (from=0.00337, to=00.00337), 2.00, (min = -0.7, max = 0.7))
                 ];
 
 solar_ts_DA = [0
@@ -87,46 +87,50 @@ wind_ts_DA = [0.985205412
            0.099302656
            0.069569628]
 
-thermal_generators5 = [ThermalStandard("Alta", true, nodes5[1],
-           TechThermal(0.5, 0.40, (min=0.0, max=0.40), 0.010, (min = -0.30, max = 0.30), nothing, nothing),
+thermal_generators5 = [ThermalStandard("Alta", true, nodes5[1], 0.40, 0.010,
+           TechThermal(0.5, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=0.40),  (min = -0.30, max = 0.30), nothing, nothing),
            ThreePartCost((0.0, 1400.0), 0.0, 4.0, 2.0)
            ),
-           ThermalStandard("Park City", true, nodes5[1],
-               TechThermal(2.2125, 1.70, (min=0.0, max=1.70), 0.20, (min =-1.275, max=1.275), (up=0.02, down=0.02), (up=2.0, down=1.0)),
+           ThermalStandard("Park City", true, nodes5[1], 1.70, 0.20,
+               TechThermal(2.2125, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=1.70), (min =-1.275, max=1.275), (up=0.02, down=0.02), (up=2.0, down=1.0)),
                ThreePartCost((0.0, 1500.0), 0.0, 1.5, 0.75)
            ),
-           ThermalStandard("Solitude", true, nodes5[3],
-               TechThermal(6.5, 5.20, (min=0.0, max=5.20), 1.00, (min =-3.90, max=3.90), (up=0.012, down=0.012), (up=3.0, down=2.0)),
+           ThermalStandard("Solitude", true, nodes5[3], 5.2, 1.00,
+               TechThermal(5.20, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=5.20), (min =-3.90, max=3.90), (up=0.012, down=0.012), (up=3.0, down=2.0)),
                ThreePartCost((0.0, 3000.0), 0.0, 3.0, 1.5)
            ),
-           ThermalStandard("Sundance", true, nodes5[4],
-               TechThermal(2.5, 2.0, (min=0.0, max=2.0), 0.40, (min =-1.5, max=1.5), (up=0.015, down=0.015), (up=2.0, down=1.0)),
+           ThermalStandard("Sundance", true, nodes5[4], 2.0, 0.40,
+               TechThermal(2.5, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=2.0), (min =-1.5, max=1.5), (up=0.015, down=0.015), (up=2.0, down=1.0)),
                ThreePartCost((0.0, 4000.0), 0.0, 4.0, 2.0)
            ),
-           ThermalStandard("Brighton", true, nodes5[5],
-               TechThermal(7.5, 6.0, (min=0.0, max=6.0), 1.50, (min =-4.50, max=4.50), (up=0.015, down=0.015), (up=5.0, down=3.0)),
+           ThermalStandard("Brighton", true, nodes5[5], 6.0, 1.50,
+               TechThermal(7.5, PowerSystems.ST, PowerSystems.COAL, (min=0.0, max=6.0), (min =-4.50, max=4.50), (up=0.015, down=0.015), (up=5.0, down=3.0)),
                ThreePartCost((0.0, 1000.0), 0.0, 1.5, 0.75)
            )];
 
-renewable_generators5 = [RenewableDispatch("WindBusA", true, nodes5[5], 1.200, TwoPartCost(22.0, 0.0)),
-                         RenewableDispatch("WindBusB", true, nodes5[4], 1.200, TwoPartCost(22.0, 0.0)),
-                         RenewableDispatch("WindBusC", true, nodes5[3], TechRenewable(1.20,  0.5, (min = -0.800, max = 0.800),1.0), TwoPartCost(22.0, 0.0))];
+renewable_generators5 = [RenewableDispatch("WindBusA", true, nodes5[5], 0.0, 0.0, PowerSystems.WT, 1.200, TwoPartCost(22.0, 0.0)),
+                         RenewableDispatch("WindBusB", true, nodes5[4], 0.0, 0.0, PowerSystems.WT, 1.200, TwoPartCost(22.0, 0.0)),
+                         RenewableDispatch("WindBusC", true, nodes5[3], 0.0, 0.0, TechRenewable(1.20, PowerSystems.WT, (min = -0.800, max = 0.800), 1.0), TwoPartCost(22.0, 0.0))];
+
+
 
 hydro_generators5 = [
-                    HydroFix("HydroFix", true, nodes5[2],
-                        TechHydro(0.600, 0.150, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), nothing, nothing)
+                    HydroFix("HydroFix", true, nodes5[2], 0.0, 0.0,
+                        TechHydro(0.600, PowerSystems.HY, (min = 0.0, max = 60.0), (min = 0.0, max = 60.0), nothing, nothing)
                     ),
-                    HydroDispatch("HydroDispatch", true, nodes5[3],
-                        TechHydro(0.600, 0.100, (min = 0.0, max = 60.0), 0.0, (min = 0.0, max = 60.0), (up = 10.0, down = 10.0), nothing), 150.0)
+                    HydroDispatch("HydroDispatch", true, nodes5[3], 0.0, 0.0,
+                        TechHydro(0.600, PowerSystems.HY, (min = 0.0, max = 60.0), (min = 0.0, max = 60.0), (up = 10.0, down = 10.0), nothing),
+                        TwoPartCost(15.0, 0.0))
                     ];
 
 battery5 = [GenericBattery(name = "Bat",
+                            primemover = PowerSystems.BA,
                             available = true,
                             bus = nodes5[1],
-                            activepower = 10.0,
                             energy = 5.0,
                             capacity = (min = 5.0, max = 100.0),
                             rating = 70,
+                            activepower = 10.0,
                             inputactivepowerlimits = (min = 0.0, max = 50.0),
                             outputactivepowerlimits = (min = 0.0, max = 50.0),
                             reactivepower = 0.0,
@@ -209,12 +213,12 @@ loadbus4_ts_DA = [ 0.871297342
                 0.771004923
                 0.717847996]
 
-loads5 = [ PowerLoad("Bus2", true, nodes5[2], 3.0, 0.9861),
-           PowerLoad("Bus3", true, nodes5[3], 3.0, 0.9861),
-           PowerLoad("Bus4", true, nodes5[4], 4.0, 1.3147),
+loads5 = [ PowerLoad("Bus2", true, nodes5[2], PowerSystems.ConstantPower, 3.0, 0.9861, 3.0, 0.9861),
+           PowerLoad("Bus3", true, nodes5[3], PowerSystems.ConstantPower, 3.0, 0.9861, 3.0, 0.9861),
+           PowerLoad("Bus4", true, nodes5[4], PowerSystems.ConstantPower, 4.0, 1.3147, 4.0, 1.3147),
         ];
 
-interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], "P", 0.10, 0.0, TwoPartCost(150.0, 2400.0))]
+interruptible = [InterruptibleLoad("IloadBus4", true, nodes5[4], PowerSystems.ConstantPower, 0.10, 0.0,  0.10, 0.0, TwoPartCost(150.0, 2400.0))]
 Iload_forecast = [Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead, loadbus4_ts_DA)),
                   Deterministic(interruptible[1], "scalingfactor", TimeArray(DayAhead+Day(1), loadbus4_ts_DA + 0.1*rand(24))),]
 
