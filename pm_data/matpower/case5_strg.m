@@ -28,11 +28,11 @@ mpc.gen = [
 %% generator cost data
 %	2	startup	shutdown	n	c(n-1)	...	c0
 mpc.gencost = [
-	2	 0.0	 0.0	 3	   0.000001	  14.000000	   0.000000;
-	2	 0.0	 0.0	 3	   0.000001	  15.000000	   0.000000;
-	2	 0.0	 0.0	 3	   0.000001	  30.000000	   0.000000;
-	2	 0.0	 0.0	 3	   0.000001	  40.000000	   0.000000;
-	2	 0.0	 0.0	 3	   0.000001	  10.000000	   0.000000;
+	2	 0.0	 0.0	 3	   0.000000	  14.000000	   0.000000;
+	2	 0.0	 0.0	 3	   0.000000	  15.000000	   0.000000;
+	2	 0.0	 0.0	 3	   0.000000	  30.000000	   0.000000;
+	2	 0.0	 0.0	 3	   0.000000	  40.000000	   0.000000;
+	2	 0.0	 0.0	 3	   0.000000	  10.000000	   0.000000;
 ];
 
 %% branch data
@@ -51,9 +51,9 @@ mpc.branch = [
 mpc.time_elapsed = 1.0
 
 %% storage data
-%   storage_bus  energy  energy_rating charge_rating  discharge_rating  charge_efficiency  discharge_efficiency  thermal_rating  qmin  qmax  r  x  standby_loss  status
+%   storage_bus ps qs energy  energy_rating charge_rating  discharge_rating  charge_efficiency  discharge_efficiency  thermal_rating  qmin  qmax  r  x  standby_loss  status
 mpc.storage = [
-	 3	 20.0	 100.0	 50.0	 70.0	 0.8	 0.9	 100.0	 -50.0	 70.0	 0.1	 0.0	 0.0	 1;
-	 10	 30.0	 100.0	 50.0	 70.0	 0.9	 0.8	 100.0	 -50.0	 70.0	 0.1	 0.0	 0.0	 1;
+	 3	 0.0	 0.0	 20.0	 100.0	 50.0	 70.0	 0.8	 0.9	 100.0	 -50.0	 70.0	 0.1	 0.0	 0.0	 1;
+	 10	 0.0	 0.0	 30.0	 100.0	 50.0	 70.0	 0.9	 0.8	 100.0	 -50.0	 70.0	 0.1	 0.0	 0.0	 1;
 ];
 
