@@ -62,10 +62,10 @@ generator:
 - {custom_name: Ramp Rate MW/Min, name: ramp_limits, system_per_unit: false}
 - {custom_name: Start Heat Cold MBTU, name: startup_heat_cold_cost}
 - {custom_name: HR_avg_0, name: heat_rate_avg_0}
-- {custom_name: HR_incr_1, name: heat_rate_avg_1}
-- {custom_name: HR_incr_2, name: heat_rate_avg_2}
-- {custom_name: HR_incr_3, name: heat_rate_avg_3}
-- {custom_name: HR_incr_4, name: heat_rate_avg_4}
+- {custom_name: HR_incr_1, name: heat_rate_incr_1}
+- {custom_name: HR_incr_2, name: heat_rate_incr_2}
+- {custom_name: HR_incr_3, name: heat_rate_incr_3}
+- {custom_name: HR_incr_4, name: heat_rate_incr_4}
 - {custom_name: Output_pct_0, name: output_percent_0}
 - {custom_name: Output_pct_1, name: output_percent_1}
 - {custom_name: Output_pct_2, name: output_percent_2}
