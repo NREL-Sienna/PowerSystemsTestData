@@ -96,7 +96,6 @@ reserves:
 - {custom_name: Reserve Category, name: reserve_category}
 simulation_objects: []
 storage:
-- {custom_name: GEN UID, name: name}
 - {custom_name: Storage, name: name}
 - {custom_name: BUS ID, name: bus_id}
 - {custom_name: Energy Level, name: energy_level}
