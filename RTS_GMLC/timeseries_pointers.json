@@ -3,7 +3,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -11,7 +11,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -19,7 +19,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -27,7 +27,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -35,7 +35,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -43,7 +43,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -51,7 +51,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "201_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -59,7 +59,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "215_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -67,7 +67,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "215_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -75,7 +75,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "215_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -83,7 +83,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -91,7 +91,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -99,7 +99,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -107,7 +107,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -115,7 +115,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -123,7 +123,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -131,7 +131,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -139,7 +139,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -147,7 +147,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -155,7 +155,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -163,7 +163,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -171,7 +171,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "314_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -179,7 +179,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "314_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -187,7 +187,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 95.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -195,7 +195,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "314_PV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 92.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -203,7 +203,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "314_PV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -211,7 +211,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 93.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -219,7 +219,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "310_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -227,7 +227,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "324_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 49.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -235,7 +235,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "312_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 94.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -243,7 +243,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "310_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -251,7 +251,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "324_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -259,7 +259,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "324_PV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -267,7 +267,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "113_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 93.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -275,7 +275,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "319_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 188.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -283,7 +283,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "215_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 125.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -291,7 +291,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "102_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -299,7 +299,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "101_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.900000000000002,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -307,7 +307,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "102_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -315,7 +315,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "104_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 26.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -323,7 +323,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "101_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 26.700000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -331,7 +331,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "101_PV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 26.200000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -339,7 +339,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "101_PV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -347,7 +347,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "103_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 61.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -355,7 +355,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "119_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 66.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/DAY_AHEAD_pv.csv"
     },
@@ -363,7 +363,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "308_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 100.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -371,7 +371,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 101.70000000000002,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -379,7 +379,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 63.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -387,7 +387,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 65.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -395,7 +395,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 67.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -403,7 +403,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 64.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -411,7 +411,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 63.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -419,7 +419,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_7",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 64.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -427,7 +427,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_8",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 66.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -435,7 +435,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_9",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 62.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -443,7 +443,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_10",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 66.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -451,7 +451,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_11",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 65.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -459,7 +459,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_12",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -467,7 +467,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -475,7 +475,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -483,7 +483,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 28.300000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -491,7 +491,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_13",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.200000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -499,7 +499,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -507,7 +507,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 28.199999999999996,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -515,7 +515,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -523,7 +523,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -531,7 +531,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -539,7 +539,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -547,7 +547,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -555,7 +555,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -563,7 +563,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -571,7 +571,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_7",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 11.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -579,7 +579,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_8",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 11.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -587,7 +587,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_9",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 10.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -595,7 +595,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_10",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 4.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -603,7 +603,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "213_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 13.200000000000001,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -611,7 +611,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "309_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 148.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/DAY_AHEAD_wind.csv"
     },
@@ -619,7 +619,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "317_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 799.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/DAY_AHEAD_wind.csv"
     },
@@ -627,7 +627,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "303_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 847.0000000000001,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/DAY_AHEAD_wind.csv"
     },
@@ -635,7 +635,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 713.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/DAY_AHEAD_wind.csv"
     },
@@ -643,7 +643,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -651,7 +651,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -659,7 +659,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -667,7 +667,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -675,7 +675,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -683,7 +683,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "122_HYDRO_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -691,7 +691,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "201_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -699,7 +699,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "215_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -707,7 +707,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "215_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -715,7 +715,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "215_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -723,7 +723,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -731,7 +731,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -739,7 +739,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -747,7 +747,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -755,7 +755,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -763,7 +763,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "222_HYDRO_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -771,7 +771,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -779,7 +779,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -787,7 +787,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -795,7 +795,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "322_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
     },
@@ -803,7 +803,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "308_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 100.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -811,7 +811,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 101.70000000000002,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -819,7 +819,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 63.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -827,7 +827,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 65.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -835,7 +835,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 67.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -843,7 +843,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 64.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -851,7 +851,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 63.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -859,7 +859,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_7",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 64.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -867,7 +867,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_8",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 66.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -875,7 +875,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_9",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 62.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -883,7 +883,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_10",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 66.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -891,7 +891,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_11",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 65.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -899,7 +899,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_12",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -907,7 +907,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -915,7 +915,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -923,7 +923,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 28.300000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -931,7 +931,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "313_RTPV_13",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.200000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -939,7 +939,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -947,7 +947,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 28.199999999999996,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -955,7 +955,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -963,7 +963,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -971,7 +971,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -979,7 +979,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -987,7 +987,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -995,7 +995,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -1003,7 +1003,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "320_RTPV_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -1011,7 +1011,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_7",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 11.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -1019,7 +1019,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_8",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 11.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -1027,7 +1027,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_9",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 10.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -1035,7 +1035,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "118_RTPV_10",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 4.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -1043,7 +1043,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "213_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 13.200000000000001,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/DAY_AHEAD_rtpv.csv"
     },
@@ -1051,7 +1051,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Reserve",
         "component_name": "Flex_Down",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/DAY_AHEAD_regional_Flex_Down.csv"
     },
@@ -1059,7 +1059,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Reserve",
         "component_name": "Flex_Up",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/DAY_AHEAD_regional_Flex_Up.csv"
     },
@@ -1067,7 +1067,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Reserve",
         "component_name": "Reg_Down",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/DAY_AHEAD_regional_Reg_Down.csv"
     },
@@ -1075,7 +1075,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Reserve",
         "component_name": "Reg_Up",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/DAY_AHEAD_regional_Reg_Up.csv"
     },
@@ -1083,7 +1083,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Reserve",
         "component_name": "Spin_Up_R1",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/DAY_AHEAD_regional_Spin_Up_R1.csv"
     },
@@ -1091,7 +1091,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Reserve",
         "component_name": "Spin_Up_R2",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/DAY_AHEAD_regional_Spin_Up_R2.csv"
     },
@@ -1099,7 +1099,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Reserve",
         "component_name": "Spin_Up_R3",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/DAY_AHEAD_regional_Spin_Up_R3.csv"
     },
@@ -1107,7 +1107,7 @@
         "simulation": "DAY_AHEAD",
         "category": "LoadZone",
         "component_name": "1",
-        "label": "maxactivepower",
+        "label": "get_maxactivepower",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv"
     },
@@ -1115,7 +1115,7 @@
         "simulation": "DAY_AHEAD",
         "category": "LoadZone",
         "component_name": "2",
-        "label": "maxactivepower",
+        "label": "get_maxactivepower",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv"
     },
@@ -1123,7 +1123,7 @@
         "simulation": "DAY_AHEAD",
         "category": "LoadZone",
         "component_name": "3",
-        "label": "maxactivepower",
+        "label": "get_maxactivepower",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv"
     },
@@ -1131,7 +1131,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Generator",
         "component_name": "212_CSP_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 200.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/DAY_AHEAD_Natural_Inflow.csv"
     },
@@ -1139,7 +1139,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "212_CSP_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 200.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/REAL_TIME_Natural_Inflow.csv"
     },
@@ -1147,7 +1147,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1155,7 +1155,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1163,7 +1163,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1171,7 +1171,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1179,7 +1179,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1187,7 +1187,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1195,7 +1195,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "201_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1203,7 +1203,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "215_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1211,7 +1211,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "215_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1219,7 +1219,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "215_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1227,7 +1227,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1235,7 +1235,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1243,7 +1243,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1251,7 +1251,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1259,7 +1259,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1267,7 +1267,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1275,7 +1275,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1283,7 +1283,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1291,7 +1291,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1299,7 +1299,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1307,7 +1307,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1315,7 +1315,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "314_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1323,7 +1323,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "314_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1331,7 +1331,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 95.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1339,7 +1339,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "314_PV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 92.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1347,7 +1347,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "314_PV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1355,7 +1355,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 93.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1363,7 +1363,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "310_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1371,7 +1371,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "324_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 49.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1379,7 +1379,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "312_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 94.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1387,7 +1387,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "310_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1395,7 +1395,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "324_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1403,7 +1403,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "324_PV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 51.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1411,7 +1411,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "113_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 93.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1419,7 +1419,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "319_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 188.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1427,7 +1427,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "215_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 125.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1435,7 +1435,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "102_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1443,7 +1443,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "101_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.900000000000002,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1451,7 +1451,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "102_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1459,7 +1459,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "104_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 26.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1467,7 +1467,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "101_PV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 26.700000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1475,7 +1475,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "101_PV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 26.200000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1483,7 +1483,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "101_PV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 25.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1491,7 +1491,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "103_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 61.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1499,7 +1499,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "119_PV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 66.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/PV/REAL_TIME_pv.csv"
     },
@@ -1507,7 +1507,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "308_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 100.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1515,7 +1515,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 101.70000000000002,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1523,7 +1523,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 63.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1531,7 +1531,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 65.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1539,7 +1539,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 67.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1547,7 +1547,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 64.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1555,7 +1555,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 63.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1563,7 +1563,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_7",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 64.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1571,7 +1571,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_8",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 66.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1579,7 +1579,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_9",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 62.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1587,7 +1587,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_10",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 66.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1595,7 +1595,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_11",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 65.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1603,7 +1603,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_12",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1611,7 +1611,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1619,7 +1619,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1627,7 +1627,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 28.300000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1635,7 +1635,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_13",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.200000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1643,7 +1643,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1651,7 +1651,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 28.199999999999996,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1659,7 +1659,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1667,7 +1667,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_2",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1675,7 +1675,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_3",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1683,7 +1683,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_4",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1691,7 +1691,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_5",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1699,7 +1699,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1707,7 +1707,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_6",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1715,7 +1715,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_7",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 11.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1723,7 +1723,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_8",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 11.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1731,7 +1731,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_9",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 10.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1739,7 +1739,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_10",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 4.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1747,7 +1747,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "213_RTPV_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 13.200000000000001,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1755,7 +1755,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "309_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 148.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/REAL_TIME_wind.csv"
     },
@@ -1763,7 +1763,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "317_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 799.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/REAL_TIME_wind.csv"
     },
@@ -1771,7 +1771,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "303_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 847.0000000000001,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/REAL_TIME_wind.csv"
     },
@@ -1779,7 +1779,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_WIND_1",
-        "label": "rating",
+        "label": "get_rating",
         "scaling_factor": 713.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/WIND/REAL_TIME_wind.csv"
     },
@@ -1787,7 +1787,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1795,7 +1795,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1803,7 +1803,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1811,7 +1811,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1819,7 +1819,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1827,7 +1827,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "122_HYDRO_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1835,7 +1835,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "201_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1843,7 +1843,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "215_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1851,7 +1851,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "215_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1859,7 +1859,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "215_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1867,7 +1867,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1875,7 +1875,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1883,7 +1883,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1891,7 +1891,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1899,7 +1899,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1907,7 +1907,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "222_HYDRO_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1915,7 +1915,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1923,7 +1923,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1931,7 +1931,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1939,7 +1939,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "322_HYDRO_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
@@ -1947,7 +1947,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "308_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 100.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1955,7 +1955,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 101.70000000000002,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1963,7 +1963,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 63.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1971,7 +1971,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 65.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1979,7 +1979,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 67.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1987,7 +1987,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 64.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -1995,7 +1995,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 63.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2003,7 +2003,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_7",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 64.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2011,7 +2011,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_8",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 66.6,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2019,7 +2019,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_9",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 62.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2027,7 +2027,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_10",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 66.9,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2035,7 +2035,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_11",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 65.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2043,7 +2043,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_12",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.800000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2051,7 +2051,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2059,7 +2059,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2067,7 +2067,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 28.300000000000004,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2075,7 +2075,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "313_RTPV_13",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.200000000000003,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2083,7 +2083,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 27.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2091,7 +2091,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 28.199999999999996,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2099,7 +2099,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2107,7 +2107,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_2",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2115,7 +2115,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_3",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2123,7 +2123,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_4",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2131,7 +2131,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_5",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.1,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2139,7 +2139,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.7,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2147,7 +2147,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "320_RTPV_6",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 9.4,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2155,7 +2155,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_7",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 11.8,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2163,7 +2163,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_8",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 11.2,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2171,7 +2171,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_9",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 10.3,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2179,7 +2179,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "118_RTPV_10",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 4.5,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2187,7 +2187,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "213_RTPV_1",
-        "label": "PMin MW",
+        "label": "get_active_power_limits_min",
         "scaling_factor": 13.200000000000001,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Renewable/RTPV/REAL_TIME_rtpv.csv"
     },
@@ -2195,7 +2195,7 @@
         "simulation": "REAL_TIME",
         "category": "Reserve",
         "component_name": "Reg_Down",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Reg_Down.csv"
     },
@@ -2203,7 +2203,7 @@
         "simulation": "REAL_TIME",
         "category": "Reserve",
         "component_name": "Reg_Up",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Reg_Up.csv"
     },
@@ -2211,7 +2211,7 @@
         "simulation": "REAL_TIME",
         "category": "Reserve",
         "component_name": "Spin_Up_R1",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R1.csv"
     },
@@ -2219,7 +2219,7 @@
         "simulation": "REAL_TIME",
         "category": "Reserve",
         "component_name": "Spin_Up_R2",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R2.csv"
     },
@@ -2227,7 +2227,7 @@
         "simulation": "REAL_TIME",
         "category": "Reserve",
         "component_name": "Spin_Up_R3",
-        "label": "Requirement",
+        "label": "get_requirement",
         "scaling_factor": 1.0,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R3.csv"
     },
@@ -2235,7 +2235,7 @@
         "simulation": "REAL_TIME",
         "category": "LoadZone",
         "component_name": "1",
-        "label": "MW Load",
+        "label": "get_maxactivepower",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv"
     },
@@ -2243,7 +2243,7 @@
         "simulation": "REAL_TIME",
         "category": "LoadZone",
         "component_name": "2",
-        "label": "MW Load",
+        "label": "get_maxactivepower",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv"
     },
@@ -2251,7 +2251,7 @@
         "simulation": "REAL_TIME",
         "category": "LoadZone",
         "component_name": "3",
-        "label": "MW Load",
+        "label": "get_maxactivepower",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv"
     }
