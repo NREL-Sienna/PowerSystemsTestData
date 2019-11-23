@@ -2212,7 +2212,7 @@
         "category": "Reserve",
         "component_name": "Spin_Up_R1",
         "label": "get_requirement",
-        "scaling_factor": 37.482,
+        "scaling_factor": 40.413,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R1.csv"
     },
     {
@@ -2220,7 +2220,7 @@
         "category": "Reserve",
         "component_name": "Spin_Up_R2",
         "label": "get_requirement",
-        "scaling_factor": 44.571,
+        "scaling_factor": 42.851,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R2.csv"
     },
     {
@@ -2228,7 +2228,7 @@
         "category": "Reserve",
         "component_name": "Spin_Up_R3",
         "label": "get_requirement",
-        "scaling_factor": 56.775,
+        "scaling_factor": 56.666,
         "data_file": "../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R3.csv"
     },
     {
