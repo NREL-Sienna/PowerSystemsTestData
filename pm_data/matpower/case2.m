@@ -18,6 +18,6 @@ mpc.branch = [
 ];
 
 mpc.bus_name = {
-    'Bus 1     LV';
-    'Bus 144   HV';
+	'Bus 1     LV';
+	'Bus 144   HV';
 };
