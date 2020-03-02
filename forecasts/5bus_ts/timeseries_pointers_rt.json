@@ -3,7 +3,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "SolarBusC",
-        "label": "get_active_power_limits_max",
+        "label": "get_rating",
         "scaling_factor": 1.0,
         "data_file": "./gen/Renewable/PV/rt_solar5.csv"
     },
@@ -11,7 +11,7 @@
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "WindBusA",
-        "label": "get_active_power_limits_max",
+        "label": "get_rating",
         "scaling_factor": 1.0,
         "data_file": "./gen/Renewable/WIND/rt_wind5.csv"
     },
