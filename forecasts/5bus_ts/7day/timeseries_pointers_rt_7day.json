@@ -1,0 +1,42 @@
+[
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "SolarBusC",
+        "label": "get_rating",
+        "scaling_factor": 36.7,
+        "data_file": "./rt_solar.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "WindBusA",
+        "label": "get_rating",
+        "scaling_factor": 99.18509696281339,
+        "data_file": "./rt_wind.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "ElectricLoad",
+        "component_name": "bus2",
+        "label": "get_maxactivepower",
+        "scaling_factor": 1139.57495,
+        "data_file": "./rt_load.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "ElectricLoad",
+        "component_name": "bus3",
+        "label": "get_maxactivepower",
+        "scaling_factor": 1139.57495,
+        "data_file": "./rt_load.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "ElectricLoad",
+        "component_name": "bus4",
+        "label": "get_maxactivepower",
+        "scaling_factor": 1139.57495,
+        "data_file": "./rt_load.csv"
+    }
+]
