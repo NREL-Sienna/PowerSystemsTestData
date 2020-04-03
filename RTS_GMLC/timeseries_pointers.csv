@@ -1,4 +1,4 @@
-Simulation,Category,Object,Parameter,Scaling Factor,Data File
+simulation,category,component_name,label,scaling_factor,data_file
 DAY_AHEAD,Generator,122_HYDRO_1,get_rating,52.49761899362675,../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv
 DAY_AHEAD,Generator,122_HYDRO_2,get_rating,52.49761899362675,../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv
 DAY_AHEAD,Generator,122_HYDRO_3,get_rating,52.49761899362675,../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv
