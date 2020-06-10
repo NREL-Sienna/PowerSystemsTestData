@@ -66,6 +66,17 @@ generator:
 - {custom_name: Non Fuel Shutdown Cost $, name: shutdown_cost}
 - {custom_name: Unit Type, name: unit_type}
 - {custom_name: Category, name: category}
+- {custom_name: Start Time Cold Hr, name: cold_start_time}
+- {custom_name: Start Time Warm Hr, name: warm_start_time}
+- {custom_name: Start Time Hot Hr, name: hot_start_time}
+- {custom_name: Startup Ramp Rate MW/min, name: startup_ramp, system_per_unit: false}
+- {custom_name: Shutdown Ramp Rate MW/min, name: shutdown_ramp, system_per_unit: false}
+- {custom_name: Status at Start, name: status_at_start}
+- {custom_name: Time at Status, name: time_at_status}
+- {custom_name: Start Cost Cold, name: cold_start_cost}
+- {custom_name: Start Cost Warm, name: warm_start_cost}
+- {custom_name: Start Cost Hot, name: hot_start_cost}
+- {custom_name: Must Run, name: must_run}
 load: []
 reserves:
 - {custom_name: Reserve Product, name: name}
