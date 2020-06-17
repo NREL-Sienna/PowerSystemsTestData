@@ -162,6 +162,318 @@
     {
         "simulation": "DAY_AHEAD",
         "category": "Generator",
+        "component_name": "122_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_5",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_6",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "201_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "215_HYDRO_1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "215_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "215_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_5",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_6",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_4",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_5",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "122_HYDRO_6",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "201_HYDRO_4",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "215_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "215_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "215_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_4",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_5",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "222_HYDRO_6",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "322_HYDRO_4",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
         "component_name": "320_PV_1",
         "label": "get_rating",
         "scaling_factor": 51.6,
@@ -892,6 +1204,326 @@
         "category": "Generator",
         "component_name": "322_HYDRO_4",
         "label": "get_rating",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_5",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_6",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "201_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "215_HYDRO_1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "215_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "215_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_5",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_6",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_2",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_4",
+        "label": "get_storage_capacity",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_4",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_5",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "122_HYDRO_6",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "201_HYDRO_4",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "215_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "215_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "215_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_4",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_5",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "222_HYDRO_6",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_1",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_2",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_3",
+        "label": "get_inflow",
+        "scaling_factor": 52.49761899362675,
+        "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "322_HYDRO_4",
+        "label": "get_inflow",
         "scaling_factor": 52.49761899362675,
         "data_file": "../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv"
     },
