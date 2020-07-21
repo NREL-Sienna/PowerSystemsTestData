@@ -1019,7 +1019,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Area",
         "component_name": "1",
-        "label": "get_max_active_power",
+        "label": "get_peak_active_power",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv"
     },
@@ -1027,7 +1027,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Area",
         "component_name": "2",
-        "label": "get_max_active_power",
+        "label": "get_peak_active_power",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv"
     },
@@ -1035,7 +1035,7 @@
         "simulation": "DAY_AHEAD",
         "category": "Area",
         "component_name": "3",
-        "label": "get_max_active_power",
+        "label": "get_peak_active_power",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv"
     },
@@ -2059,7 +2059,7 @@
         "simulation": "REAL_TIME",
         "category": "Area",
         "component_name": "1",
-        "label": "get_max_active_power",
+        "label": "get_peak_active_power",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv"
     },
@@ -2067,7 +2067,7 @@
         "simulation": "REAL_TIME",
         "category": "Area",
         "component_name": "2",
-        "label": "get_max_active_power",
+        "label": "get_peak_active_power",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv"
     },
@@ -2075,7 +2075,7 @@
         "simulation": "REAL_TIME",
         "category": "Area",
         "component_name": "3",
-        "label": "get_max_active_power",
+        "label": "get_peak_active_power",
         "scaling_factor": 2850.0,
         "data_file": "../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv"
     }
