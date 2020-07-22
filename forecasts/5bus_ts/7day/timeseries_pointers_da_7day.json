@@ -2,6 +2,62 @@
     {
         "simulation": "DAY_AHEAD",
         "category": "Generator",
+        "component_name": "HydroDispatch1",
+        "label": "get_max_active_power",
+        "scaling_factor": 1.0,
+        "data_file": "./da_hydro5_rating.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "HydroDispatch2",
+        "label": "get_max_active_power",
+        "scaling_factor": 1.0,
+        "data_file": "./da_hydro5_rating.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "HydroDispatch3",
+        "label": "get_max_active_power",
+        "scaling_factor": 1.0,
+        "data_file": "./da_hydro5_rating.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "HydroDispatch1",
+        "label": "get_inflow",
+        "scaling_factor": 1.0,
+        "data_file": "./da_hydro5_inflow.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "HydroDispatch3",
+        "label": "get_inflow",
+        "scaling_factor": 1.0,
+        "data_file": "./da_hydro5_storage.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "HydroDispatch1",
+        "label": "get_storage_capacity",
+        "scaling_factor": 1.0,
+        "data_file": "./da_hydro5_storage.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
+        "component_name": "HydroDispatch3",
+        "label": "get_storage_capacity",
+        "scaling_factor": 1.0,
+        "data_file": "./da_hydro5_storage.csv"
+    },
+    {
+        "simulation": "DAY_AHEAD",
+        "category": "Generator",
         "component_name": "SolarBusC",
         "label": "get_max_active_power",
         "scaling_factor": 1.0,
