@@ -137,9 +137,9 @@ DAY_AHEAD,Reserve,Reg_Up,get_requirement,1.0,../RTS_GMLC/Reserves/DAY_AHEAD_regi
 DAY_AHEAD,Reserve,Spin_Up_R1,get_requirement,1.0,../RTS_GMLC/Reserves/DAY_AHEAD_regional_Spin_Up_R1.csv
 DAY_AHEAD,Reserve,Spin_Up_R2,get_requirement,1.0,../RTS_GMLC/Reserves/DAY_AHEAD_regional_Spin_Up_R2.csv
 DAY_AHEAD,Reserve,Spin_Up_R3,get_requirement,1.0,../RTS_GMLC/Reserves/DAY_AHEAD_regional_Spin_Up_R3.csv
-DAY_AHEAD,Area,1,get_peak_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
-DAY_AHEAD,Area,2,get_peak_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
-DAY_AHEAD,Area,3,get_peak_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
+DAY_AHEAD,Area,1,get_max_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
+DAY_AHEAD,Area,2,get_max_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
+DAY_AHEAD,Area,3,get_max_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/DAY_AHEAD_regional_Load.csv
 DAY_AHEAD,Generator,212_CSP_1,get_max_active_power,200.0,../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/DAY_AHEAD_Natural_Inflow.csv
 REAL_TIME,Generator,212_CSP_1,get_max_active_power,200.0,../forecasts/RTS_GMLC_forecasts/gen/Renewable/CSP/REAL_TIME_Natural_Inflow.csv
 REAL_TIME,Generator,122_HYDRO_1,get_max_active_power,52.49761899362675,../forecasts/RTS_GMLC_forecasts/gen/Hydro/REAL_TIME_hydro.csv
@@ -278,6 +278,6 @@ REAL_TIME,Reserve,Reg_Up,get_requirement,1.0,../RTS_GMLC/Reserves/REAL_TIME_regi
 REAL_TIME,Reserve,Spin_Up_R1,get_requirement,1.0,../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R1.csv
 REAL_TIME,Reserve,Spin_Up_R2,get_requirement,1.0,../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R2.csv
 REAL_TIME,Reserve,Spin_Up_R3,get_requirement,1.0,../RTS_GMLC/Reserves/REAL_TIME_regional_Spin_Up_R3.csv
-REAL_TIME,Area,1,get_peak_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv
-REAL_TIME,Area,2,get_peak_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv
-REAL_TIME,Area,3,get_peak_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv
+REAL_TIME,Area,1,get_max_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv
+REAL_TIME,Area,2,get_max_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv
+REAL_TIME,Area,3,get_max_active_power,2850.0,../forecasts/RTS_GMLC_forecasts/load/REAL_TIME_regional_Load.csv
