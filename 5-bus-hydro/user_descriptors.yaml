@@ -40,7 +40,7 @@ generator:
 - {custom_name: Output_pct_0, name: output_point_0, unit_system: device_base}
 - {custom_name: Output_pct_1, name: output_point_1, unit_system: device_base}
 - {custom_name: Output_pct_2, name: output_point_2, unit_system: device_base}
-- {custom_name: Base MVA, name: base_mva}
+- {custom_name: Base MVA, name: base_mva, unit_system: natural_units}
 - {custom_name: Non Fuel Shutdown Cost $, name: shutdown_cost}
 - {custom_name: Unit Type, name: unit_type}
 - {custom_name: Category, name: category}

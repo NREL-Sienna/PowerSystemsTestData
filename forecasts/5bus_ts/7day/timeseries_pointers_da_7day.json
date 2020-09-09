@@ -4,7 +4,7 @@
         "category": "Generator",
         "component_name": "HydroDispatch1",
         "label": "get_max_active_power",
-        "scaling_factor": 1.0,
+        "scaling_factor": 30.0,
         "data_file": "./da_hydro5_rating.csv"
     },
     {
@@ -12,7 +12,7 @@
         "category": "Generator",
         "component_name": "HydroDispatch2",
         "label": "get_max_active_power",
-        "scaling_factor": 1.0,
+        "scaling_factor": 10.0,
         "data_file": "./da_hydro5_rating.csv"
     },
     {
@@ -20,7 +20,7 @@
         "category": "Generator",
         "component_name": "HydroDispatch3",
         "label": "get_max_active_power",
-        "scaling_factor": 1.0,
+        "scaling_factor": 75.0,
         "data_file": "./da_hydro5_rating.csv"
     },
     {
