@@ -1,4 +1,4 @@
-simulation,category,component_name,module,type,label,scaling_factor_multiplier,scaling_factor_multiplier_module,normalization_factor,data_file
+simulation,category,component_name,module,type,name,scaling_factor_multiplier,scaling_factor_multiplier_module,normalization_factor,data_file
 DAY_AHEAD,Generator,122_HYDRO_1,InfrastructureSystems,SingleTimeSeries,max_active_power,get_max_active_power,PowerSystems,52.49761899362675,../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv
 DAY_AHEAD,Generator,122_HYDRO_2,InfrastructureSystems,SingleTimeSeries,max_active_power,get_max_active_power,PowerSystems,52.49761899362675,../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv
 DAY_AHEAD,Generator,122_HYDRO_3,InfrastructureSystems,SingleTimeSeries,max_active_power,get_max_active_power,PowerSystems,52.49761899362675,../forecasts/RTS_GMLC_forecasts/gen/Hydro/DAY_AHEAD_hydro.csv
