@@ -1,6 +1,7 @@
 [
     {
         "simulation": "REAL_TIME",
+        "resolution": 300,
         "category": "Generator",
         "component_name": "SolarBusC",
         "module": "InfrastructureSystems",
@@ -13,6 +14,7 @@
     },
     {
         "simulation": "REAL_TIME",
+        "resolution": 300,
         "category": "Generator",
         "component_name": "WindBusA",
         "module": "InfrastructureSystems",
@@ -25,6 +27,7 @@
     },
     {
         "simulation": "REAL_TIME",
+        "resolution": 300,
         "category": "ElectricLoad",
         "component_name": "bus2",
         "module": "InfrastructureSystems",
@@ -37,6 +40,7 @@
     },
     {
         "simulation": "REAL_TIME",
+        "resolution": 300,
         "category": "ElectricLoad",
         "component_name": "bus3",
         "module": "InfrastructureSystems",
@@ -49,6 +53,7 @@
     },
     {
         "simulation": "REAL_TIME",
+        "resolution": 300,
         "category": "ElectricLoad",
         "component_name": "bus4",
         "module": "InfrastructureSystems",
