@@ -2,41 +2,113 @@
     {
         "simulation": "REAL_TIME",
         "category": "Generator",
-        "component_name": "SolarBusC",
-        "label": "get_rating",
+        "component_name": "HydroDispatch1",
+        "label": "get_max_active_power",
         "scaling_factor": 1.0,
-        "data_file": "./gen/Renewable/PV/rt_solar5.csv"
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_rating.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch2",
+        "label": "get_max_active_power",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_rating.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch3",
+        "label": "get_max_active_power",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_rating.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch1",
+        "label": "get_inflow",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_inflow.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch3",
+        "label": "get_inflow",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_storage.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch1",
+        "label": "get_storage_target",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_storage.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch3",
+        "label": "get_storage_target",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_storage.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch1",
+        "label": "get_hydro_budget",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_budget.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "HydroDispatch3",
+        "label": "get_hydro_budget",
+        "scaling_factor": 1.0,
+        "data_file": "../forecasts/5bus_ts/gen/Hydro/rt_hydro5_budget.csv"
+    },
+    {
+        "simulation": "REAL_TIME",
+        "category": "Generator",
+        "component_name": "SolarBusC",
+        "label": "get_max_active_power",
+        "scaling_factor": 36.7,
+        "data_file": "../forecasts/5bus_ts/gen/Renewable/PV/rt_solar.csv"
     },
     {
         "simulation": "REAL_TIME",
         "category": "Generator",
         "component_name": "WindBusA",
-        "label": "get_rating",
-        "scaling_factor": 1.0,
-        "data_file": "./gen/Renewable/WIND/rt_wind5.csv"
+        "label": "get_max_active_power",
+        "scaling_factor": 99.18509696281339,
+        "data_file": "../forecasts/5bus_ts/gen/Renewable/WIND/rt_wind.csv"
     },
     {
         "simulation": "REAL_TIME",
         "category": "ElectricLoad",
         "component_name": "bus2",
-        "label": "get_maxactivepower",
-        "scaling_factor": 1.0,
-        "data_file": "./load/rt_load5.csv"
+        "label": "get_max_active_power",
+        "scaling_factor": 1139.57495,
+        "data_file": "../forecasts/5bus_ts/load/rt_load5.csv"
     },
     {
         "simulation": "REAL_TIME",
         "category": "ElectricLoad",
         "component_name": "bus3",
-        "label": "get_maxactivepower",
-        "scaling_factor": 1.0,
-        "data_file": "./load/rt_load5.csv"
+        "label": "get_max_active_power",
+        "scaling_factor": 1139.57495,
+        "data_file": "../forecasts/5bus_ts/load/rt_load5.csv"
     },
     {
         "simulation": "REAL_TIME",
         "category": "ElectricLoad",
         "component_name": "bus4",
-        "label": "get_maxactivepower",
-        "scaling_factor": 1.0,
-        "data_file": "./load/rt_load5.csv"
+        "label": "get_max_active_power",
+        "scaling_factor": 1139.57495,
+        "data_file": "../forecasts/5bus_ts/load/rt_load5.csv"
     }
 ]
