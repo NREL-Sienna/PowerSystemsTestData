@@ -1653,7 +1653,7 @@
     {
         "simulation": "DAY_AHEAD",
         "resolution": 3600,
-        "category": "Area",
+        "category": "LoadZone",
         "component_name": "1",
         "module": "InfrastructureSystems",
         "type": "SingleTimeSeries",
@@ -1666,7 +1666,7 @@
     {
         "simulation": "DAY_AHEAD",
         "resolution": 3600,
-        "category": "Area",
+        "category": "LoadZone",
         "component_name": "2",
         "module": "InfrastructureSystems",
         "type": "SingleTimeSeries",
@@ -1679,7 +1679,7 @@
     {
         "simulation": "DAY_AHEAD",
         "resolution": 3600,
-        "category": "Area",
+        "category": "LoadZone",
         "component_name": "3",
         "module": "InfrastructureSystems",
         "type": "SingleTimeSeries",
@@ -3343,7 +3343,7 @@
     {
         "simulation": "REAL_TIME",
         "resolution": 300,
-        "category": "Area",
+        "category": "LoadZone",
         "component_name": "1",
         "module": "InfrastructureSystems",
         "type": "SingleTimeSeries",
@@ -3356,7 +3356,7 @@
     {
         "simulation": "REAL_TIME",
         "resolution": 300,
-        "category": "Area",
+        "category": "LoadZone",
         "component_name": "2",
         "module": "InfrastructureSystems",
         "type": "SingleTimeSeries",
@@ -3369,7 +3369,7 @@
     {
         "simulation": "REAL_TIME",
         "resolution": 300,
-        "category": "Area",
+        "category": "LoadZone",
         "component_name": "3",
         "module": "InfrastructureSystems",
         "type": "SingleTimeSeries",
