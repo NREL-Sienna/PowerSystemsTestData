@@ -10,7 +10,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 30.0,
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_rating.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_rating.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -23,7 +23,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 10.0,
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_rating.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_rating.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -36,7 +36,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 75.0,
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_rating.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_rating.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -49,7 +49,7 @@
         "scaling_factor_multiplier": "get_inflow",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": "max",
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_inflow.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_inflow.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -62,7 +62,7 @@
         "scaling_factor_multiplier": "get_inflow",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": "max",
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_storage.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_storage.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -73,7 +73,7 @@
         "type": "SingleTimeSeries",
         "name": "hydro_budget",
         "normalization_factor": 24,
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_budget.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_budget.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -84,7 +84,7 @@
         "type": "SingleTimeSeries",
         "name": "hydro_budget",
         "normalization_factor": 24,
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_budget.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_budget.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -97,7 +97,7 @@
         "scaling_factor_multiplier": "get_storage_target",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1.0,
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_storage.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_storage.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -110,7 +110,7 @@
         "scaling_factor_multiplier": "get_storage_target",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1.0,
-        "data_file": "../forecasts/5bus_ts/gen/Hydro/da_hydro5_storage.csv"
+        "data_file": "./5bus_ts/gen/Hydro/da_hydro5_storage.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -123,7 +123,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1.0,
-        "data_file": "../forecasts/5bus_ts/gen/Renewable/PV/da_solar.csv"
+        "data_file": "./5bus_ts/gen/Renewable/PV/da_solar.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -136,7 +136,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 95.06980631683862,
-        "data_file": "../forecasts/5bus_ts/gen/Renewable/WIND/da_wind.csv"
+        "data_file": "./5bus_ts/gen/Renewable/WIND/da_wind.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -149,7 +149,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1118.1893541666584,
-        "data_file": "../forecasts/5bus_ts/load/da_load5.csv"
+        "data_file": "./5bus_ts/load/da_load5.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -162,7 +162,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1118.1893541666584,
-        "data_file": "../forecasts/5bus_ts/load/da_load5.csv"
+        "data_file": "./5bus_ts/load/da_load5.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -175,7 +175,7 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 11.181893541666584,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "./5bus_ts/reserve/da_reserve.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -188,7 +188,7 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 22.36378708333317,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "./5bus_ts/reserve/da_reserve.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -201,7 +201,7 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 33.545680624999754,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "./5bus_ts/reserve/da_reserve.csv"
     },
         {
         "simulation": "DAY_AHEAD",
@@ -214,6 +214,6 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 44.72757416666634,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "./5bus_ts/reserve/da_reserve.csv"
     }
 ]
