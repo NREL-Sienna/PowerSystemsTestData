@@ -85,6 +85,8 @@ generator:
 - {custom_name: Start Cost Warm, name: warm_start_cost}
 - {custom_name: Start Cost Hot, name: hot_start_cost}
 - {custom_name: Must Run, name: must_run}
+- {custom_name: FOR, name: fotr}   # Outage Information Fields
+- {custom_name: MTTR Hr, name: mttr} # Outage Information Fields
 load: []
 reserves:
 - {custom_name: Reserve Product, name: name}

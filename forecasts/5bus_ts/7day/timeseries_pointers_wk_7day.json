@@ -1,7 +1,7 @@
 [
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch1",
         "module": "PowerSystems",
@@ -14,7 +14,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch2",
         "module": "PowerSystems",
@@ -27,7 +27,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch3",
         "module": "PowerSystems",
@@ -40,7 +40,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch1",
         "module": "PowerSystems",
@@ -53,7 +53,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch3",
         "module": "PowerSystems",
@@ -66,7 +66,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch1",
         "module": "PowerSystems",
@@ -79,7 +79,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch3",
         "module": "PowerSystems",
@@ -92,7 +92,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch1",
         "module": "PowerSystems",
@@ -103,7 +103,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "HydroDispatch3",
         "module": "PowerSystems",
@@ -114,7 +114,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "SolarBusC",
         "module": "PowerSystems",
@@ -127,7 +127,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Generator",
         "component_name": "WindBusA",
         "module": "PowerSystems",
@@ -140,7 +140,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "ElectricLoad",
         "component_name": "bus2",
         "module": "PowerSystems",
@@ -153,7 +153,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "ElectricLoad",
         "component_name": "bus3",
         "module": "PowerSystems",
@@ -166,7 +166,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "ElectricLoad",
         "component_name": "bus4",
         "module": "PowerSystems",
@@ -179,7 +179,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Reserve",
         "component_name": "REG1",
         "module": "PowerSystems",
@@ -192,7 +192,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Reserve",
         "component_name": "REG2",
         "module": "PowerSystems",
@@ -205,7 +205,7 @@
     },
     {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Reserve",
         "component_name": "REG3",
         "module": "PowerSystems",
@@ -218,7 +218,7 @@
     },
         {
         "simulation": "DAY_AHEAD",
-        "resolution": 3600,
+        "resolution": 86400,
         "category": "Reserve",
         "component_name": "REG4",
         "module": "PowerSystems",
