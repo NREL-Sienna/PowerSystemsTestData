@@ -149,7 +149,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1118.1893541666584,
-        "data_file": "../forecasts/5bus_ts/load/da_load5.csv"
+        "data_file": "../5bus_ts/load/da_load5.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -162,7 +162,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1118.1893541666584,
-        "data_file": "../forecasts/5bus_ts/load/da_load5.csv"
+        "data_file": "../5bus_ts/load/da_load5.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -175,7 +175,7 @@
         "scaling_factor_multiplier": "get_max_active_power",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1118.1893541666584,
-        "data_file": "../forecasts/5bus_ts/load/da_load5.csv"
+        "data_file": "../5bus_ts/load/da_load5.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -188,7 +188,7 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 11.181893541666584,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "../5bus_ts/reserve/da_reserve.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -201,7 +201,7 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 22.36378708333317,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "../5bus_ts/reserve/da_reserve.csv"
     },
     {
         "simulation": "DAY_AHEAD",
@@ -214,7 +214,7 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 33.545680624999754,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "../5bus_ts/reserve/da_reserve.csv"
     },
         {
         "simulation": "DAY_AHEAD",
@@ -227,6 +227,6 @@
         "scaling_factor_multiplier": "get_requirement",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 44.72757416666634,
-        "data_file": "../forecasts/5bus_ts/reserve/da_reserve.csv"
+        "data_file": "../5bus_ts/reserve/da_reserve.csv"
     }
 ]
