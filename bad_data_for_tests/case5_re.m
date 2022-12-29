@@ -3,7 +3,7 @@
 % used in tests of,
 % - non-contiguous bus ids
 % - tranformer orentation swapping
-% - dual values 
+% - dual values
 %
 
 function mpc = nesta_case5_pjm
