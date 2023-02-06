@@ -182,8 +182,7 @@ branches10_dc(nodes10_dc) = [
         r = 0.01,
         l = 0.01,
         c = 0.0,
-        active_power_limits_from = (min = -100.0, max = 100.0),
-        active_power_limits_to = (min = -100.0, max = 100.0),
+        rate = 100.0,
     ),
     TModelHVDCLine(
         name = "nodeD_DC-nodeD2_DC",
@@ -193,8 +192,7 @@ branches10_dc(nodes10_dc) = [
         r = 0.01,
         l = 0.01,
         c = 0.0,
-        active_power_limits_from = (min = -100.0, max = 100.0),
-        active_power_limits_to = (min = -100.0, max = 100.0),
+        rate = 100.0,
     ),
     TModelHVDCLine(
         name = "nodeC_DC-nodeD2_DC",
@@ -204,8 +202,7 @@ branches10_dc(nodes10_dc) = [
         r = 0.01,
         l = 0.01,
         c = 0.0,
-        active_power_limits_from = (min = -100.0, max = 100.0),
-        active_power_limits_to = (min = -100.0, max = 100.0),
+        rate = 100.0,
     ),
 ]
 
