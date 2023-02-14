@@ -13,7 +13,7 @@ nodes10() = [
     ACBus(6, "nodeA2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
     ACBus(7, "nodeB2", "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
     ACBus(8, "nodeC2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(9, "nodeD2", "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(9, "nodeD2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
     ACBus(10, "nodeE2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
 ];
 
