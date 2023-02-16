@@ -182,7 +182,7 @@ branches10_dc(nodes10_dc) = [
         r = 0.01,
         l = 0.01,
         c = 0.0,
-        rate = 100.0,
+        rate = 1.0,
     ),
     TModelHVDCLine(
         name = "nodeD_DC-nodeD2_DC",
@@ -192,7 +192,7 @@ branches10_dc(nodes10_dc) = [
         r = 0.01,
         l = 0.01,
         c = 0.0,
-        rate = 100.0,
+        rate = 1.0,
     ),
     TModelHVDCLine(
         name = "nodeC_DC-nodeD2_DC",
@@ -202,7 +202,7 @@ branches10_dc(nodes10_dc) = [
         r = 0.01,
         l = 0.01,
         c = 0.0,
-        rate = 100.0,
+        rate = 1.0,
     ),
 ]
 
@@ -537,7 +537,7 @@ ipcs_10bus(nodes, nodesdc) = [
         dc_bus = nodesdc[1],
         active_power = 0.0,
         rating = 2.0,
-        active_power_limits = (min = -10.0, max = 10.0),
+        active_power_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
     InterconnectingConverter(
@@ -547,7 +547,7 @@ ipcs_10bus(nodes, nodesdc) = [
         dc_bus = nodesdc[2],
         active_power = 0.0,
         rating = 2.0,
-        active_power_limits = (min = -10.0, max = 10.0),
+        active_power_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
     InterconnectingConverter(
@@ -557,7 +557,7 @@ ipcs_10bus(nodes, nodesdc) = [
         dc_bus = nodesdc[3],
         active_power = 0.0,
         rating = 2.0,
-        active_power_limits = (min = -10.0, max = 10.0),
+        active_power_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
     InterconnectingConverter(
@@ -567,7 +567,7 @@ ipcs_10bus(nodes, nodesdc) = [
         dc_bus = nodesdc[4],
         active_power = 0.0,
         rating = 2.0,
-        active_power_limits = (min = -10.0, max = 10.0),
+        active_power_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
 ]
