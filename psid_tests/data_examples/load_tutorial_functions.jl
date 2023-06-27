@@ -61,31 +61,19 @@ tg_tgov1() = SteamTurbineGov1(
     DB_l = 0.0,
     T_rate = 0.0
 )
-pss_none() = PSSFixed(0.0)
+pss_none_load() = PSSFixed(0.0)
 
 ##### Generator Constructor #####
 
 function dyn_genrou(gen)
     return PSY.DynamicGenerator(
-        name = get_name(gen),
+        name = PSY.get_name(gen),
         ω_ref = 1.0,
         machine = GENROU_ex(), 
         shaft = shaft_ex(), 
         avr = avr_sexs(), 
         prime_mover = tg_tgov1(), 
-        pss = pss_none(), 
-    )
-end
-
-function dyn_marconato(gen)
-    return PSY.DynamicGenerator(
-        name = get_name(gen),
-        ω_ref = 1.0,
-        machine = Marconato_ex(), 
-        shaft = shaft_ex(), 
-        avr = avr_sexs(), 
-        prime_mover = tg_tgov1(), 
-        pss = pss_none(), 
+        pss = pss_none_load(), 
     )
 end
 
@@ -113,14 +101,14 @@ function outer_control_droop_load()
         return PSY.ActivePowerDroop(Rp = 0.02, ωz = 2 * pi * 20)
     end
     function reactive_droop_load()
-        return ReactivePowerDroop(kq = 0.05, ωf = 2 * pi * 20)
+        return PSY.ReactivePowerDroop(kq = 0.05, ωf = 2 * pi * 20)
     end
-    return OuterControl(active_droop_load(), reactive_droop_load(), Dict{String,Any}("is_not_reference" => 0.0))
+    return PSY.OuterControl(active_droop_load(), reactive_droop_load(), Dict{String,Any}("is_not_reference" => 0.0))
 end
 
 
 ######## Inner Controls #########
-inner_control_load() = VoltageModeControl(
+inner_control_load() = PSY.VoltageModeControl(
     kpv = 0.59,     #Voltage controller proportional gain
     kiv = 736.0,    #Voltage controller integral gain
     kffv = 0.0,     #Binary variable enabling the voltage feed-forward in output of current controllers
@@ -137,13 +125,13 @@ inner_control_load() = VoltageModeControl(
 no_pll_load() = PSY.FixedFrequency()
 
 ######## Filter Data ########
-filt_load() = LCLFilter(lf = 0.08, rf = 0.003, cf = 0.074, lg = 0.2, rg = 0.01)
+filt_load() = PSY.LCLFilter(lf = 0.08, rf = 0.003, cf = 0.074, lg = 0.2, rg = 0.01)
 
 ####### DC Source Data #########
-stiff_source() = FixedDCSource(voltage = 690.0)
+stiff_source() = PSY.FixedDCSource(voltage = 690.0)
 
 ####### Converter Model #########
-average_converter_load() = AverageConverter(rated_voltage = 690.0, rated_current = 9999.0)
+average_converter_load() = PSY.AverageConverter(rated_voltage = 690.0, rated_current = 9999.0)
 
 
 ##### Inverter Constructors #####
@@ -151,7 +139,7 @@ average_converter_load() = AverageConverter(rated_voltage = 690.0, rated_current
 # Droop 
 function inv_droop(static_device)
     return PSY.DynamicInverter(
-        get_name(static_device), # name
+        PSY.get_name(static_device), # name
         1.0, #ω_ref
         average_converter_load(), # converter
         outer_control_droop_load(), # outer control
