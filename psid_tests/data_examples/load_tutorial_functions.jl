@@ -108,40 +108,19 @@ end
 ######## Outer Controls #########
 
 # Droop Controller
-function outer_control_droop()
-    function active_droop()
+function outer_control_droop_load()
+    function active_droop_load()
         return PSY.ActivePowerDroop(Rp = 0.02, ωz = 2 * pi * 20)
     end
-    function reactive_droop()
+    function reactive_droop_load()
         return ReactivePowerDroop(kq = 0.05, ωf = 2 * pi * 20)
     end
-    return OuterControl(active_droop(), reactive_droop(), Dict{String,Any}("is_not_reference" => 0.0))
+    return OuterControl(active_droop_load(), reactive_droop_load(), Dict{String,Any}("is_not_reference" => 0.0))
 end
 
-# VSM
-function outer_control_vsm()
-    function virtual_inertia()
-        return VirtualInertia(Ta = 0.397887, kd = 0.0, kω = 50.0)
-    end
-    function reactive_droop()
-        return ReactivePowerDroop(kq = 0.05, ωf = 2 * pi * 20)
-    end
-    return OuterControl(virtual_inertia(), reactive_droop())
-end
-
-# VOC
-function outer_control_voc()
-    function active_voc()
-        return PSY.ActiveVirtualOscillator(k1 = 0.02*1.0, ψ = pi / 4)
-    end
-    function reactive_voc()
-        return PSY.ReactiveVirtualOscillator(k2 = 0.4 * 1.0)
-    end
-    return OuterControl(active_voc(), reactive_voc(), Dict{String,Any}("is_not_reference" => 0.0))
-end
 
 ######## Inner Controls #########
-inner_control() = VoltageModeControl(
+inner_control_load() = VoltageModeControl(
     kpv = 0.59,     #Voltage controller proportional gain
     kiv = 736.0,    #Voltage controller integral gain
     kffv = 0.0,     #Binary variable enabling the voltage feed-forward in output of current controllers
@@ -155,141 +134,38 @@ inner_control() = VoltageModeControl(
 )
 
 ######## PLL Data ########
-no_pll() = PSY.FixedFrequency()
+no_pll_load() = PSY.FixedFrequency()
 
 ######## Filter Data ########
-filt() = LCLFilter(lf = 0.08, rf = 0.003, cf = 0.074, lg = 0.2, rg = 0.01)
-filt_no_dynamics() = LCLFilter(lf = 0.08, rf = 0.003, cf = 0.074, lg = 0.2, rg = 0.01, ext = Dict{String,Any}("is_filter_differential" => 0.0))
-filt_voc() = LCLFilter(lf = 0.0196, rf = 0.0139, cf = 0.1086, lg = 0.0196, rg = 0.0139)
+filt_load() = LCLFilter(lf = 0.08, rf = 0.003, cf = 0.074, lg = 0.2, rg = 0.01)
 
 ####### DC Source Data #########
 stiff_source() = FixedDCSource(voltage = 690.0)
 
 ####### Converter Model #########
-average_converter() = AverageConverter(rated_voltage = 690.0, rated_current = 9999.0)
+average_converter_load() = AverageConverter(rated_voltage = 690.0, rated_current = 9999.0)
 
 
 ##### Inverter Constructors #####
-# VSM
-function inv_vsm(static_device)
-    return PSY.DynamicInverter(
-        get_name(static_device), # name
-        1.0, #ω_ref
-        average_converter(), # converter
-        outer_control_vsm(), # outer control
-        inner_control(), # inner control
-        stiff_source(), # dc source
-        no_pll(), # pll
-        filt(), # filter
-    ) 
-end
-
-function inv_vsm_nodyn(static_device)
-    return PSY.DynamicInverter(
-        get_name(static_device), # name
-        1.0, #ω_ref
-        average_converter(), # converter
-        outer_control_vsm(), # outer control
-        inner_control(), # inner control
-        stiff_source(), # dc source
-        no_pll(), # pll
-        filt_no_dynamics(), # filter
-    ) 
-end
 
 # Droop 
 function inv_droop(static_device)
     return PSY.DynamicInverter(
         get_name(static_device), # name
         1.0, #ω_ref
-        average_converter(), # converter
-        outer_control_droop(), # outer control
-        inner_control(), # inner control
+        average_converter_load(), # converter
+        outer_control_droop_load(), # outer control
+        inner_control_load(), # inner control
         stiff_source(), # dc source
-        no_pll(), # pll
-        filt(), # filter
+        no_pll_load(), # pll
+        filt_load(), # filter
     ) 
 end
 
-function inv_droop_nodyn(static_device)
-    return PSY.DynamicInverter(
-        get_name(static_device), # name
-        1.0, #ω_ref
-        average_converter(), # converter
-        outer_control_droop(), # outer control
-        inner_control(), # inner control
-        stiff_source(), # dc source
-        no_pll(), # pll
-        filt_no_dynamics(), # filter
-    ) 
-end
-
-# VOC
-function inv_voc(static_device)
-    return PSY.DynamicInverter(
-        get_name(static_device), # name
-        1.0, #ω_ref
-        average_converter(), # converter
-        outer_control_voc(), # outer control
-        inner_control(), # inner control
-        stiff_source(), # dc source
-        no_pll(), # pll
-        filt(),
-        #filt_voc(), # filter
-    ) 
-end
-
-function inv_voc_nodyn(static_device)
-    return PSY.DynamicInverter(
-        get_name(static_device), # name
-        1.0, #ω_ref
-        average_converter(), # converter
-        outer_control_voc(), # outer control
-        inner_control(), # inner control
-        stiff_source(), # dc source
-        no_pll(), # pll
-        filt_no_dynamics(),
-        #filt_voc(), # filter
-    ) 
-end
 
 ###############################################
 ################## Load Data ##################
 ###############################################
-
-### Induction Machine ###
-
-# Parameters are taken from typical per-unit parameters
-# of Single Cage Induction Machine Motors provided in Lecture
-# Notes ELEC0047: Power System Dynamics, Control and Stability
-# by professor Thierry Van Cutsem from University of Liège
-# Link: https://thierryvancutsem.github.io/home/elec0047/dyn_of_ind_mac.pdf
-
-Ind_Motor(load) = SingleCageInductionMachine(
-    name = PSY.get_name(load),
-    R_s = 0.013,
-    R_r = 0.009,
-    X_ls = 0.067,
-    X_lr = 0.17,
-    X_m = 3.8,
-    H = 1.5,
-    A = 0.0,
-    B = 1.0, # Torque linearly proportional to speed.
-    base_power = 100.0,
-)
-
-Ind_Motor3rd(load) = SimplifiedSingleCageInductionMachine(
-    name = PSY.get_name(load),
-    R_s = 0.013,
-    R_r = 0.009,
-    X_ls = 0.067,
-    X_lr = 0.17,
-    X_m = 3.8,
-    H = 1.5,
-    A = 0.0,
-    B = 1.0,
-    base_power = 100.0,
-)
 
 # Parameters taken from active load model from N. Bottrell Masters
 # Thesis "Small-Signal Analysis of Active Loads and Large-signal Analysis
@@ -373,58 +249,10 @@ function get_genrou_system(raw_file)
     return sys
 end
 
-function get_marconato_system(raw_file)
-    sys = get_static_system(raw_file)
-    gen = get_component(ThermalStandard, sys, "generator-101-1")
-    dyn_device = dyn_marconato(gen)
-    add_component!(sys, dyn_device, gen)
-    return sys
-end
-
-function get_vsm_system(raw_file)
-    sys = get_static_system(raw_file)
-    gen = get_component(ThermalStandard, sys, "generator-101-1")
-    dyn_device = inv_vsm(gen)
-    add_component!(sys, dyn_device, gen)
-    return sys
-end
-
-function get_vsm_system_nodyn(raw_file)
-    sys = get_static_system(raw_file)
-    gen = get_component(ThermalStandard, sys, "generator-101-1")
-    dyn_device = inv_vsm_nodyn(gen)
-    add_component!(sys, dyn_device, gen)
-    return sys
-end
-
 function get_droop_system(raw_file)
     sys = get_static_system(raw_file)
     gen = get_component(ThermalStandard, sys, "generator-101-1")
     dyn_device = inv_droop(gen)
-    add_component!(sys, dyn_device, gen)
-    return sys
-end
-
-function get_droop_system_nodyn(raw_file)
-    sys = get_static_system(raw_file)
-    gen = get_component(ThermalStandard, sys, "generator-101-1")
-    dyn_device = inv_droop_nodyn(gen)
-    add_component!(sys, dyn_device, gen)
-    return sys
-end
-
-function get_voc_system(raw_file)
-    sys = get_static_system(raw_file)
-    gen = get_component(ThermalStandard, sys, "generator-101-1")
-    dyn_device = inv_voc(gen)
-    add_component!(sys, dyn_device, gen)
-    return sys
-end
-
-function get_voc_system_nodyn(raw_file)
-    sys = get_static_system(raw_file)
-    gen = get_component(ThermalStandard, sys, "generator-101-1")
-    dyn_device = inv_voc_nodyn(gen)
     add_component!(sys, dyn_device, gen)
     return sys
 end
