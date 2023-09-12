@@ -55,4 +55,4 @@ end
 
 #Compute Y_bus after fault
 fault_branches = deepcopy(collect(get_components(Branch, threebus_sys))[2:end])
-Ybus_fault = PSY.Ybus(fault_branches, get_components(Bus, threebus_sys))[:, :]
+Ybus_fault = PSY.Ybus(fault_branches, get_components(ACBus, threebus_sys))[:, :]
