@@ -1,6 +1,6 @@
 # PowerSystemsTestData
 
-This repository contains several data files in modeling packages in [SIIP](https://github.com/NREL-SIIP/).
+This repository contains several data files in modeling packages in [Sienna](https://github.com/NREL-Sienna).
 
 ## File directory
 
