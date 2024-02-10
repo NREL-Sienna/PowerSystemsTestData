@@ -14,5 +14,5 @@ This repository contains several data files in modeling packages in [Sienna](htt
 - psse_dyr: Data for PSSe dynamic models
 - psse_dyr: Data for PSSe power flow datasets
 - psy_data: Data directly typed in PowerSystems types.
-- RTS_GMLC: Slighlty modified data from the original [RTS-GMLC dataset](https://github.com/gridmod/rts-gmlc)
+- RTS_GMLC: Slightly modified data from the original [RTS-GMLC dataset](https://github.com/gridmod/rts-gmlc)
 - SyntheticUSA: TAMU PowerFlow Dataset of the whole continental United States (no timeseries)
