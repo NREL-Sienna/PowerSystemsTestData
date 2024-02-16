@@ -484,7 +484,8 @@ thermal_pglib_generators5(nodes5) = [
         (hot = 2.0, warm = 4.0, cold = 12.0),
         3,
         MultiStartCost(
-            VariableCost([(0.0, 5.0), (290.1, 7.33), (582.72, 9.67), (894.1, 12.0)]),
+            PiecewiseLinearPointData(
+                [(5.0, 0.0), (7.33, 290.1), (9.67, 582.72), (12.0, 894.1)]),
             897.29,
             0.0,
             (hot = 393.28, warm = 455.37, cold = 703.76),
@@ -510,7 +511,8 @@ thermal_pglib_generators5(nodes5) = [
         (hot = 1.0, warm = 999.0, cold = 999.0),
         1,
         MultiStartCost(
-            VariableCost([(0.0, 8.0), (391.45, 12.0), (783.74, 16.0), (1212.28, 20.0)]),
+            PiecewiseLinearPointData(
+                [(8.0, 0.0), (12.0, 391.45), (16.0, 783.74), (20.0, 1212.28)]),
             1085.78,
             0.0,
             (hot = 51.75, warm = PSY.START_COST, cold = PSY.START_COST),
@@ -715,7 +717,7 @@ hydro_generators5_ems(nodes5) = [
         ramp_limits = (up = 7.0, down = 7.0),
         time_limits = nothing,
         operation_cost = PSY.StorageManagementCost(
-            variable = VariableCost(0.15),
+            variable = LinearFunctionData(0.15),
             fixed = 0.0,
             start_up = 0.0,
             shut_down = 0.0,
@@ -795,7 +797,7 @@ batteryems5(nodes5) = [
          base_power = 100.0,
          storage_target=0.2,
          operation_cost = PSY.StorageManagementCost(
-            variable = VariableCost(0.0),
+            variable = LinearFunctionData(0.0),
             fixed = 0.0,
             start_up = 0.0,
             shut_down = 0.0,
