@@ -342,7 +342,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -0.30, max = 0.30),
         ramp_limits = nothing,
         time_limits = nothing,
-        operation_cost = ThreePartCost((0.0, 14.0), 0.0, 4.0, 2.0),
+        operation_cost = ThreePartCost(LinearFunctionData(14.0), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -359,7 +359,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -1.275, max = 1.275),
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost((0.0, 15.0), 0.0, 1.5, 0.75),
+        operation_cost = ThreePartCost(LinearFunctionData(15.0), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -376,7 +376,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -3.90, max = 3.90),
         ramp_limits = (up = 0.012 * 5.2, down = 0.012 * 5.2),
         time_limits = (up = 3.0, down = 2.0),
-        operation_cost = ThreePartCost((0.0, 30.0), 0.0, 3.0, 1.5),
+        operation_cost = ThreePartCost(LinearFunctionData(30.0), 0.0, 3.0, 1.5),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -393,7 +393,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -1.5, max = 1.5),
         ramp_limits = (up = 0.015 * 2.5, down = 0.015 * 2.5),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost((0.0, 40.0), 0.0, 4.0, 2.0),
+        operation_cost = ThreePartCost(LinearFunctionData(40.0), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -410,7 +410,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -4.50, max = 4.50),
         ramp_limits = (up = 0.015 * 7.5, down = 0.015 * 7.5),
         time_limits = (up = 5.0, down = 3.0),
-        operation_cost = ThreePartCost((0.0, 10.0), 0.0, 1.5, 0.75),
+        operation_cost = ThreePartCost(LinearFunctionData(10.0), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
 ];
@@ -431,7 +431,7 @@ thermal_generators5_pwl(nodes5) = [
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 2.0, down = 1.0),
         operation_cost = ThreePartCost(
-            VariableCost([(0.0, 50.0), (190.1, 80.0), (582.72, 120.0), (1094.1, 170.0)]),
+            PiecewiseLinearPointData([(50.0, 0.0), (80.0, 190.1), (120.0, 582.72), (170.0, 1094.1)]),
             0.0,
             1.5,
             0.75,
@@ -456,7 +456,7 @@ thermal_generators5_pwl_nonconvex(nodes5) = [
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 2.0, down = 1.0),
         operation_cost = ThreePartCost(
-            VariableCost([(0.0, 50.0), (190.1, 80.0), (582.72, 120.0), (825.1, 170.0)]),
+            PiecewiseLinearPointData([(50.0, 0.0), (80.0, 190.1), (120.0, 582.72), (170.0, 825.1)]),
             0.0,
             1.5,
             0.75,
@@ -484,7 +484,8 @@ thermal_pglib_generators5(nodes5) = [
         (hot = 2.0, warm = 4.0, cold = 12.0),
         3,
         MultiStartCost(
-            VariableCost([(0.0, 5.0), (290.1, 7.33), (582.72, 9.67), (894.1, 12.0)]),
+            PiecewiseLinearPointData(
+                [(5.0, 0.0), (7.33, 290.1), (9.67, 582.72), (12.0, 894.1)]),
             897.29,
             0.0,
             (hot = 393.28, warm = 455.37, cold = 703.76),
@@ -510,7 +511,8 @@ thermal_pglib_generators5(nodes5) = [
         (hot = 1.0, warm = 999.0, cold = 999.0),
         1,
         MultiStartCost(
-            VariableCost([(0.0, 8.0), (391.45, 12.0), (783.74, 16.0), (1212.28, 20.0)]),
+            PiecewiseLinearPointData(
+                [(8.0, 0.0), (12.0, 391.45), (16.0, 783.74), (20.0, 1212.28)]),
             1085.78,
             0.0,
             (hot = 51.75, warm = PSY.START_COST, cold = PSY.START_COST),
@@ -535,7 +537,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -0.30, max = 0.30),
         ramp_limits = (up = 0.40, down = 0.40),
         time_limits = (up = 0.0, down = 0.0),
-        operation_cost = ThreePartCost((0.0, 14.0), 0.0, 4.0, 2.0),
+        operation_cost = ThreePartCost(LinearFunctionData(14.0), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -552,7 +554,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -1.275, max = 1.275),
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 0.0, down = 0.0),
-        operation_cost = ThreePartCost((0.0, 15.0), 0.0, 1.5, 0.75),
+        operation_cost = ThreePartCost(QuadraticFunctionData(0.0, 15.0, 0.0), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -569,7 +571,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -3.90, max = 3.90),
         ramp_limits = (up = 0.0012 * 5.2, down = 0.0012 * 5.2),
         time_limits = (up = 5.0, down = 3.0),
-        operation_cost = ThreePartCost((0.0, 30.0), 0.0, 3.0, 1.5),
+        operation_cost = ThreePartCost(QuadraticFunctionData(0.0, 30.0, 0.0), 0.0, 3.0, 1.5),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -586,7 +588,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -1.5, max = 1.5),
         ramp_limits = (up = 0.015 * 2.5, down = 0.015 * 2.5),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost((0.0, 40.0), 0.0, 4.0, 2.0),
+        operation_cost = ThreePartCost(QuadraticFunctionData(0.0, 40.0, 0.0), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -603,7 +605,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -4.50, max = 4.50),
         ramp_limits = (up = 0.0015 * 7.5, down = 0.0015 * 7.5),
         time_limits = (up = 5.0, down = 3.0),
-        operation_cost = ThreePartCost((0.0, 10.0), 0.0, 1.5, 0.75),
+        operation_cost = ThreePartCost(QuadraticFunctionData(0.0, 10.0, 0.0), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
 ];
@@ -620,7 +622,7 @@ renewable_generators5(nodes5) = [
         PrimeMovers.WT,
         (min = 0.0, max = 0.0),
         1.0,
-        TwoPartCost(0.220, 0.0),
+        TwoPartCost(LinearFunctionData(0.220), 0.0),
         100.0,
     ),
     RenewableDispatch(
@@ -633,7 +635,7 @@ renewable_generators5(nodes5) = [
         PrimeMovers.WT,
         (min = 0.0, max = 0.0),
         1.0,
-        TwoPartCost(0.220, 0.0),
+        TwoPartCost(LinearFunctionData(0.220), 0.0),
         100.0,
     ),
     RenewableDispatch(
@@ -646,7 +648,7 @@ renewable_generators5(nodes5) = [
         PrimeMovers.WT,
         (min = -0.800, max = 0.800),
         1.0,
-        TwoPartCost(0.220, 0.0),
+        TwoPartCost(LinearFunctionData(0.220), 0.0),
         100.0,
     ),
 ];
@@ -678,7 +680,7 @@ hydro_generators5(nodes5) = [
         reactive_power_limits = (min = 0.0, max = 7.0),
         ramp_limits = (up = 7.0, down = 7.0),
         time_limits = nothing,
-        operation_cost = TwoPartCost(0.15, 0.0),
+        operation_cost = TwoPartCost(LinearFunctionData(0.15), 0.0),
         base_power = 100.0,
         storage_capacity = 50.0,
         inflow = 4.0,
@@ -715,7 +717,7 @@ hydro_generators5_ems(nodes5) = [
         ramp_limits = (up = 7.0, down = 7.0),
         time_limits = nothing,
         operation_cost = PSY.StorageManagementCost(
-            variable = VariableCost(0.15),
+            variable = LinearFunctionData(0.15),
             fixed = 0.0,
             start_up = 0.0,
             shut_down = 0.0,
@@ -744,7 +746,7 @@ phes5(nodes5) = [
         reactive_power_limits = (min = 0.0, max = 5.0),
         ramp_limits = (up = 10.0 * 0.5, down = 10.0 * 0.5),
         time_limits = nothing,
-        operation_cost = TwoPartCost(0.15, 0.0),
+        operation_cost = TwoPartCost(LinearFunctionData(0.15), 0.0),
         rating_pump = 0.2,
         active_power_limits_pump = (min = 0.0, max = 10.0),
         reactive_power_limits_pump = (min = 0.0, max = 10.0),
@@ -795,7 +797,7 @@ batteryems5(nodes5) = [
          base_power = 100.0,
          storage_target=0.2,
          operation_cost = PSY.StorageManagementCost(
-            variable = VariableCost(0.0),
+            variable = LinearFunctionData(0.0),
             fixed = 0.0,
             start_up = 0.0,
             shut_down = 0.0,
@@ -932,10 +934,10 @@ interruptible(nodes5) = [InterruptiblePowerLoad(
     1.00,
     0.0,
     100.0,
-    TwoPartCost(1.50, 24.0),
+    TwoPartCost(LinearFunctionData(1.50), 24.0),
 )]
 
-ORDC_cost = [(9000.0, 0.0), (6000.0, 0.2), (500.0, 0.4), (10.0, 0.6), (0.0, 0.8)]
+ORDC_cost = PiecewiseLinearPointData([(0.0, 9000.0), (0.2, 6000.0), (0.4, 500.0), (0.6, 10.0), (0.8, 0.0)])
 
 reserve5(thermal_generators5) = [
     VariableReserve{ReserveUp}(
