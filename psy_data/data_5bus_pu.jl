@@ -937,7 +937,7 @@ interruptible(nodes5) = [InterruptiblePowerLoad(
     TwoPartCost(LinearFunctionData(1.50), 24.0),
 )]
 
-ORDC_cost = [(9000.0, 0.0), (6000.0, 0.2), (500.0, 0.4), (10.0, 0.6), (0.0, 0.8)]
+ORDC_cost = PiecewiseLinearPointData([(0.0, 9000.0), (0.2, 6000.0), (0.4, 500.0), (0.6, 10.0), (0.8, 0.0)])
 
 reserve5(thermal_generators5) = [
     VariableReserve{ReserveUp}(
