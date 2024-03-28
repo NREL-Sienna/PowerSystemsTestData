@@ -730,6 +730,8 @@ hydro_generators5_ems(nodes5) = [
     ),
 ];
 
+
+# Modeling a 50 MW with 10 hours of duration.
 phes5(nodes5) = [
     HydroPumpedStorage(
         name = "HydroPumpedStorage",
@@ -737,26 +739,26 @@ phes5(nodes5) = [
         bus = nodes5[3],
         active_power = 0.0,
         reactive_power = 0.0,
-        rating = 5.0,
-        base_power = 100.0,
+        rating = 1.0,
+        base_power = 50.0,
         prime_mover_type = PrimeMovers.HY,
-        active_power_limits = (min = 0.0, max = 5.0),
-        reactive_power_limits = (min = 0.0, max = 5.0),
-        ramp_limits = (up = 10.0 * 0.5, down = 10.0 * 0.5),
+        active_power_limits = (min = 0.0, max = 1),
+        reactive_power_limits = (min = 0.0, max = 1),
+        ramp_limits = (up = 0.1, down = 0.1),
         time_limits = nothing,
         operation_cost = TwoPartCost(0.15, 0.0),
-        rating_pump = 0.2,
-        active_power_limits_pump = (min = 0.0, max = 10.0),
-        reactive_power_limits_pump = (min = 0.0, max = 10.0),
-        ramp_limits_pump = (up = 10.0 * 0.6, down = 10.0 * 0.6),
+        rating_pump = 1,
+        active_power_limits_pump = (min = 0.0, max = 1),
+        reactive_power_limits_pump = nothing,
+        ramp_limits_pump = (up = 1, down = 1),
         time_limits_pump = nothing,
-        storage_capacity = (up = 25.0, down = 25.0), # 50 pu * hr (i.e. 5 GWh)
-        inflow = 3.0,
-        outflow = 1.0,
-        initial_storage = (up = 0.5, down = 0.5),
-        storage_target = (up = 0.5, down = 0.75),
+        storage_capacity = (up = 2, down = 2),    # 2 pu * hr (10 hrs of storage)
+        inflow = 0.0,                             # Simple system with no inflow
+        outflow = 0.0,                            # Simple system with no outflow
+        initial_storage = (up = 0.0, down = 0.0), # Device with no charge at the start
+        storage_target = (up = 0.0, down = 0.0),  # Parameter outadated and does not accept nothing.
         conversion_factor = 1.0,
-        pump_efficiency = 1.0,
+        pump_efficiency = 0.8,
     ),
 ];
 
