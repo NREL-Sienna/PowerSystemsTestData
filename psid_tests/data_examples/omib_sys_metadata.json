@@ -17,7 +17,7 @@
             "count": 1
         },
         {
-            "type": "DynamicGenerator",
+            "type": "DynamicGenerator{BaseMachine, SingleMass, AVRFixed, TGFixed, PSSFixed}",
             "count": 1
         },
         {

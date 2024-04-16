@@ -17,11 +17,31 @@
             "count": 4
         },
         {
-            "type": "DynamicGenerator",
+            "type": "DynamicGenerator{RoundRotorQuadratic, SingleMass, SEXS, GasTG, IEEEST}",
             "count": 6
         },
         {
-            "type": "DynamicInverter",
+            "type": "DynamicGenerator{RoundRotorQuadratic, SingleMass, SEXS, GasTG, PSSFixed}",
+            "count": 41
+        },
+        {
+            "type": "DynamicGenerator{RoundRotorQuadratic, SingleMass, SEXS, HydroTurbineGov, IEEEST}",
+            "count": 3
+        },
+        {
+            "type": "DynamicGenerator{RoundRotorQuadratic, SingleMass, SEXS, HydroTurbineGov, PSSFixed}",
+            "count": 22
+        },
+        {
+            "type": "DynamicGenerator{RoundRotorQuadratic, SingleMass, SEXS, SteamTurbineGov1, IEEEST}",
+            "count": 1
+        },
+        {
+            "type": "DynamicGenerator{RoundRotorQuadratic, SingleMass, SEXS, SteamTurbineGov1, PSSFixed}",
+            "count": 36
+        },
+        {
+            "type": "DynamicInverter{RenewableEnergyConverterTypeA, OuterControl{ActiveRenewableControllerAB, ReactiveRenewableControllerAB}, RECurrentControlB, FixedDCSource, FixedFrequency, RLFilter, Nothing}",
             "count": 37
         },
         {
