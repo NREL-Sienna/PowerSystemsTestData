@@ -17,11 +17,11 @@
             "count": 1
         },
         {
-            "type": "DynamicGenerator",
+            "type": "DynamicGenerator{OneDOneQMachine, SingleMass, AVRTypeI, TGFixed, PSSFixed}",
             "count": 1
         },
         {
-            "type": "DynamicInverter",
+            "type": "DynamicInverter{AverageConverter, OuterControl{VirtualInertia, ReactivePowerDroop}, VoltageModeControl, FixedDCSource, KauraPLL, LCLFilter, Nothing}",
             "count": 1
         },
         {

@@ -17,7 +17,7 @@
             "count": 1
         },
         {
-            "type": "DynamicGenerator",
+            "type": "DynamicGenerator{AndersonFouadMachine, SingleMass, AVRTypeII, TGTypeI, PSSFixed}",
             "count": 3
         },
         {
