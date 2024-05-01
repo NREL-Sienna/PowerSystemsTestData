@@ -937,7 +937,7 @@ interruptible(nodes5) = [InterruptiblePowerLoad(
     LoadCost(CostCurve(LinearCurve(1.50)), 24.0),
 )]
 
-ORDC_cost = CostCurve(IncrementalCurve(PiecewisePointCurve([(0.0, 9000.0), (0.2, 6000.0), (0.4, 500.0), (0.6, 10.0), (0.8, 0.0)])), UnitSystem.DEVICE_BASE)
+ORDC_cost = PiecewiseStepData([0.0, 0.2, 0.4, 0.6, 0.8], [-15000.0, -27500.0, -2450.0, -50.0])
 
 reserve5(thermal_generators5) = [
     VariableReserve{ReserveUp}(
