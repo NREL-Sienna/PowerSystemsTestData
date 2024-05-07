@@ -937,7 +937,7 @@ interruptible(nodes5) = [InterruptiblePowerLoad(
     LoadCost(CostCurve(LinearCurve(1.50)), 24.0),
 )]
 
-ORDC_cost = CostCurve(IncrementalCurve(PiecewisePointCurve([(0.0, 9000.0), (0.2, 6000.0), (0.4, 500.0), (0.6, 10.0), (0.8, 0.0)])), UnitSystem.DEVICE_BASE)
+ORDC_cost = PiecewiseStepData([0.0, 0.2, 0.4, 0.6, 0.8], [-15000.0, -27500.0, -2450.0, -50.0])
 
 reserve5(thermal_generators5) = [
     VariableReserve{ReserveUp}(
@@ -985,7 +985,7 @@ ORDC_cost_ts = [
 ]
 
 # TODO: add a sensible cost for hybrid devices
-hybrid_cost = CostCurve(PiecewiseIncrementalCurve(25.0, [0.0, 1.0], [0.0]), UnitSystem.DEVICE_BASE)
+hybrid_cost = PiecewiseStepData([0.0, 1.0], [0.0])
 hybrid_cost_ts = [
     TimeSeries.TimeArray(DayAhead, repeat([hybrid_cost], 24)),
     TimeSeries.TimeArray(DayAhead + Day(1), repeat([hybrid_cost], 24)),
@@ -1032,7 +1032,7 @@ hydro_budget_RT = [
     [TimeSeries.TimeArray(RealTime + Day(1), repeat(hydro_inflow_ts_DA  * 0.8, inner = 12))],
 ];
 
-hybrid_cost_RT = CostCurve(PiecewiseIncrementalCurve(25.1, [0.0, 1.0], [0.0]), UnitSystem.DEVICE_BASE)
+hybrid_cost_RT = hybrid_cost = PiecewiseStepData([0.0, 1.0], [0.0])
 hybrid_cost_ts_RT = [
     [TimeSeries.TimeArray(RealTime, repeat([hybrid_cost], 288))],
     [TimeSeries.TimeArray(RealTime + Day(1), repeat([hybrid_cost_RT], 288))],
