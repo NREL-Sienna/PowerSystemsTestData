@@ -1,7 +1,7 @@
 ################# Fixed Cost values ####################
 thermal_generator_linear_cost(node) =
     ThermalStandard(
-        name="Test Linear Cost",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -10,7 +10,7 @@ thermal_generator_linear_cost(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -24,7 +24,7 @@ thermal_generator_linear_cost(node) =
 
 thermal_generator_linear_fuel(node) =
     ThermalStandard(
-        name="Test Linear Fuel",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -33,7 +33,7 @@ thermal_generator_linear_fuel(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -47,7 +47,7 @@ thermal_generator_linear_fuel(node) =
 
 thermal_generator_pwl_io_fuel(node) =
     ThermalStandard(
-        name="Test PWL Point",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -56,7 +56,7 @@ thermal_generator_pwl_io_fuel(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -70,7 +70,7 @@ thermal_generator_pwl_io_fuel(node) =
 
 thermal_generator_pwl_io_cost(node) =
     ThermalStandard(
-        name="Test PWL Point",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -79,7 +79,7 @@ thermal_generator_pwl_io_cost(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -93,7 +93,7 @@ thermal_generator_pwl_io_cost(node) =
 
 thermal_generator_pwl_incremental_cost(node) =
     ThermalStandard(
-        name="Test PWL Marginal",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -102,7 +102,7 @@ thermal_generator_pwl_incremental_cost(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -118,7 +118,7 @@ thermal_generator_pwl_incremental_cost(node) =
 
 thermal_generator_pwl_incremental_fuel(node) =
     ThermalStandard(
-        name="Test PWL fuel",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -127,7 +127,7 @@ thermal_generator_pwl_incremental_fuel(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -143,7 +143,7 @@ thermal_generator_pwl_incremental_fuel(node) =
 
 thermal_generator_quad_cost(node) =
     ThermalStandard(
-        name="Test quad cost",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -152,7 +152,7 @@ thermal_generator_quad_cost(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -166,7 +166,7 @@ thermal_generator_quad_cost(node) =
 
 thermal_generator_quad_fuel(node) =
     ThermalStandard(
-        name="Test quad fuel",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -175,7 +175,7 @@ thermal_generator_quad_fuel(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -189,7 +189,7 @@ thermal_generator_quad_fuel(node) =
 
 thermal_generator_pwl_io_cost_nonconvex(node) =
     ThermalStandard(
-        name="Test PWL Nonconvex",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -198,7 +198,7 @@ thermal_generator_pwl_io_cost_nonconvex(node) =
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -214,11 +214,11 @@ thermal_generator_pwl_io_cost_nonconvex(node) =
 function _get_fuel_cost_time_series()
     fuel_price_forecast = SortedDict{Dates.DateTime,TimeSeries.TimeArray}()
     ini_time = DateTime("1/1/2024  0:00:00", "d/m/y  H:M:S")
-    fuel_price = [[10.0, 3.0, 10.0, 1.0], [10.0, 3.0, 10.0, 1.0]]
+    fuel_price = [[10.0, 3.0, 10.0, 1.0, 1000.0], [10.0, 3.0, 10.0, 1.0, 1000.0]]
     for (ix, date) in enumerate(range(ini_time; length=2, step=Hour(1)))
         fuel_price_forecast[date] =
             TimeSeries.TimeArray(
-                range(ini_time; length=4, step=Hour(1)),
+                range(ini_time; length=5, step=Hour(1)),
                 fuel_price[ix],
             )
     end
@@ -227,7 +227,7 @@ end
 
 function thermal_generator_linear_fuel_ts(sys, node)
     gen = ThermalStandard(
-        name="Test Linear Fuel",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -236,7 +236,7 @@ function thermal_generator_linear_fuel_ts(sys, node)
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -254,7 +254,7 @@ end
 
 function thermal_generator_pwl_io_fuel_ts(sys, node)
     gen = ThermalStandard(
-        name="Test PWL Point",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -263,7 +263,7 @@ function thermal_generator_pwl_io_fuel_ts(sys, node)
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -281,7 +281,7 @@ end
 
 function thermal_generator_pwl_incremental_fuel_ts(sys, node)
     gen = ThermalStandard(
-        name="Test PWL fuel",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -290,7 +290,7 @@ function thermal_generator_pwl_incremental_fuel_ts(sys, node)
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
@@ -310,7 +310,7 @@ end
 
 function thermal_generator_quad_fuel_ts(sys, node)
     gen = ThermalStandard(
-        name="Test quad fuel",
+        name="Test Unit",
         available=true,
         status=true,
         bus=node,
@@ -319,7 +319,7 @@ function thermal_generator_quad_fuel_ts(sys, node)
         rating=2.2125,
         prime_mover_type=PrimeMovers.ST,
         fuel=ThermalFuels.COAL,
-        active_power_limits=(min=0.0, max=1.70),
+        active_power_limits=(min=0.5, max=1.70),
         reactive_power_limits=(min=-1.275, max=1.275),
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
