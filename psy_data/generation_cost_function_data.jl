@@ -132,7 +132,7 @@ thermal_generator_pwl_incremental_fuel(node) =
         ramp_limits=(up=0.02 * 2.2125, down=0.02 * 2.2125),
         time_limits=(up=2.0, down=1.0),
         operation_cost=ThermalGenerationCost(FuelCurve(
-                PiecewiseAverageCurve(30.0, [50.0, 80.0, 120.0, 170.0], [0.6337, 0.98155, 1.02276]),
+                PiecewiseIncrementalCurve(30.0, [50.0, 80.0, 120.0, 170.0], [0.6337, 0.98155, 1.02276]),
                 10.0),
             0.0,
             1.5,
