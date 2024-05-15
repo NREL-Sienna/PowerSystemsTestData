@@ -30,5 +30,5 @@ ThermalMultiStart:
 - {fuel: SYNC_COND, type: SYNC_COND}
 - {fuel: OTHER, type: OT}
 
-GenericBattery:
+EnergyReservoirStorage:
 - {fuel: STORAGE, type: null}

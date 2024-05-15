@@ -761,9 +761,10 @@ phes5(nodes5) = [
     ),
 ];
 
-battery5(nodes5) = [GenericBattery(
+battery5(nodes5) = [EnergyReservoirStorage(
     name = "Bat",
     prime_mover_type = PrimeMovers.BA,
+    storage_technology_type = StorageTech.OTHER_CHEM,
     available = true,
     bus = nodes5[1],
     initial_energy = 2.0,
