@@ -780,9 +780,10 @@ battery5(nodes5) = [EnergyReservoirStorage(
 )];
 
 batteryems5(nodes5) = [
-     PSY.BatteryEMS(;
+     PSY.EnergyReservoirStorage(;
          name = "Bat2",
          prime_mover_type = PrimeMovers.BA,
+         storage_technology_type = StorageTech.OTHER_CHEM,
          available = true,
          bus = nodes5[1],
          initial_energy = 5.0,
