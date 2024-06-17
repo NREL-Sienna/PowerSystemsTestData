@@ -941,7 +941,7 @@ interruptible(nodes5) = [InterruptiblePowerLoad(
     LoadCost(CostCurve(LinearCurve(1.50)), 24.0),
 )]
 # Natural Units: First vector: Power in MW, Second Vector: Slopes in $/MWh
-ORDC_cost = PiecewiseStepData([0.0, 20.0, 40.0, 60.0, 80.0], [150.0, 27.5, 24.5, 0.5])
+ORDC_cost = CostCurve(PiecewiseIncrementalCurve(0.0, [0.0, 20.0, 40.0, 60.0, 80.0], [150.0, 27.5, 24.5, 0.5]))
 
 reserve5(thermal_generators5) = [
     VariableReserve{ReserveUp}(
@@ -981,11 +981,6 @@ reserve5_il(interruptible_loads) = [
     VariableReserve{ReserveUp}("Reserve7", true, 30, 100),
     VariableReserve{ReserveDown}("Reserve8", true, 5, 50),
     ReserveDemandCurve{ReserveUp}(nothing, "ORDC1", true, 0.6),
-]
-
-ORDC_cost_ts = [
-    TimeSeries.TimeArray(DayAhead, repeat([ORDC_cost], 24)),
-    TimeSeries.TimeArray(DayAhead + Day(1), repeat([ORDC_cost], 24)),
 ]
 
 # TODO: add a sensible cost for hybrid devices
