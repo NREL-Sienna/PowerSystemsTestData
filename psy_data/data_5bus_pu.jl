@@ -940,8 +940,8 @@ interruptible(nodes5) = [InterruptiblePowerLoad(
     100.0,
     LoadCost(CostCurve(LinearCurve(1.50)), 24.0),
 )]
-
-ORDC_cost = PiecewiseStepData([0.0, 0.2, 0.4, 0.6, 0.8], [-15000.0, -27500.0, -2450.0, -50.0])
+# Natural Units: First vector: Power in MW, Second Vector: Slopes in $/MWh
+ORDC_cost = PiecewiseStepData([0.0, 20.0, 40.0, 60.0, 80.0], [150.0, 27.5, 24.5, 0.5])
 
 reserve5(thermal_generators5) = [
     VariableReserve{ReserveUp}(
