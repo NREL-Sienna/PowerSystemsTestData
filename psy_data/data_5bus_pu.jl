@@ -342,7 +342,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -0.30, max = 0.30),
         ramp_limits = nothing,
         time_limits = nothing,
-        operation_cost = ThreePartCost((0.0, 14.0), 0.0, 4.0, 2.0),
+        operation_cost = ThermalGenerationCost(CostCurve(LinearCurve(14.0)), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -359,7 +359,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -1.275, max = 1.275),
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost((0.0, 15.0), 0.0, 1.5, 0.75),
+        operation_cost = ThermalGenerationCost(CostCurve(LinearCurve(15.0)), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -376,7 +376,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -3.90, max = 3.90),
         ramp_limits = (up = 0.012 * 5.2, down = 0.012 * 5.2),
         time_limits = (up = 3.0, down = 2.0),
-        operation_cost = ThreePartCost((0.0, 30.0), 0.0, 3.0, 1.5),
+        operation_cost = ThermalGenerationCost(CostCurve(LinearCurve(30.0)), 0.0, 3.0, 1.5),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -393,7 +393,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -1.5, max = 1.5),
         ramp_limits = (up = 0.015 * 2.5, down = 0.015 * 2.5),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost((0.0, 40.0), 0.0, 4.0, 2.0),
+        operation_cost = ThermalGenerationCost(CostCurve(LinearCurve(40.0)), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -410,7 +410,7 @@ thermal_generators5(nodes5) = [
         reactive_power_limits = (min = -4.50, max = 4.50),
         ramp_limits = (up = 0.015 * 7.5, down = 0.015 * 7.5),
         time_limits = (up = 5.0, down = 3.0),
-        operation_cost = ThreePartCost((0.0, 10.0), 0.0, 1.5, 0.75),
+        operation_cost = ThermalGenerationCost(CostCurve(LinearCurve(10.0)), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
 ];
@@ -430,8 +430,7 @@ thermal_generators5_pwl(nodes5) = [
         reactive_power_limits = (min = -1.275, max = 1.275),
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost(
-            VariableCost([(0.0, 50.0), (190.1, 80.0), (582.72, 120.0), (1094.1, 170.0)]),
+        operation_cost = ThermalGenerationCost(CostCurve(PiecewisePointCurve([(50.0, 0.0), (80.0, 190.1), (120.0, 582.72), (170.0, 1094.1)])),
             0.0,
             1.5,
             0.75,
@@ -455,8 +454,7 @@ thermal_generators5_pwl_nonconvex(nodes5) = [
         reactive_power_limits = (min = -1.275, max = 1.275),
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost(
-            VariableCost([(0.0, 50.0), (190.1, 80.0), (582.72, 120.0), (825.1, 170.0)]),
+        operation_cost = ThermalGenerationCost(CostCurve(PiecewisePointCurve([(50.0, 0.0), (80.0, 190.1), (120.0, 582.72), (170.0, 825.1)])),
             0.0,
             1.5,
             0.75,
@@ -483,10 +481,10 @@ thermal_pglib_generators5(nodes5) = [
         (up = 4.0, down = 2.0),
         (hot = 2.0, warm = 4.0, cold = 12.0),
         3,
-        MultiStartCost(
-            VariableCost([(0.0, 5.0), (290.1, 7.33), (582.72, 9.67), (894.1, 12.0)]),
+        ThermalGenerationCost(
+            CostCurve(PiecewisePointCurve(
+                [(5.0, 0.0), (7.33, 290.1), (9.67, 582.72), (12.0, 894.1)])),
             897.29,
-            0.0,
             (hot = 393.28, warm = 455.37, cold = 703.76),
             0.0,
         ),
@@ -509,10 +507,10 @@ thermal_pglib_generators5(nodes5) = [
         (up = 1.0, down = 1.0),
         (hot = 1.0, warm = 999.0, cold = 999.0),
         1,
-        MultiStartCost(
-            VariableCost([(0.0, 8.0), (391.45, 12.0), (783.74, 16.0), (1212.28, 20.0)]),
+        ThermalGenerationCost(
+            CostCurve(PiecewisePointCurve(
+                [(8.0, 0.0), (12.0, 391.45), (16.0, 783.74), (20.0, 1212.28)])),
             1085.78,
-            0.0,
             (hot = 51.75, warm = PSY.START_COST, cold = PSY.START_COST),
             0.0,
         ),
@@ -535,7 +533,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -0.30, max = 0.30),
         ramp_limits = (up = 0.40, down = 0.40),
         time_limits = (up = 0.0, down = 0.0),
-        operation_cost = ThreePartCost((0.0, 14.0), 0.0, 4.0, 2.0),
+        operation_cost = ThermalGenerationCost(CostCurve(LinearCurve(14.0)), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -552,7 +550,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -1.275, max = 1.275),
         ramp_limits = (up = 0.02 * 2.2125, down = 0.02 * 2.2125),
         time_limits = (up = 0.0, down = 0.0),
-        operation_cost = ThreePartCost((0.0, 15.0), 0.0, 1.5, 0.75),
+        operation_cost = ThermalGenerationCost(CostCurve(QuadraticCurve(0.0, 15.0, 0.0)), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -569,7 +567,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -3.90, max = 3.90),
         ramp_limits = (up = 0.0012 * 5.2, down = 0.0012 * 5.2),
         time_limits = (up = 5.0, down = 3.0),
-        operation_cost = ThreePartCost((0.0, 30.0), 0.0, 3.0, 1.5),
+        operation_cost = ThermalGenerationCost(CostCurve(QuadraticCurve(0.0, 30.0, 0.0)), 0.0, 3.0, 1.5),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -586,7 +584,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -1.5, max = 1.5),
         ramp_limits = (up = 0.015 * 2.5, down = 0.015 * 2.5),
         time_limits = (up = 2.0, down = 1.0),
-        operation_cost = ThreePartCost((0.0, 40.0), 0.0, 4.0, 2.0),
+        operation_cost = ThermalGenerationCost(CostCurve(QuadraticCurve(0.0, 40.0, 0.0)), 0.0, 4.0, 2.0),
         base_power = 100.0,
     ),
     ThermalStandard(
@@ -603,7 +601,7 @@ thermal_generators5_uc_testing(nodes) = [
         reactive_power_limits = (min = -4.50, max = 4.50),
         ramp_limits = (up = 0.0015 * 7.5, down = 0.0015 * 7.5),
         time_limits = (up = 5.0, down = 3.0),
-        operation_cost = ThreePartCost((0.0, 10.0), 0.0, 1.5, 0.75),
+        operation_cost = ThermalGenerationCost(CostCurve(QuadraticCurve(0.0, 10.0, 0.0)), 0.0, 1.5, 0.75),
         base_power = 100.0,
     ),
 ];
@@ -620,7 +618,7 @@ renewable_generators5(nodes5) = [
         PrimeMovers.WT,
         (min = 0.0, max = 0.0),
         1.0,
-        TwoPartCost(0.220, 0.0),
+        RenewableGenerationCost(CostCurve(LinearCurve(0.220))),
         100.0,
     ),
     RenewableDispatch(
@@ -633,7 +631,7 @@ renewable_generators5(nodes5) = [
         PrimeMovers.WT,
         (min = 0.0, max = 0.0),
         1.0,
-        TwoPartCost(0.220, 0.0),
+        RenewableGenerationCost(CostCurve(LinearCurve(0.220))),
         100.0,
     ),
     RenewableDispatch(
@@ -646,7 +644,7 @@ renewable_generators5(nodes5) = [
         PrimeMovers.WT,
         (min = -0.800, max = 0.800),
         1.0,
-        TwoPartCost(0.220, 0.0),
+        RenewableGenerationCost(CostCurve(LinearCurve(0.220))),
         100.0,
     ),
 ];
@@ -678,7 +676,7 @@ hydro_generators5(nodes5) = [
         reactive_power_limits = (min = 0.0, max = 7.0),
         ramp_limits = (up = 7.0, down = 7.0),
         time_limits = nothing,
-        operation_cost = TwoPartCost(0.15, 0.0),
+        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
         base_power = 100.0,
         storage_capacity = 50.0,
         inflow = 4.0,
@@ -714,8 +712,9 @@ hydro_generators5_ems(nodes5) = [
         reactive_power_limits = (min = 0.0, max = 7.0),
         ramp_limits = (up = 7.0, down = 7.0),
         time_limits = nothing,
-        operation_cost = PSY.StorageManagementCost(
-            variable = VariableCost(0.15),
+        operation_cost = PSY.StorageCost(;
+            charge_variable_cost = CostCurve(LinearCurve(0.15)),
+            discharge_variable_cost = CostCurve(LinearCurve(0.15)),
             fixed = 0.0,
             start_up = 0.0,
             shut_down = 0.0,
@@ -746,7 +745,7 @@ phes5(nodes5) = [
         reactive_power_limits = (min = 0.0, max = 1),
         ramp_limits = (up = 0.1, down = 0.1),
         time_limits = nothing,
-        operation_cost = TwoPartCost(0.15, 0.0),
+        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
         rating_pump = 1,
         active_power_limits_pump = (min = 0.0, max = 1),
         reactive_power_limits_pump = nothing,
@@ -762,13 +761,15 @@ phes5(nodes5) = [
     ),
 ];
 
-battery5(nodes5) = [GenericBattery(
+battery5(nodes5) = [EnergyReservoirStorage(
     name = "Bat",
     prime_mover_type = PrimeMovers.BA,
+    storage_technology_type = StorageTech.OTHER_CHEM,
     available = true,
     bus = nodes5[1],
-    initial_energy = 2.0,
-    state_of_charge_limits = (min = 0.05, max = 4.0),
+    storage_capacity = 4.0,
+    storage_level_limits = (min = 0.05 / 4.0, max = 4.0 / 4.0),
+    initial_storage_capacity_level = 2.0 / 4.0,
     rating = 4.0,
     active_power = 4.0,
     input_active_power_limits = (min = 0.0, max = 2.0),
@@ -780,13 +781,15 @@ battery5(nodes5) = [GenericBattery(
 )];
 
 batteryems5(nodes5) = [
-     PSY.BatteryEMS(;
+     PSY.EnergyReservoirStorage(;
          name = "Bat2",
          prime_mover_type = PrimeMovers.BA,
+         storage_technology_type = StorageTech.OTHER_CHEM,
          available = true,
          bus = nodes5[1],
-         initial_energy = 5.0,
-         state_of_charge_limits = (min = .10, max = 7.0),
+         storage_capacity = 7.0,
+         storage_level_limits = (min = .10 / 7.0, max = 7.0 / 7.0),
+         initial_storage_capacity_level = 5.0 / 7.0,
          rating = 7.0,
          active_power = 2.0,
          input_active_power_limits = (min = 0.0, max = 2.0),
@@ -795,15 +798,16 @@ batteryems5(nodes5) = [
          reactive_power = 0.0,
          reactive_power_limits = (min = -2.0, max = 2.0),
          base_power = 100.0,
-         storage_target=0.2,
-         operation_cost = PSY.StorageManagementCost(
-            variable = VariableCost(0.0),
+         storage_target = 0.2,
+         operation_cost = PSY.StorageCost(;
+            charge_variable_cost = zero(CostCurve),
+            discharge_variable_cost = zero(CostCurve),
             fixed = 0.0,
             start_up = 0.0,
             shut_down = 0.0,
             energy_shortage_cost = 50.0,
             energy_surplus_cost = 40.0,
-         ),
+        ),
      )
  ];
 
@@ -934,10 +938,10 @@ interruptible(nodes5) = [InterruptiblePowerLoad(
     1.00,
     0.0,
     100.0,
-    TwoPartCost(1.50, 24.0),
+    LoadCost(CostCurve(LinearCurve(1.50)), 24.0),
 )]
-
-ORDC_cost = [(9000.0, 0.0), (6000.0, 0.2), (500.0, 0.4), (10.0, 0.6), (0.0, 0.8)]
+# Natural Units: First vector: Power in MW, Second Vector: Slopes in $/MWh
+ORDC_cost = CostCurve(PiecewiseIncrementalCurve(0.0, [0.0, 20.0, 40.0, 60.0, 80.0], [150.0, 27.5, 24.5, 0.5]))
 
 reserve5(thermal_generators5) = [
     VariableReserve{ReserveUp}(
@@ -979,15 +983,11 @@ reserve5_il(interruptible_loads) = [
     ReserveDemandCurve{ReserveUp}(nothing, "ORDC1", true, 0.6),
 ]
 
-ORDC_cost_ts = [
-    TimeSeries.TimeArray(DayAhead, repeat([ORDC_cost], 24)),
-    TimeSeries.TimeArray(DayAhead + Day(1), repeat([ORDC_cost], 24)),
-]
-
 # TODO: add a sensible cost for hybrid devices
+hybrid_cost = PiecewiseStepData([0.0, 1.0], [0.0])
 hybrid_cost_ts = [
-    TimeSeries.TimeArray(DayAhead, repeat([25.0], 24)),
-    TimeSeries.TimeArray(DayAhead + Day(1), repeat([25.0], 24)),
+    TimeSeries.TimeArray(DayAhead, repeat([hybrid_cost], 24)),
+    TimeSeries.TimeArray(DayAhead + Day(1), repeat([hybrid_cost], 24)),
 ]
 
 Reserve_ts = [TimeSeries.TimeArray(DayAhead, rand(24)), TimeSeries.TimeArray(DayAhead + Day(1), rand(24))]
@@ -1031,9 +1031,10 @@ hydro_budget_RT = [
     [TimeSeries.TimeArray(RealTime + Day(1), repeat(hydro_inflow_ts_DA  * 0.8, inner = 12))],
 ];
 
+hybrid_cost_RT = hybrid_cost = PiecewiseStepData([0.0, 1.0], [0.0])
 hybrid_cost_ts_RT = [
-    [TimeSeries.TimeArray(RealTime, repeat([25.0], 288))],
-    [TimeSeries.TimeArray(RealTime + Day(1), ones(288) * 0.1 + repeat([25.0], 288))],
+    [TimeSeries.TimeArray(RealTime, repeat([hybrid_cost], 288))],
+    [TimeSeries.TimeArray(RealTime + Day(1), repeat([hybrid_cost_RT], 288))],
 ];
 
 load_timeseries_RT = [

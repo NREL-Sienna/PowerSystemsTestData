@@ -20,7 +20,7 @@ RenewableDispatch:
 - {fuel: WIND, type: null}
 - {fuel: SOLAR, type: CSP}  # TODO: may need a new struct
 
-RenewableFix:
+RenewableNonDispatch:
 - {fuel: SOLAR, type: RTPV}
 
 ThermalStandard:
@@ -34,5 +34,5 @@ ThermalStandard:
 - {fuel: SYNC_COND, type: SYNC_COND}
 - {fuel: OTHER, type: OT}
 
-GenericBattery:
+EnergyReservoirStorage:
 - {fuel: STORAGE, type: null}

@@ -5,6 +5,10 @@
     "time_series_resolution_milliseconds": 0,
     "component_counts": [
         {
+            "type": "ACBus",
+            "count": 2
+        },
+        {
             "type": "Arc",
             "count": 1
         },
@@ -13,11 +17,7 @@
             "count": 1
         },
         {
-            "type": "Bus",
-            "count": 2
-        },
-        {
-            "type": "DynamicGenerator",
+            "type": "DynamicGenerator{BaseMachine, SingleMass, AVRFixed, TGFixed, PSSFixed}",
             "count": 1
         },
         {

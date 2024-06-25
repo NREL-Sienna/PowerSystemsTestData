@@ -6,43 +6,39 @@
     "component_counts": [
         {
             "type": "ACBus",
-            "count": 3
+            "count": 9
         },
         {
             "type": "Arc",
-            "count": 3
+            "count": 9
         },
         {
             "type": "Area",
             "count": 1
         },
         {
-            "type": "DynamicGenerator{OneDOneQMachine, SingleMass, AVRTypeI, TGFixed, PSSFixed}",
-            "count": 1
-        },
-        {
-            "type": "DynamicInverter{AverageConverter, OuterControl{VirtualInertia, ReactivePowerDroop}, VoltageModeControl, FixedDCSource, KauraPLL, LCLFilter, Nothing}",
-            "count": 1
+            "type": "DynamicGenerator{AndersonFouadMachine, SingleMass, AVRTypeII, TGTypeI, PSSFixed}",
+            "count": 3
         },
         {
             "type": "Line",
-            "count": 3
+            "count": 6
         },
         {
             "type": "LoadZone",
             "count": 1
         },
         {
-            "type": "Source",
-            "count": 1
-        },
-        {
-            "type": "StandardLoad",
+            "type": "PowerLoad",
             "count": 3
         },
         {
             "type": "ThermalStandard",
-            "count": 2
+            "count": 3
+        },
+        {
+            "type": "Transformer2W",
+            "count": 3
         }
     ],
     "time_series_counts": [
