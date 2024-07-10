@@ -175,10 +175,6 @@ P_limit_9T = 2.0
 # 908 with 10219 (Twin)
 # 909 with 10206 (Twin)
 
-function get_bus_by_number(sys, number)
-    return first(get_components(x -> x.number == number, Bus, sys))
-end
-
 # For 7T system
 bus_arcs_7T = [
     (701, 107),
