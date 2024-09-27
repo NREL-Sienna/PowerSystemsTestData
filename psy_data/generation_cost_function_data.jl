@@ -498,8 +498,8 @@ function thermal_generators_market_bid_ts(sys, node)
 
     PSY.add_component!(sys, gen1)
     PSY.add_component!(sys, gen2)
-    PSY.set_variable_cost!(sys, gen1, market_bid_gen1)
-    PSY.set_variable_cost!(sys, gen2, market_bid_gen2)
+    PSY.set_variable_cost!(sys, gen1, market_bid_gen1, PSY.UnitSystem.NATURAL_UNITS)
+    PSY.set_variable_cost!(sys, gen2, market_bid_gen2, PSY.UnitSystem.NATURAL_UNITS)
 
     return [gen1, gen2]
 end
