@@ -983,6 +983,13 @@ reserve5_il(interruptible_loads) = [
     ReserveDemandCurve{ReserveUp}(nothing, "ORDC1", true, 0.6),
 ]
 
+
+reserve5_phes(phes5) = [
+    VariableReserve{ReserveUp}("Reserve9", true, 30, 100),
+    VariableReserve{ReserveDown}("Reserve10", true, 5, 50),
+    ReserveDemandCurve{ReserveUp}(nothing, "ORDC1", true, 0.6),
+]
+
 # TODO: add a sensible cost for hybrid devices
 hybrid_cost = PiecewiseStepData([0.0, 1.0], [0.0])
 hybrid_cost_ts = [
