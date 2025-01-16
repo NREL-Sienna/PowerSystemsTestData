@@ -591,6 +591,8 @@ ipcs_10bus(nodes, nodesdc) = [
         active_power = 0.0,
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
+        dc_current = 0.0,
+        dc_current_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
     InterconnectingConverter(
@@ -601,6 +603,8 @@ ipcs_10bus(nodes, nodesdc) = [
         active_power = 0.0,
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
+        dc_current = 0.0,
+        dc_current_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
     InterconnectingConverter(
@@ -611,6 +615,8 @@ ipcs_10bus(nodes, nodesdc) = [
         active_power = 0.0,
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
+        dc_current = 0.0,
+        dc_current_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
     InterconnectingConverter(
@@ -621,6 +627,8 @@ ipcs_10bus(nodes, nodesdc) = [
         active_power = 0.0,
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
+        dc_current = 0.0,
+        dc_current_limits = (min = -1.0, max = 1.0),
         base_power = 100.0,
     ),
 ]
