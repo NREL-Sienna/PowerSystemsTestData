@@ -6,5 +6,4 @@
 *.ipynb_checkpoints
 Manifest.toml
 .vscode
-*.h5
 tags
