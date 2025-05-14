@@ -732,24 +732,8 @@ hydro_generators5_ems(nodes5) = [
 
 # Modeling a 50 MW with 10 hours of duration.
 function phes5(nodes5)
-    turbine = HydroTurbine(;
-        name = "HydroTurbine",
-        available = true,
-        bus = nodes5[3],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 1,
-        base_power = 50.0,
-        active_power_limits = (min = 0.0, max = 1),
-        reactive_power_limits = (min = 0.0, max = 1),
-        outflow_limits = nothing,
-        ramp_limits = (up = 0.1, down = 0.1),
-        time_limits = nothing,
-        powerhouse_elevation = 0.0,
-    )
-
-    reservoir = HydroReservoir(;
-        name = "Reservoir",
+    head_reservoir = HydroReservoir(;
+        name = "Head Reservoir",
         available = true,
         initial_level = 0.,
         storage_level_limits = (min = 0.0, max = 2.0),
@@ -761,45 +745,53 @@ function phes5(nodes5)
         head_to_volume_factor = 1.0,
         intake_elevation = 100.0,
     )
-    
-    set_reservoirs!(turbine, [reservoir])
 
-    @show turbine
-    @show reservoir
+    tail_reservoir = HydroReservoir(;
+        name = "Tail Reservoir",
+        available = true,
+        initial_level = 0.,
+        storage_level_limits = (min = 0.0, max = 2.0),
+        spillage_limits = nothing,
+        inflow = 0.0,
+        outflow = 0.0,
+        level_targets = 0.15,
+        travel_time = nothing,
+        head_to_volume_factor = 1.0,
+        intake_elevation = 0.0,
+    )
 
-    return [turbine, reservoir]
+    turbine = HydroPumpTurbine(;
+        name="HydroPumpTurbine",
+        available=true,
+        bus=nodes5[3],
+        active_power=0.0,
+        reactive_power=0.0,
+        rating=1.0,
+        active_power_limits=(min=0.0, max=1.0),
+        reactive_power_limits=(min=0.0, max=1.0),
+        active_power_limits_pump=(min=0.0, max=1.0),
+        outflow_limits=(min=0.0, max=1.0),
+        head_reservoir=head_reservoir,
+        tail_reservoir=tail_reservoir,
+        powerhouse_elevation=0.0,
+        ramp_limits=(up = 0.1, down = 0.1),
+        time_limits=nothing,
+        base_power=50.0,
+        operation_cost=HydroGenerationCost(nothing),
+        active_power_pump=0.0,
+        efficiency=(turbine = 0.9, pump = 0.8),
+        transition_time=(turbine = 0.1, pump = 0.1),
+        minimum_time=(turbine = 1.0, pump = 1.0),
+        conversion_factor=1.0,
+        must_run=false,
+        prime_mover_type=PrimeMovers.PS,
+        services=Device[],
+        dynamic_injector=nothing,
+        ext=Dict{String, Any}(),
+    )
+
+    return [turbine, head_reservoir, tail_reservoir]
 end
-
-# phes5(nodes5) = [
-#     HydroPumpedStorage(
-#         name = "HydroPumpedStorage",
-#         available = true,
-#         bus = nodes5[3],
-#         active_power = 0.0,
-#         reactive_power = 0.0,
-#         rating = 1.0,
-#         base_power = 50.0,
-#         prime_mover_type = PrimeMovers.HY,
-#         active_power_limits = (min = 0.0, max = 1),
-#         reactive_power_limits = (min = 0.0, max = 1),
-#         ramp_limits = (up = 0.1, down = 0.1),
-#         time_limits = nothing,
-#         operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
-#         rating_pump = 1,
-#         active_power_limits_pump = (min = 0.0, max = 1),
-#         reactive_power_limits_pump = nothing,
-#         ramp_limits_pump = (up = 1, down = 1),
-#         time_limits_pump = nothing,
-#         storage_capacity = (up = 2, down = 2),    # 2 pu * hr (10 hrs of storage)
-#         inflow = 0.0,                             # Simple system with no inflow
-#         outflow = 0.0,                            # Simple system with no outflow
-#         initial_storage = (up = 0.0, down = 0.0), # Device with no charge at the start
-#         storage_target = (up = 0.0, down = 0.0),  # Parameter outadated and does not accept nothing.
-#         conversion_factor = 1.0,
-#         pump_efficiency = 0.8,
-#     ),
-    
-# ];
 
 battery5(nodes5) = [EnergyReservoirStorage(
     name = "Bat",
