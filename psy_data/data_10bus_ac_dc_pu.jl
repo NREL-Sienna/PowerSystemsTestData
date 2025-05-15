@@ -592,7 +592,7 @@ ipcs_10bus(nodes, nodesdc) = [
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
         dc_current = 0.0,
-        max_dc_current = 1e8,
+        max_dc_current = 1e8,  # setting to the default value
         base_power = 100.0,
     ),
     InterconnectingConverter(;
