@@ -583,7 +583,7 @@ loadbusD_ts_DA = [
 ]
 
 ipcs_10bus(nodes, nodesdc) = [
-    InterconnectingConverter(
+    InterconnectingConverter(;
         name = "IPC-nodeC",
         available = true,
         bus = nodes[3],
@@ -592,10 +592,10 @@ ipcs_10bus(nodes, nodesdc) = [
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
         dc_current = 0.0,
-        dc_current_limits = (min = -1.0, max = 1.0),
+        max_dc_current = 1e8,  # setting to the default value
         base_power = 100.0,
     ),
-    InterconnectingConverter(
+    InterconnectingConverter(;
         name = "IPC-nodeD",
         available = true,
         bus = nodes[4],
@@ -604,10 +604,10 @@ ipcs_10bus(nodes, nodesdc) = [
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
         dc_current = 0.0,
-        dc_current_limits = (min = -1.0, max = 1.0),
+        max_dc_current = 1e8,
         base_power = 100.0,
     ),
-    InterconnectingConverter(
+    InterconnectingConverter(;
         name = "IPC-nodeC2",
         available = true,
         bus = nodes[8],
@@ -616,10 +616,10 @@ ipcs_10bus(nodes, nodesdc) = [
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
         dc_current = 0.0,
-        dc_current_limits = (min = -1.0, max = 1.0),
+        max_dc_current = 1e8,
         base_power = 100.0,
     ),
-    InterconnectingConverter(
+    InterconnectingConverter(;
         name = "IPC-nodeD2",
         available = true,
         bus = nodes[9],
@@ -628,7 +628,7 @@ ipcs_10bus(nodes, nodesdc) = [
         rating = 2.0,
         active_power_limits = (min = -1.0, max = 1.0),
         dc_current = 0.0,
-        dc_current_limits = (min = -1.0, max = 1.0),
+        max_dc_current = 1e8,
         base_power = 100.0,
     ),
 ]
