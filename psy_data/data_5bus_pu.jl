@@ -607,7 +607,7 @@ thermal_generators5_uc_testing(nodes) = [
 ];
 
 
-renewable_generators5(nodes5) = [
+renewable_dispatch5(nodes5) = [
     RenewableDispatch(
         "WindBusA",
         true,
@@ -649,6 +649,49 @@ renewable_generators5(nodes5) = [
     ),
 ];
 
+renewable_nondispatch5(nodes5) = [
+    RenewableNonDispatch(
+        "WindBusA",
+        true,
+        nodes5[5],
+        0.0,
+        0.0,
+        1.200,
+        PrimeMovers.WT,
+        (min = 0.0, max = 0.0),
+        1.0,
+        RenewableGenerationCost(CostCurve(LinearCurve(0.220))),
+        100.0,
+    ),
+    RenewableNonDispatch(
+        "WindBusB",
+        true,
+        nodes5[4],
+        0.0,
+        0.0,
+        1.200,
+        PrimeMovers.WT,
+        (min = 0.0, max = 0.0),
+        1.0,
+        RenewableGenerationCost(CostCurve(LinearCurve(0.220))),
+        100.0,
+    ),
+    RenewableNonDispatch(
+        "WindBusC",
+        true,
+        nodes5[3],
+        0.0,
+        0.0,
+        1.20,
+        PrimeMovers.WT,
+        (min = -0.800, max = 0.800),
+        1.0,
+        RenewableGenerationCost(CostCurve(LinearCurve(0.220))),
+        100.0,
+    ),
+];
+
+#TODO: fix
 hydro_generators5(nodes5) = [
     HydroDispatch(
         name = "HydroDispatch",
@@ -759,10 +802,7 @@ function phes5(nodes5)
         head_to_volume_factor = 1.0,
         intake_elevation = 0.0,
     )
-
-    turbine = HydroPumpTurbine(;
-        name="HydroPumpTurbine",
-        available=true,
+    defs = (available=true,
         bus=nodes5[3],
         active_power=0.0,
         reactive_power=0.0,
@@ -787,10 +827,16 @@ function phes5(nodes5)
         prime_mover_type=PrimeMovers.PS,
         services=Device[],
         dynamic_injector=nothing,
-        ext=Dict{String, Any}(),
-    )
+        ext=Dict{String, Any}()
+        ,)
+    turbine1 = HydroPumpTurbine(; defs...,
+        name="HydroPumpTurbine1",
+        )
+    turbine2 = HydroPumpTurbine(; defs...,
+        name="HydroPumpTurbine2",
+        )
 
-    return [turbine, head_reservoir, tail_reservoir]
+    return [turbine1, turbine2, head_reservoir, tail_reservoir]
 end
 
 battery5(nodes5) = [EnergyReservoirStorage(
