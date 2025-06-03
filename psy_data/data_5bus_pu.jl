@@ -686,9 +686,9 @@ renewable_nondispatch5(nodes5) = [
 ];
 
 #TODO: fix
-hydro_generators5(nodes5) = [
+hydro_dispatch5(nodes5) = [
     HydroDispatch(
-        name = "HydroDispatch",
+        name = "HydroDispatch1",
         available = true,
         bus = nodes5[2],
         active_power = 0.0,
@@ -701,6 +701,7 @@ hydro_generators5(nodes5) = [
         time_limits = nothing,
         base_power = 100.0,
     ),
+    #=
     HydroEnergyReservoir(
         name = "HydroEnergyReservoir",
         available = true,
@@ -719,12 +720,12 @@ hydro_generators5(nodes5) = [
         inflow = 4.0,
         conversion_factor = 1.0,
         initial_storage = 0.5,
-    ),
+    ),=#
 ];
 
 hydro_generators5_ems(nodes5) = [
     HydroDispatch(
-        name = "HydroDispatch",
+        name = "HydroDispatch2",
         available = true,
         bus = nodes5[2],
         active_power = 0.0,
@@ -738,7 +739,7 @@ hydro_generators5_ems(nodes5) = [
         base_power = 100.0,
     ),
     HydroEnergyReservoir(
-        name = "HydroEnergyReservoir",
+        name = "HydroEnergyReservoir3",
         available = true,
         bus = nodes5[3],
         active_power = 0.0,
@@ -966,7 +967,7 @@ loadbus4_ts_DA = [
 
 loads5(nodes5) = [
     PowerLoad(
-        "Bus2",
+        "bus2",
         true,
         nodes5[2],
 
@@ -977,7 +978,7 @@ loads5(nodes5) = [
         0.9861,
     ),
     PowerLoad(
-        "Bus3",
+        "bus3",
         true,
         nodes5[3],
 
@@ -988,7 +989,7 @@ loads5(nodes5) = [
         0.9861,
     ),
     PowerLoad(
-        "Bus4",
+        "bus4",
         true,
         nodes5[4],
 
