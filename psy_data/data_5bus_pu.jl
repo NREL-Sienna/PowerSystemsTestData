@@ -609,6 +609,19 @@ thermal_generators5_uc_testing(nodes) = [
 
 renewable_dispatch5(nodes5) = [
     RenewableDispatch(
+        "SolarBusC",
+        true,
+        nodes5[3],
+        0.0,
+        0.0,
+        3.84,
+        PrimeMovers.PVe,
+        (min = 0.0, max = 0.0),
+        1.0,
+        RenewableGenerationCost(nothing),
+        100.0,
+    ),
+    RenewableDispatch(
         "WindBusA",
         true,
         nodes5[5],
