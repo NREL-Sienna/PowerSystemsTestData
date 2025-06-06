@@ -5,16 +5,16 @@ const PSY = PowerSystems
 
 ## Buses ##
 nodes10() = [
-    ACBus(1, "nodeA", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(2, "nodeB", "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(3, "nodeC", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(4, "nodeD", "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(5, "nodeE", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(6, "nodeA2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(7, "nodeB2", "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(8, "nodeC2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(9, "nodeD2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(10, "nodeE2", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(1, "nodeA", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(2, "nodeB", true, "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(3, "nodeC", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(4, "nodeD", true, "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(5, "nodeE", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(6, "nodeA2", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(7, "nodeB2", true, "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(8, "nodeC2", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(9, "nodeD2", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(10, "nodeE2", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
 ];
 
 nodes10_dc() = [
