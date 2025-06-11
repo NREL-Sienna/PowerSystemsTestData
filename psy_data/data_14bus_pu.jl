@@ -265,8 +265,6 @@ branches14_dc(nodes14) = [
         0.978,
         20.0,
         100.0,
-        get_base_voltage(nodes14[4]),
-        get_base_voltage(nodes14[7]),
     ),
     TapTransformer(
         "Trans1",
@@ -280,8 +278,6 @@ branches14_dc(nodes14) = [
         0.969,
         20.0,
         100.0,
-        get_base_voltage(nodes14[4]),
-        get_base_voltage(nodes14[9])
     ),
     TapTransformer(
         "Trans2",
@@ -295,8 +291,6 @@ branches14_dc(nodes14) = [
         0.932,
         20.0,
         100.0,
-        get_base_voltage(nodes14[5]),
-        get_base_voltage(nodes14[6])
     ),
     Line(
         "Line8",
@@ -345,8 +339,6 @@ branches14_dc(nodes14) = [
         0.0,
         20.0,
         100.0,
-        get_base_voltage(nodes14[7]),
-        get_base_voltage(nodes14[8]),
     ),
     Line(
         "Line16",
@@ -519,8 +511,6 @@ branches14(nodes14) = [
         0.978, # tap
         20.0, # rating
         100.0, # base power
-        get_base_voltage(nodes14[4]),
-        get_base_voltage(nodes14[7]),
     ),
     TapTransformer(
         "Trans1",
@@ -534,8 +524,6 @@ branches14(nodes14) = [
         0.969,
         20.0,
         100.0,
-        get_base_voltage(nodes14[4]),
-        get_base_voltage(nodes14[9]),
     ),
     TapTransformer(
         "Trans2",
@@ -549,8 +537,6 @@ branches14(nodes14) = [
         0.932,
         20.0,
         100.0,
-        get_base_voltage(nodes14[5]),
-        get_base_voltage(nodes14[6]),
     ),
     Line(
         "Line8",
@@ -599,8 +585,6 @@ branches14(nodes14) = [
         0.0,
         20.0,
         100.0,
-        get_base_voltage(nodes14[7]),
-        get_base_voltage(nodes14[8]),
     ),
     Line(
         "Line16",
