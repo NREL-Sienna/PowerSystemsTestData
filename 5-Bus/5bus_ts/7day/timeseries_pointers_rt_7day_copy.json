@@ -1,7 +1,7 @@
 [ 
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "HydroReservoir",
         "component_name": "Tail Reservoir",
         "module": "PowerSystems",
@@ -12,7 +12,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "HydroReservoir",
         "component_name": "Head Reservoir",
         "module": "PowerSystems",
@@ -23,7 +23,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "HydroReservoir",
         "component_name": "Tail Reservoir",
         "module": "PowerSystems",
@@ -34,7 +34,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "HydroReservoir",
         "component_name": "Head Reservoir",
         "module": "PowerSystems",
@@ -45,7 +45,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "SolarBusC",
         "module": "PowerSystems",
@@ -58,7 +58,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "WindBusB",
         "module": "PowerSystems",
@@ -71,7 +71,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "WindBusC",
         "module": "PowerSystems",
@@ -84,7 +84,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "WindBusA",
         "module": "PowerSystems",
@@ -97,7 +97,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "WindBusNonDispatchB",
         "module": "PowerSystems",
@@ -110,7 +110,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "WindBusNonDispatchC",
         "module": "PowerSystems",
@@ -123,7 +123,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "WindBusNonDispatchA",
         "module": "PowerSystems",
@@ -136,7 +136,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "ElectricLoad",
         "component_name": "bus2",
         "module": "PowerSystems",
@@ -149,7 +149,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "ElectricLoad",
         "component_name": "bus3",
         "module": "PowerSystems",
@@ -162,7 +162,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "ElectricLoad",
         "component_name": "bus4",
         "module": "PowerSystems",
@@ -175,7 +175,7 @@
     },
     {
         "simulation": "REAL_TIME",
-        "resolution": 3600,
+        "resolution": 300,
         "category": "Generator",
         "component_name": "HydroDispatch1",
         "module": "PowerSystems",
