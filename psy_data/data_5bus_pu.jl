@@ -13,6 +13,7 @@ DayAhead = collect(
 )
 #Dispatch_11am =  collect(DateTime("1/1/2024  0:11:00", "d/m/y  H:M:S"):Minute(15):DateTime("1/1/2024  12::00", "d/m/y  H:M:S"))
 
+
 function nodes5() 
     nodes = [
     #ACBus(1, "nodeA", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
@@ -28,6 +29,7 @@ function nodes5()
     ];
 return nodes
 end
+
 
 branches5_dc(nodes5) = [
     Line(
