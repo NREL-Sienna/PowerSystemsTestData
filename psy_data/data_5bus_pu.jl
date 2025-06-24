@@ -13,13 +13,21 @@ DayAhead = collect(
 )
 #Dispatch_11am =  collect(DateTime("1/1/2024  0:11:00", "d/m/y  H:M:S"):Minute(15):DateTime("1/1/2024  12::00", "d/m/y  H:M:S"))
 
-nodes5() = [
-    ACBus(1, "nodeA", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(2, "nodeB", "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(3, "nodeC", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(4, "nodeD", "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(5, "nodeE", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-];
+function nodes5() 
+    nodes = [
+    #ACBus(1, "nodeA", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(2, "nodeB", "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(3, "nodeC", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(4, "nodeD", "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(5, "nodeE", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(number = 1, name= "nodeA", available = true, bustype = "PV", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 2, name= "nodeB", available = true, bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 3, name= "nodeC", available = true, bustype = "PV", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 4, name= "nodeD", available = true, bustype = "REF", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 5, name= "nodeE", available = true, bustype = "PV", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ];
+return nodes
+end
 
 branches5_dc(nodes5) = [
     Line(
@@ -847,7 +855,7 @@ function phes5(nodes5)
     return [turbine1, turbine2, head_reservoir, tail_reservoir]
 end
 
-function cabincreekreservoirs(nodes5)
+function cabincreekreservoirs(nodes5,hydroLevelDataType)
     head_reservoir = HydroReservoir(;
         name = "Head Reservoir",
         available = true,
@@ -863,7 +871,7 @@ function cabincreekreservoirs(nodes5)
         travel_time = 0.0, #"Downstream travel time in hours"
         intake_elevation = 11000.0/3.28084, #"Height of the intake of the reservoir in meters above the sea level."
         head_to_volume_factor = 1.0, #::ValueCurve
-        level_data_type = ReservoirDataType.USABLE_VOLUME
+        level_data_type = hydroLevelDataType
     )
     tail_reservoir = HydroReservoir(;
         name = "Tail Reservoir",
@@ -880,7 +888,7 @@ function cabincreekreservoirs(nodes5)
         travel_time = 0.0, #"Downstream travel time in hours"
         intake_elevation = (10000.0-1.0)/3.28084, #"Height of the intake of the reservoir in meters above the sea level."
         head_to_volume_factor = 1.0, #::ValueCurve
-        level_data_type = ReservoirDataType.USABLE_VOLUME
+        level_data_type = hydroLevelDataType
     )
     return [head_reservoir, tail_reservoir]
 end

@@ -8,7 +8,7 @@
         "type": "SingleTimeSeries",
         "name": "outflow",
         "normalization_factor": 1.0,
-        "data_file": "./rt_hydro_reservoir_outflow.csv"
+        "data_file": "./rt_hydro_reservoir_outflow_cms.csv"
     },
     {
         "simulation": "REAL_TIME",
@@ -19,7 +19,7 @@
         "type": "SingleTimeSeries",
         "name": "outlow",
         "normalization_factor": 1.0,
-        "data_file": "./rt_hydro_reservoir_outflow.csv"
+        "data_file": "./rt_hydro_reservoir_outflow_cms.csv"
     },
     {
         "simulation": "REAL_TIME",
@@ -30,7 +30,7 @@
         "type": "SingleTimeSeries",
         "name": "inflow",
         "normalization_factor": 1.0,
-        "data_file": "./rt_hydro_reservoir_inflow.csv"
+        "data_file": "./rt_hydro_reservoir_inflow_ENERGY.csv"
     },
     {
         "simulation": "REAL_TIME",
@@ -41,7 +41,7 @@
         "type": "SingleTimeSeries",
         "name": "inflow",
         "normalization_factor": 1.0,
-        "data_file": "./rt_hydro_reservoir_inflow.csv"
+        "data_file": "./rt_hydro_reservoir_inflow_ENERGY.csv"
     },
     {
         "simulation": "REAL_TIME",
