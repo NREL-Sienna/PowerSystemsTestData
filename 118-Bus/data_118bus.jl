@@ -35,6 +35,7 @@ function nodes118()
         local bus = ACBus(;
           number = parse(Int64, num),
           name = "bus$num",
+          available = true,
           bustype = type,
           angle = 0.0,
           magnitude = 1.0,
