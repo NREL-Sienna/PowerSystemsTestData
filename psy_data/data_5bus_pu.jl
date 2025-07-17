@@ -13,13 +13,23 @@ DayAhead = collect(
 )
 #Dispatch_11am =  collect(DateTime("1/1/2024  0:11:00", "d/m/y  H:M:S"):Minute(15):DateTime("1/1/2024  12::00", "d/m/y  H:M:S"))
 
-nodes5() = [
-    ACBus(1, "nodeA", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(2, "nodeB", true, "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(3, "nodeC", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(4, "nodeD", true, "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(5, "nodeE", true, "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-];
+
+function nodes5() 
+    nodes = [
+    #ACBus(1, "nodeA", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(2, "nodeB", "PQ", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(3, "nodeC", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(4, "nodeD", "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    #ACBus(5, "nodeE", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
+    ACBus(number = 1, name= "nodeA", bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 2, name= "nodeB",  bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 3, name= "nodeC",  bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 4, name= "nodeD",  bustype = "REF", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 5, name= "nodeE",  bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ];
+return nodes
+end
+
 
 branches5_dc(nodes5) = [
     Line(
@@ -607,7 +617,20 @@ thermal_generators5_uc_testing(nodes) = [
 ];
 
 
-renewable_generators5(nodes5) = [
+renewable_dispatch5(nodes5) = [
+    RenewableDispatch(
+        "SolarBusC",
+        true,
+        nodes5[3],
+        0.0,
+        0.0,
+        3.84,
+        PrimeMovers.PVe,
+        (min = 0.0, max = 0.0),
+        1.0,
+        RenewableGenerationCost(nothing),
+        100.0,
+    ),
     RenewableDispatch(
         "WindBusA",
         true,
@@ -649,9 +672,46 @@ renewable_generators5(nodes5) = [
     ),
 ];
 
-hydro_generators5(nodes5) = [
+renewable_nondispatch5(nodes5) = [
+    RenewableNonDispatch(
+        name = "WindBusNonDispatchA",
+        available = true,
+        bus = nodes5[5],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 1.2,
+        prime_mover_type = PrimeMovers.WT,
+        power_factor = 1.0,
+        base_power = 100.0,
+        ),
+    RenewableNonDispatch(
+        name = "WindBusNonDispatchB",
+        available = true,
+        bus = nodes5[4],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 1.2,
+        prime_mover_type = PrimeMovers.WT,
+        power_factor = 1.0,
+        base_power = 100.0,
+        ),
+    RenewableNonDispatch(
+        name = "WindBusNonDispatchC",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 1.2,
+        prime_mover_type = PrimeMovers.WT,
+        power_factor = 1.0,
+        base_power = 100.0,
+        ),
+];
+
+#TODO: fix
+hydro_dispatch5(nodes5) = [
     HydroDispatch(
-        name = "HydroDispatch",
+        name = "HydroDispatch1",
         available = true,
         bus = nodes5[2],
         active_power = 0.0,
@@ -664,6 +724,7 @@ hydro_generators5(nodes5) = [
         time_limits = nothing,
         base_power = 100.0,
     ),
+    #=
     HydroEnergyReservoir(
         name = "HydroEnergyReservoir",
         available = true,
@@ -682,12 +743,12 @@ hydro_generators5(nodes5) = [
         inflow = 4.0,
         conversion_factor = 1.0,
         initial_storage = 0.5,
-    ),
+    ),=#
 ];
 
 hydro_generators5_ems(nodes5) = [
     HydroDispatch(
-        name = "HydroDispatch",
+        name = "HydroDispatch2",
         available = true,
         bus = nodes5[2],
         active_power = 0.0,
@@ -701,7 +762,7 @@ hydro_generators5_ems(nodes5) = [
         base_power = 100.0,
     ),
     HydroEnergyReservoir(
-        name = "HydroEnergyReservoir",
+        name = "HydroEnergyReservoir3",
         available = true,
         bus = nodes5[3],
         active_power = 0.0,
@@ -759,14 +820,11 @@ function phes5(nodes5)
         head_to_volume_factor = 1.0,
         intake_elevation = 0.0,
     )
-
-    turbine = HydroPumpTurbine(;
-        name="HydroPumpTurbine",
-        available=true,
+    defs = (available=true,
         bus=nodes5[3],
         active_power=0.0,
         reactive_power=0.0,
-        rating=1.0,
+        rating=3.0,
         active_power_limits=(min=0.0, max=1.0),
         reactive_power_limits=(min=0.0, max=1.0),
         active_power_limits_pump=(min=0.0, max=1.0),
@@ -776,21 +834,139 @@ function phes5(nodes5)
         powerhouse_elevation=0.0,
         ramp_limits=(up = 0.1, down = 0.1),
         time_limits=nothing,
-        base_power=50.0,
+        base_power=50.0, # 300 MW turbine
         operation_cost=HydroGenerationCost(nothing),
         active_power_pump=0.0,
         efficiency=(turbine = 0.9, pump = 0.8),
         transition_time=(turbine = 0.1, pump = 0.1),
         minimum_time=(turbine = 1.0, pump = 1.0),
-        conversion_factor=1.0,
+        conversion_factor=1.0, # "Conversion factor from flow/volume to energy: m^3 -> p.u-hr"
         must_run=false,
         prime_mover_type=PrimeMovers.PS,
         services=Device[],
         dynamic_injector=nothing,
-        ext=Dict{String, Any}(),
-    )
+        ext=Dict{String, Any}()
+        ,)
+    turbine1 = HydroPumpTurbine(; defs...,
+        name="HydroPumpTurbine1",
+        )
+    turbine2 = HydroPumpTurbine(; defs...,
+        name="HydroPumpTurbine2",
+        )
 
-    return [turbine, head_reservoir, tail_reservoir]
+    return [turbine1, turbine2, head_reservoir, tail_reservoir]
+end
+
+function cabincreekreservoirs(nodes5,hydroLevelDataType)
+    head_reservoir = HydroReservoir(;
+        name = "Head Reservoir",
+        available = true,
+        #"Storage level limits for the reservoir in m^3 (if data type is volume) or m (if data type is head). 
+        #If nothing, the reservoir volume is assumed to be infinite."
+        storage_level_limits = (min=0.0,max=1945198.0), #m^3
+        initial_level = 0.50,
+        spillage_limits = nothing,
+        #"Amount of water refilling the reservoir in m^3/h."
+        inflow = 0.0,
+        outflow = 0.0,
+        level_targets = 0.0,
+        travel_time = 0.0, #"Downstream travel time in hours"
+        intake_elevation = 11000.0/3.28084, #"Height of the intake of the reservoir in meters above the sea level."
+        head_to_volume_factor = 1.0, #::ValueCurve
+        level_data_type = hydroLevelDataType
+    )
+    tail_reservoir = HydroReservoir(;
+        name = "Tail Reservoir",
+        available = true,
+        #"Storage level limits for the reservoir in m^3 (if data type is volume) or m (if data type is head). 
+        #If nothing, the reservoir volume is assumed to be infinite."
+        storage_level_limits = (min=0.0,max=2416387.3),
+        initial_level = 0.50,
+        spillage_limits = nothing,
+        #"Amount of water refilling the reservoir in m^3/h."
+        inflow = 0.0,
+        outflow = 0.0,
+        level_targets = 0.0,
+        travel_time = 0.0, #"Downstream travel time in hours"
+        intake_elevation = (10000.0-1.0)/3.28084, #"Height of the intake of the reservoir in meters above the sea level."
+        head_to_volume_factor = 1.0, #::ValueCurve
+        level_data_type = hydroLevelDataType
+    )
+    return [head_reservoir, tail_reservoir]
+end
+
+function cabincreekpump(nodes5,sys)
+    
+    # seems to set everything in terms of device base. excellent this makes sense.
+    defs = (available=true,
+        bus=nodes5[3],
+        active_power=0.0,
+        reactive_power=0.0,
+        rating=1.0,
+        active_power_limits=(min=0.0, max=1.0),
+        reactive_power_limits=(min=0.0, max=1.0),
+        active_power_limits_pump=(min=0.0, max=1.0),
+        outflow_limits=(min=0.0, max=50.0), #m^3/s #about 50m^3 /s to get 300 MW
+        head_reservoir=collect(get_components(x -> (PSY.get_name(x) =="Head Reservoir"),HydroReservoir,sys))[1],
+        tail_reservoir=collect(get_components(x -> (PSY.get_name(x) =="Tail Reservoir"),HydroReservoir,sys))[1],
+        powerhouse_elevation=10000.0/3.28084,
+        ramp_limits=(up = 0.1, down = 0.1),
+        time_limits=nothing,
+        base_power=150.0,
+        operation_cost=HydroGenerationCost(nothing),
+        active_power_pump=0.0,
+        efficiency=(turbine = 0.9, pump = 0.8),
+        transition_time=(turbine = 0.1, pump = 0.1),
+        minimum_time=(turbine = 1.0, pump = 1.0),
+        conversion_factor=1.0, # "Conversion factor from flow/volume to energy: m^3/s -> p.u-hr"
+        # so figure this out from the height difference
+        must_run=false,
+        prime_mover_type=PrimeMovers.PS,
+        services=Device[],
+        dynamic_injector=nothing,
+        )
+    turbine1 = HydroPumpTurbine(; defs...,
+        name="HydroPumpTurbine1",
+        )
+    turbine2 = HydroPumpTurbine(; defs...,
+        name="HydroPumpTurbine2",
+        )
+    return [turbine1, turbine2]
+end
+
+function cabincreeknopump(nodes5,sys)
+    
+    defs = (available=true,
+        bus=nodes5[3],
+        active_power=0.0,
+        reactive_power=0.0,
+        rating=1.0,
+        active_power_limits=(min=0.0, max=1.0),
+        reactive_power_limits=(min=0.0, max=1.0),
+        outflow_limits=(min=0.0, max=50.0),
+        reservoirs=collect(get_components(x -> PSY.get_name(x) =="Head Reservoir",HydroReservoir,sys)),
+        powerhouse_elevation=10000.0/3.28084,
+        ramp_limits=(up = 0.1, down = 0.1),
+        time_limits=nothing,
+        base_power=150.0,
+        operation_cost=HydroGenerationCost(nothing),
+        efficiency= 0.9,
+        conversion_factor=1.0, # "Conversion factor from flow/volume to energy: m^3/s -> p.u-hr"
+        # so figure this out from the height difference
+        services=Device[],
+        dynamic_injector=nothing,
+        ext=Dict{String, Any}()
+        ,)
+    turbine1 = HydroTurbine(; defs...,
+        name="HydroTurbine1",
+        )
+    turbine2 = HydroTurbine(; defs...,
+        name="HydroTurbine2",
+        )
+    turbine3 = HydroTurbine(; defs...,
+        name = "HydroTurbine3",
+        reservoirs = collect(get_components(x -> PSY.get_name(x) =="Tail Reservoir",HydroReservoir,sys)),)
+    return [turbine1, turbine2, turbine3]
 end
 
 battery5(nodes5) = [EnergyReservoirStorage(
@@ -926,7 +1102,7 @@ loadbus4_ts_DA = [
 
 loads5(nodes5) = [
     PowerLoad(
-        "Bus2",
+        "bus2",
         true,
         nodes5[2],
 
@@ -937,7 +1113,7 @@ loads5(nodes5) = [
         0.9861,
     ),
     PowerLoad(
-        "Bus3",
+        "bus3",
         true,
         nodes5[3],
 
@@ -948,7 +1124,7 @@ loads5(nodes5) = [
         0.9861,
     ),
     PowerLoad(
-        "Bus4",
+        "bus4",
         true,
         nodes5[4],
 
