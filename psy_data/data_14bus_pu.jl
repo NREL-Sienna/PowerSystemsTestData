@@ -10,10 +10,11 @@ dates = collect(
 )
 
 nodes14() = [
-    ACBus(1, "Bus 1", "REF", 0.0, 1.06, (min = 0.94, max = 1.06), 69, nothing, nothing),
+    ACBus(1, "Bus 1", true, "REF", 0.0, 1.06, (min = 0.94, max = 1.06), 69, nothing, nothing),
     ACBus(
         2,
         "Bus 2",
+        true,
         "PV",
         -0.08691739674931762,
         1.045,
@@ -25,6 +26,7 @@ nodes14() = [
     ACBus(
         3,
         "Bus 3",
+        true,
         "PV",
         -0.22200588085367873,
         1.01,
@@ -36,6 +38,7 @@ nodes14() = [
     ACBus(
         4,
         "Bus 4",
+        true,
         "PQ",
         -0.18029251173101424,
         1.019,
@@ -47,6 +50,7 @@ nodes14() = [
     ACBus(
         5,
         "Bus 5",
+        true,
         "PQ",
         -0.15323990832510212,
         1.02,
@@ -58,6 +62,7 @@ nodes14() = [
     ACBus(
         6,
         "Bus 6",
+        true,
         "PV",
         -0.24818581963359368,
         1.07,
@@ -69,6 +74,7 @@ nodes14() = [
     ACBus(
         7,
         "Bus 7",
+        true,
         "PQ",
         -0.23335052099164186,
         1.062,
@@ -80,6 +86,7 @@ nodes14() = [
     ACBus(
         8,
         "Bus 8",
+        true,
         "PV",
         -0.2331759880664424,
         1.09,
@@ -91,6 +98,7 @@ nodes14() = [
     ACBus(
         9,
         "Bus 9",
+        true,
         "PQ",
         -0.2607521902479528,
         1.056,
@@ -102,6 +110,7 @@ nodes14() = [
     ACBus(
         10,
         "Bus 10",
+        true,
         "PQ",
         -0.26354471705114374,
         1.051,
@@ -113,6 +122,7 @@ nodes14() = [
     ACBus(
         11,
         "Bus 11",
+        true,
         "PQ",
         -0.2581341963699613,
         1.057,
@@ -124,6 +134,7 @@ nodes14() = [
     ACBus(
         12,
         "Bus 12",
+        true,
         "PQ",
         -0.2630211182755455,
         1.055,
@@ -135,6 +146,7 @@ nodes14() = [
     ACBus(
         13,
         "Bus 13",
+        true,
         "PQ",
         -0.2645919146023404,
         1.05,
@@ -146,6 +158,7 @@ nodes14() = [
     ACBus(
         14,
         "Bus 14",
+        true,
         "PQ",
         -0.27995081201989047,
         1.036,
@@ -487,17 +500,17 @@ branches14(nodes14) = [
         1.04,
     ),
     TapTransformer(
-        "Trans3",
-        true,
-        0.0,
-        0.0,
+        "Trans3", # name
+        true, # available
+        0.0, # active power flow
+        0.0, # reactive power flow
         Arc(from = nodes14[4], to = nodes14[7]),
-        0.0,
-        0.20912,
-        0.0,
-        0.978,
-        20.0,
-        100.0,
+        0.0, # r
+        0.20912, # x
+        0.0, # primary shunt
+        0.978, # tap
+        20.0, # rating
+        100.0, # base power
     ),
     TapTransformer(
         "Trans1",
