@@ -20,11 +20,11 @@ function nodes5()
     #ACBus(3, "nodeC", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
     #ACBus(4, "nodeD", "REF", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
     #ACBus(5, "nodeE", "PV", 0, 1.0, (min = 0.9, max = 1.05), 230, nothing, nothing),
-    ACBus(number = 1, name= "nodeA", bustype = "PV", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 1, name= "nodeA", bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
     ACBus(number = 2, name= "nodeB",  bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
-    ACBus(number = 3, name= "nodeC",  bustype = "PV", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 3, name= "nodeC",  bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
     ACBus(number = 4, name= "nodeD",  bustype = "REF", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
-    ACBus(number = 5, name= "nodeE",  bustype = "PV", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
+    ACBus(number = 5, name= "nodeE",  bustype = "PQ", angle = 0.0, magnitude = 1.0, voltage_limits = (min = 0.9, max = 1.05), base_voltage = 230,),
     ];
 return nodes
 end
@@ -961,7 +961,10 @@ function cabincreeknopump(nodes5,sys)
     turbine2 = HydroTurbine(; defs...,
         name="HydroTurbine2",
         )
-    return [turbine1, turbine2]
+    turbine3 = HydroTurbine(; defs...,
+        name = "HydroTurbine3",
+        reservoirs = collect(get_components(x -> PSY.get_name(x) =="Tail Reservoir",HydroReservoir,sys)),)
+    return [turbine1, turbine2, turbine3]
 end
 
 battery5(nodes5) = [EnergyReservoirStorage(
