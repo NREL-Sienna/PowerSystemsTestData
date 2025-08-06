@@ -86,7 +86,6 @@ for row in eachrow(line_params)
             r = row["Resistance (p.u.)"],
             x = row["Reactance (p.u.)"],
             primary_shunt = 0.0,
-            winding_group_number = 0,
             rating = row["Max Flow (MW)"]/100,
         );
         push!(tlines, tline)
