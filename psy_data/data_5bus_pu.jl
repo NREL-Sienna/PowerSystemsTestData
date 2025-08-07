@@ -607,20 +607,7 @@ thermal_generators5_uc_testing(nodes) = [
 ];
 
 
-renewable_dispatch5(nodes5) = [
-    RenewableDispatch(
-        "SolarBusC",
-        true,
-        nodes5[3],
-        0.0,
-        0.0,
-        3.84,
-        PrimeMovers.PVe,
-        (min = 0.0, max = 0.0),
-        1.0,
-        RenewableGenerationCost(nothing),
-        100.0,
-    ),
+renewable_generators5(nodes5) = [
     RenewableDispatch(
         "WindBusA",
         true,
@@ -662,46 +649,9 @@ renewable_dispatch5(nodes5) = [
     ),
 ];
 
-renewable_nondispatch5(nodes5) = [
-    RenewableNonDispatch(
-        name = "WindBusNonDispatchA",
-        available = true,
-        bus = nodes5[5],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 1.2,
-        prime_mover_type = PrimeMovers.WT,
-        power_factor = 1.0,
-        base_power = 100.0,
-        ),
-    RenewableNonDispatch(
-        name = "WindBusNonDispatchB",
-        available = true,
-        bus = nodes5[4],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 1.2,
-        prime_mover_type = PrimeMovers.WT,
-        power_factor = 1.0,
-        base_power = 100.0,
-        ),
-    RenewableNonDispatch(
-        name = "WindBusNonDispatchC",
-        available = true,
-        bus = nodes5[3],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 1.2,
-        prime_mover_type = PrimeMovers.WT,
-        power_factor = 1.0,
-        base_power = 100.0,
-        ),
-];
-
-#TODO: fix
-hydro_dispatch5(nodes5) = [
+hydro_generators5(nodes5) = [
     HydroDispatch(
-        name = "HydroDispatch1",
+        name = "HydroDispatch",
         available = true,
         bus = nodes5[2],
         active_power = 0.0,
@@ -714,7 +664,6 @@ hydro_dispatch5(nodes5) = [
         time_limits = nothing,
         base_power = 100.0,
     ),
-    #=
     HydroEnergyReservoir(
         name = "HydroEnergyReservoir",
         available = true,
@@ -733,12 +682,12 @@ hydro_dispatch5(nodes5) = [
         inflow = 4.0,
         conversion_factor = 1.0,
         initial_storage = 0.5,
-    ),=#
+    ),
 ];
 
 hydro_generators5_ems(nodes5) = [
     HydroDispatch(
-        name = "HydroDispatch2",
+        name = "HydroDispatch",
         available = true,
         bus = nodes5[2],
         active_power = 0.0,
@@ -752,7 +701,7 @@ hydro_generators5_ems(nodes5) = [
         base_power = 100.0,
     ),
     HydroEnergyReservoir(
-        name = "HydroEnergyReservoir3",
+        name = "HydroEnergyReservoir",
         available = true,
         bus = nodes5[3],
         active_power = 0.0,
