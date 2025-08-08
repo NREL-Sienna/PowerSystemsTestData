@@ -1225,7 +1225,7 @@ hydro_turbines5_head(nodes5) = [
         time_limits = nothing,
         base_power = 100.0,
         powerhouse_elevation = 317.12, # elevation in meters for Jiguey dam
-        operation_cost = HydroGenerationCost(),
+        operation_cost = HydroGenerationCost(nothing),
     )
 ]
 
