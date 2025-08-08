@@ -1137,3 +1137,111 @@ Iload_timeseries_DA = [
     [TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA)],
     [TimeSeries.TimeArray(DayAhead + Day(1), loadbus4_ts_DA + 0.1 * rand(24))],
 ]
+
+
+### New Hydro Data ###
+
+weekly_hydro_reservoir_inflow_water_m3_s = [
+    10.53, #2020-01-01
+    8.44, #2020-01-08
+    7.78, #2020-01-15
+    6.84, #2020-01-22
+    27.79, #2020-01-25    
+    6.09, #2020-02-05
+    3.94, #2020-02-12   
+] # Jiguey data in m³/s
+
+# Convert to MW by multiplying by 220 (typical water height drop for Jiguey dam) 9.81 (gravity) * 1000 (density of water) * 0.9 (efficiency) and divide by 1e8 to transform to MW and per-unit (100MW base power)
+weekly_hydro_reservoir_inflow_energy_pu =
+    weekly_hydro_reservoir_inflow_water_m3_s * 220 * 9.81 * 1000.0 * 0.9 / 1e8
+
+day_hydro_reservoir_inflow_energy_pu = ones(24) * weekly_hydro_reservoir_inflow_energy_pu[1]
+day_hydro_reservoir_inflow_water_m3_s = ones(24) * weekly_hydro_reservoir_inflow_water_m3_s[1]
+
+inflow_ts_DA_energy = [
+    [TimeSeries.TimeArray(DayAhead, day_hydro_reservoir_inflow_energy_pu)],
+    [TimeSeries.TimeArray(DayAhead + Day(1), day_hydro_reservoir_inflow_energy_pu + 0.1 * rand(24))],
+]
+
+inflow_ts_DA_water = [
+    [TimeSeries.TimeArray(DayAhead, day_hydro_reservoir_inflow_water_m3_s)],
+    [TimeSeries.TimeArray(DayAhead + Day(1), day_hydro_reservoir_inflow_water_m3_s + 0.05 * rand(24))],
+]
+
+outflow_ts_DA_water = [
+    [TimeSeries.TimeArray(DayAhead, zeros(24))], # No outflow in the first day
+    [TimeSeries.TimeArray(DayAhead + Day(1), zeros(24))], # No outflow in the second day
+]
+
+hydro_turbines5_energy(nodes5) = [
+    HydroTurbine(;
+        name = "HydroEnergyReservoir_turbine",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 7.0,
+        active_power_limits = (min = 0.0, max = 7.0),
+        reactive_power_limits = (min = 0.0, max = 7.0),
+        outflow_limits = nothing,
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 0.0,
+        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
+    )
+]
+
+hydro_reservoir5_energy() = [
+    HydroReservoir(;
+        name = "HydroEnergyReservoir__reservoir",
+        available = true,
+        initial_level = 0.5,
+        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh 
+        spillage_limits = nothing,
+        inflow = 4.0, # in MW
+        outflow = 0.0, # in MW
+        level_targets = 1.0,
+        travel_time = nothing,
+        intake_elevation = 0.0,
+        head_to_volume_factor = 0.0,
+        level_data_type = PowerSystems.ReservoirDataType.ENERGY,
+    )
+]
+
+
+hydro_turbines5_head(nodes5) = [
+    HydroTurbine(;
+        name = "Water_Turbine",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 5.2,
+        active_power_limits = (min = 0.0, max = 5.2),
+        reactive_power_limits = (min = -3.9, max = 3.9),
+        outflow_limits = (min = 0.0, max = 30.0), # in m³/s
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 317.12, # elevation in meters for Jiguey dam
+        operation_cost = HydroGenerationCost(nothing),
+    )
+]
+
+hydro_reservoir5_head() = [
+    HydroReservoir(;
+        name = "Water_Reservoir",
+        available = true,
+        initial_level = 0.9, # 500 m
+        storage_level_limits = (min = 463.5, max = 555.5), # in meters 
+        spillage_limits = nothing,
+        inflow = 0.0, # added in time series
+        outflow = 0.0, # no outflow time series
+        level_targets = 1.0,
+        travel_time = nothing,
+        intake_elevation = 463.3,
+        head_to_volume_factor = 302376.2, # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
+        level_data_type = PowerSystems.ReservoirDataType.HEAD,
+    )
+]
