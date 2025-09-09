@@ -738,7 +738,6 @@ function phes5(nodes5)
         minimum_time=(turbine = 1.0, pump = 1.0),
         conversion_factor=1.0,
         must_run=false,
-        prime_mover_type=PrimeMovers.PS,
         services=Device[],
         dynamic_injector=nothing,
         ext=Dict{String, Any}(),
