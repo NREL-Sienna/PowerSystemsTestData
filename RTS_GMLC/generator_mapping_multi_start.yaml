@@ -1,6 +1,6 @@
 # Parsing code ignores type=null.
 
-HydroEnergyReservoir:
+HydroTurbine:
 #- {fuel: HYDRO, type: null} # uncomment this lines to enable hydro energy scheduling
 #- {fuel: HYDRO, type: HYDRO} # uncomment this lines to enable hydro energy scheduling
 - {fuel: HYDRO, type: INFLOW}

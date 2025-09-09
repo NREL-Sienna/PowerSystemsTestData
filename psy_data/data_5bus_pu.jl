@@ -664,71 +664,42 @@ hydro_generators5(nodes5) = [
         time_limits = nothing,
         base_power = 100.0,
     ),
-    HydroEnergyReservoir(
-        name = "HydroEnergyReservoir",
+    HydroTurbine(;
+        name = "HydroEnergyReservoirTurbine",
         available = true,
-        bus = nodes5[3],
+        bus = node,
         active_power = 0.0,
         reactive_power = 0.0,
         rating = 7.0,
-        prime_mover_type = PrimeMovers.HY,
         active_power_limits = (min = 0.0, max = 7.0),
         reactive_power_limits = (min = 0.0, max = 7.0),
         ramp_limits = (up = 7.0, down = 7.0),
         time_limits = nothing,
-        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
+        operation_cost = HydroGenerationCost(
+            CostCurve(LinearCurve(0.15)), 0.0),
         base_power = 100.0,
-        storage_capacity = 50.0,
-        inflow = 4.0,
         conversion_factor = 1.0,
-        initial_storage = 0.5,
-    ),
+        outflow_limits = nothing,
+        powerhouse_elevation = 0.0
+    )
 ];
 
-hydro_generators5_ems(nodes5) = [
-    HydroDispatch(
-        name = "HydroDispatch",
+hydro_reservoir() = PSY.HydroReservoir(;
+        name = "HydroReservoir",
         available = true,
-        bus = nodes5[2],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 6.0,
-        prime_mover_type = PrimeMovers.HY,
-        active_power_limits = (min = 0.0, max = 6.0),
-        reactive_power_limits = (min = 0.0, max = 6.0),
-        ramp_limits = nothing,
-        time_limits = nothing,
-        base_power = 100.0,
-    ),
-    HydroEnergyReservoir(
-        name = "HydroEnergyReservoir",
-        available = true,
-        bus = nodes5[3],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 7.0,
-        prime_mover_type = PrimeMovers.HY,
-        active_power_limits = (min = 0.0, max = 7.0),
-        reactive_power_limits = (min = 0.0, max = 7.0),
-        ramp_limits = (up = 7.0, down = 7.0),
-        time_limits = nothing,
-        operation_cost = PSY.StorageCost(;
-            charge_variable_cost = CostCurve(LinearCurve(0.15)),
-            discharge_variable_cost = CostCurve(LinearCurve(0.15)),
-            fixed = 0.0,
-            start_up = 0.0,
-            shut_down = 0.0,
-            energy_shortage_cost = 50.0,
-            energy_surplus_cost = 0.0,
-        ),
-        base_power = 100.0,
-        storage_capacity = 50.0,
+        storage_level_limits = (min = 0.0, max = 50.0),
+        spillage_limits = nothing,
         inflow = 4.0,
-        conversion_factor = 1.0,
-        initial_storage = 0.5,
-    ),
-];
-
+        outflow = 0.0,
+        level_targets = nothing,
+        intake_elevation = 0.0,
+        travel_time = 0.0,
+        initial_level = 0.5,
+        head_to_volume_factor = LinearCurve(0.0),
+        operation_cost = HydroReservoirCost(;
+                level_shortage_cost = 50.0,
+                level_surplus_cost = 0.0,)
+    )
 
 # Modeling a 50 MW with 10 hours of duration.
 function phes5(nodes5)
