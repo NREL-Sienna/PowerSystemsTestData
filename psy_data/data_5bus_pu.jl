@@ -684,23 +684,6 @@ hydro_generators5(nodes5) = [
     )
 ];
 
-hydro_reservoir() = PSY.HydroReservoir(;
-        name = "HydroReservoir",
-        available = true,
-        storage_level_limits = (min = 0.0, max = 50.0),
-        spillage_limits = nothing,
-        inflow = 4.0,
-        outflow = 0.0,
-        level_targets = nothing,
-        intake_elevation = 0.0,
-        travel_time = 0.0,
-        initial_level = 0.5,
-        head_to_volume_factor = LinearCurve(0.0),
-        operation_cost = HydroReservoirCost(;
-                level_shortage_cost = 50.0,
-                level_surplus_cost = 0.0,)
-    )
-
 # Modeling a 50 MW with 10 hours of duration.
 function phes5(nodes5)
     head_reservoir = HydroReservoir(;
@@ -1117,9 +1100,9 @@ weekly_hydro_reservoir_inflow_water_m3_s = [
     8.44, #2020-01-08
     7.78, #2020-01-15
     6.84, #2020-01-22
-    27.79, #2020-01-25    
+    27.79, #2020-01-25
     6.09, #2020-02-05
-    3.94, #2020-02-12   
+    3.94, #2020-02-12
 ] # Jiguey data in m³/s
 
 # Convert to MW by multiplying by 220 (typical water height drop for Jiguey dam) 9.81 (gravity) * 1000 (density of water) * 0.9 (efficiency) and divide by 1e8 to transform to MW and per-unit (100MW base power)
@@ -1168,7 +1151,7 @@ hydro_reservoir5_energy() = [
         name = "HydroEnergyReservoir__reservoir",
         available = true,
         initial_level = 0.5,
-        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh 
+        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh
         spillage_limits = nothing,
         inflow = 4.0, # in MW
         outflow = 0.0, # in MW
@@ -1205,7 +1188,7 @@ hydro_reservoir5_head() = [
         name = "Water_Reservoir",
         available = true,
         initial_level = 0.9, # 500 m
-        storage_level_limits = (min = 463.5, max = 555.5), # in meters 
+        storage_level_limits = (min = 463.5, max = 555.5), # in meters
         spillage_limits = nothing,
         inflow = 0.0, # added in time series
         outflow = 0.0, # no outflow time series
