@@ -667,7 +667,7 @@ hydro_generators5(nodes5) = [
     HydroTurbine(;
         name = "HydroEnergyReservoirTurbine",
         available = true,
-        bus = node,
+        bus = nodes5[3],
         active_power = 0.0,
         reactive_power = 0.0,
         rating = 7.0,
