@@ -1198,3 +1198,19 @@ hydro_reservoir5_head() = [
         level_data_type = PowerSystems.ReservoirDataType.HEAD,
     )
 ]
+
+shiftable5(nodes5) = [
+    ShiftablePowerLoad(
+        "ShiftableLoadBus4",
+        true,
+        nodes5[4],
+        0.10,
+        (min = 0.05, max = 0.20),
+        0.0, # reactive
+        0.10, # max active
+        0.0, # max reactive
+        100.0, # base power
+        24,
+        LoadCost(CostCurve(LinearCurve(150.0)), 2400.0),
+    ),
+]
