@@ -857,17 +857,17 @@ timeseries_DA14 = [
     TimeArray(dates, loadz2_ts),
 ];
 
-battery14(nodes14) = [
-    EnergyReservoirStorage(
+battery14(nodes14_nodes) = [
+    EnergyReservoirStorage(;
         name = "Bat",
         prime_mover_type = PrimeMovers.BA,
         storage_technology_type = StorageTech.OTHER_CHEM,
         available = true,
-        bus = nodes14[1],
-        initial_energy = 5.0,
-        state_of_charge_limits = (min = 5.0, max = 100.0),
+        bus = nodes14_nodes[1],
+        storage_capacity = 100.0,
+        storage_level_limits = (min = 5.0 / 100.0, max = 100.0 / 100.0),
+        initial_storage_capacity_level = 5.0 / 100.0,
         rating = 70,
-        storage_capacity = 1.0,
         active_power = 10.0,
         input_active_power_limits = (min = 0.0, max = 50.0),
         output_active_power_limits = (min = 0.0, max = 50.0),
