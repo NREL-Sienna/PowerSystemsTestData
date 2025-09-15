@@ -664,71 +664,25 @@ hydro_generators5(nodes5) = [
         time_limits = nothing,
         base_power = 100.0,
     ),
-    HydroEnergyReservoir(
-        name = "HydroEnergyReservoir",
+    HydroTurbine(;
+        name = "HydroEnergyReservoirTurbine",
         available = true,
         bus = nodes5[3],
         active_power = 0.0,
         reactive_power = 0.0,
         rating = 7.0,
-        prime_mover_type = PrimeMovers.HY,
         active_power_limits = (min = 0.0, max = 7.0),
         reactive_power_limits = (min = 0.0, max = 7.0),
         ramp_limits = (up = 7.0, down = 7.0),
         time_limits = nothing,
-        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
+        operation_cost = HydroGenerationCost(
+            CostCurve(LinearCurve(0.15)), 0.0),
         base_power = 100.0,
-        storage_capacity = 50.0,
-        inflow = 4.0,
         conversion_factor = 1.0,
-        initial_storage = 0.5,
-    ),
+        outflow_limits = nothing,
+        powerhouse_elevation = 0.0
+    )
 ];
-
-hydro_generators5_ems(nodes5) = [
-    HydroDispatch(
-        name = "HydroDispatch",
-        available = true,
-        bus = nodes5[2],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 6.0,
-        prime_mover_type = PrimeMovers.HY,
-        active_power_limits = (min = 0.0, max = 6.0),
-        reactive_power_limits = (min = 0.0, max = 6.0),
-        ramp_limits = nothing,
-        time_limits = nothing,
-        base_power = 100.0,
-    ),
-    HydroEnergyReservoir(
-        name = "HydroEnergyReservoir",
-        available = true,
-        bus = nodes5[3],
-        active_power = 0.0,
-        reactive_power = 0.0,
-        rating = 7.0,
-        prime_mover_type = PrimeMovers.HY,
-        active_power_limits = (min = 0.0, max = 7.0),
-        reactive_power_limits = (min = 0.0, max = 7.0),
-        ramp_limits = (up = 7.0, down = 7.0),
-        time_limits = nothing,
-        operation_cost = PSY.StorageCost(;
-            charge_variable_cost = CostCurve(LinearCurve(0.15)),
-            discharge_variable_cost = CostCurve(LinearCurve(0.15)),
-            fixed = 0.0,
-            start_up = 0.0,
-            shut_down = 0.0,
-            energy_shortage_cost = 50.0,
-            energy_surplus_cost = 0.0,
-        ),
-        base_power = 100.0,
-        storage_capacity = 50.0,
-        inflow = 4.0,
-        conversion_factor = 1.0,
-        initial_storage = 0.5,
-    ),
-];
-
 
 # Modeling a 50 MW with 10 hours of duration.
 function phes5(nodes5)
@@ -784,7 +738,6 @@ function phes5(nodes5)
         minimum_time=(turbine = 1.0, pump = 1.0),
         conversion_factor=1.0,
         must_run=false,
-        prime_mover_type=PrimeMovers.PS,
         services=Device[],
         dynamic_injector=nothing,
         ext=Dict{String, Any}(),
@@ -1146,9 +1099,9 @@ weekly_hydro_reservoir_inflow_water_m3_s = [
     8.44, #2020-01-08
     7.78, #2020-01-15
     6.84, #2020-01-22
-    27.79, #2020-01-25    
+    27.79, #2020-01-25
     6.09, #2020-02-05
-    3.94, #2020-02-12   
+    3.94, #2020-02-12
 ] # Jiguey data in m³/s
 
 # Convert to MW by multiplying by 220 (typical water height drop for Jiguey dam) 9.81 (gravity) * 1000 (density of water) * 0.9 (efficiency) and divide by 1e8 to transform to MW and per-unit (100MW base power)
@@ -1197,7 +1150,7 @@ hydro_reservoir5_energy() = [
         name = "HydroEnergyReservoir__reservoir",
         available = true,
         initial_level = 0.5,
-        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh 
+        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh
         spillage_limits = nothing,
         inflow = 4.0, # in MW
         outflow = 0.0, # in MW
@@ -1234,7 +1187,7 @@ hydro_reservoir5_head() = [
         name = "Water_Reservoir",
         available = true,
         initial_level = 0.9, # 500 m
-        storage_level_limits = (min = 463.5, max = 555.5), # in meters 
+        storage_level_limits = (min = 463.5, max = 555.5), # in meters
         spillage_limits = nothing,
         inflow = 0.0, # added in time series
         outflow = 0.0, # no outflow time series
@@ -1244,4 +1197,20 @@ hydro_reservoir5_head() = [
         head_to_volume_factor = 302376.2, # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
         level_data_type = PowerSystems.ReservoirDataType.HEAD,
     )
+]
+
+shiftable5(nodes5) = [
+    ShiftablePowerLoad(
+        "ShiftableLoadBus4",
+        true,
+        nodes5[4],
+        0.10,
+        (min = 0.05, max = 0.20),
+        0.0, # reactive
+        0.10, # max active
+        0.0, # max reactive
+        100.0, # base power
+        24,
+        LoadCost(CostCurve(LinearCurve(150.0)), 2400.0),
+    ),
 ]
