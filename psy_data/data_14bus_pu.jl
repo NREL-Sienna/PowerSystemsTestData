@@ -844,17 +844,32 @@ loads14(nodes14) = [
 ]
 
 timeseries_DA14 = [
-    TimeArray(dates, loadz1_ts),
-    TimeArray(dates, loadz1_ts),
-    TimeArray(dates, loadz3_ts),
-    TimeArray(dates, loadz1_ts),
-    TimeArray(dates, loadz2_ts),
-    TimeArray(dates, loadz3_ts),
-    TimeArray(dates, loadz2_ts),
-    TimeArray(dates, loadz2_ts),
-    TimeArray(dates, loadz2_ts),
-    TimeArray(dates, loadz2_ts),
-    TimeArray(dates, loadz2_ts),
+    [
+        TimeArray(dates, loadz1_ts),
+        TimeArray(dates, loadz1_ts),
+        TimeArray(dates, loadz3_ts),
+        TimeArray(dates, loadz1_ts),
+        TimeArray(dates, loadz2_ts),
+        TimeArray(dates, loadz3_ts),
+        TimeArray(dates, loadz2_ts),
+        TimeArray(dates, loadz2_ts),
+        TimeArray(dates, loadz2_ts),
+        TimeArray(dates, loadz2_ts),
+        TimeArray(dates, loadz2_ts),
+    ],
+    [
+        TimeArray(dates + Day(1), loadz1_ts),
+        TimeArray(dates + Day(1), loadz1_ts),
+        TimeArray(dates + Day(1), loadz3_ts),
+        TimeArray(dates + Day(1), loadz1_ts),
+        TimeArray(dates + Day(1), loadz2_ts),
+        TimeArray(dates + Day(1), loadz3_ts),
+        TimeArray(dates + Day(1), loadz2_ts),
+        TimeArray(dates + Day(1), loadz2_ts),
+        TimeArray(dates + Day(1), loadz2_ts),
+        TimeArray(dates + Day(1), loadz2_ts),
+        TimeArray(dates + Day(1), loadz2_ts),
+    ]
 ];
 
 battery14(nodes14_nodes) = [
