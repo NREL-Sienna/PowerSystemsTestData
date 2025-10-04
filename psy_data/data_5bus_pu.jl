@@ -1,6 +1,3 @@
-using Pkg
-Pkg.activate("/Users/rhenriqu/.julia/dev/PowerSystems/test")
-
 using TimeSeries
 using Dates
 using Random
