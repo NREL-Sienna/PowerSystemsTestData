@@ -686,32 +686,6 @@ hydro_generators5(nodes5) = [
 
 # Modeling a 50 MW with 10 hours of duration.
 function phes5(nodes5)
-    head_reservoir = HydroReservoir(;
-        name = "Head Reservoir",
-        available = true,
-        initial_level = 0.,
-        storage_level_limits = (min = 0.0, max = 2.0),
-        spillage_limits = nothing,
-        inflow = 0.0,
-        outflow = 0.0,
-        level_targets = 0.15,
-        head_to_volume_factor = LinearCurve(1.0),
-        intake_elevation = 100.0,
-    )
-
-    tail_reservoir = HydroReservoir(;
-        name = "Tail Reservoir",
-        available = true,
-        initial_level = 0.,
-        storage_level_limits = (min = 0.0, max = 2.0),
-        spillage_limits = nothing,
-        inflow = 0.0,
-        outflow = 0.0,
-        level_targets = 0.15,
-        head_to_volume_factor = LinearCurve(1.0),
-        intake_elevation = 0.0,
-    )
-
     turbine = HydroPumpTurbine(;
         name="HydroPumpTurbine",
         available=true,
@@ -737,6 +711,34 @@ function phes5(nodes5)
         services=Device[],
         dynamic_injector=nothing,
         ext=Dict{String, Any}(),
+    )
+
+    head_reservoir = HydroReservoir(;
+        name = "Head Reservoir",
+        available = true,
+        initial_level = 0.,
+        storage_level_limits = (min = 0.0, max = 2.0),
+        spillage_limits = nothing,
+        inflow = 0.0,
+        outflow = 0.0,
+        level_targets = 0.15,
+        head_to_volume_factor = LinearCurve(1.0),
+        intake_elevation = 100.0,
+        downstream_turbines = [turbine],
+    )
+
+    tail_reservoir = HydroReservoir(;
+        name = "Tail Reservoir",
+        available = true,
+        initial_level = 0.,
+        storage_level_limits = (min = 0.0, max = 2.0),
+        spillage_limits = nothing,
+        inflow = 0.0,
+        outflow = 0.0,
+        level_targets = 0.15,
+        head_to_volume_factor = LinearCurve(1.0),
+        intake_elevation = 0.0,
+        upstream_turbines = [turbine],
     )
 
     return [turbine, head_reservoir, tail_reservoir]
