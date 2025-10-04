@@ -1,3 +1,6 @@
+using Pkg
+Pkg.activate("/Users/rhenriqu/.julia/dev/PowerSystems/test")
+
 using TimeSeries
 using Dates
 using Random
@@ -695,8 +698,7 @@ function phes5(nodes5)
         inflow = 0.0,
         outflow = 0.0,
         level_targets = 0.15,
-        travel_time = nothing,
-        head_to_volume_factor = 1.0,
+        head_to_volume_factor = LinearCurve(1.0),
         intake_elevation = 100.0,
     )
 
@@ -709,8 +711,7 @@ function phes5(nodes5)
         inflow = 0.0,
         outflow = 0.0,
         level_targets = 0.15,
-        travel_time = nothing,
-        head_to_volume_factor = 1.0,
+        head_to_volume_factor = LinearCurve(1.0),
         intake_elevation = 0.0,
     )
 
@@ -725,8 +726,6 @@ function phes5(nodes5)
         reactive_power_limits=(min=0.0, max=1.0),
         active_power_limits_pump=(min=0.0, max=1.0),
         outflow_limits=(min=0.0, max=1.0),
-        head_reservoir=head_reservoir,
-        tail_reservoir=tail_reservoir,
         powerhouse_elevation=0.0,
         ramp_limits=(up = 0.1, down = 0.1),
         time_limits=nothing,
@@ -982,12 +981,28 @@ hybrid_cost_ts = [
     TimeSeries.TimeArray(DayAhead + Day(1), repeat([hybrid_cost], 24)),
 ]
 
+hybrid_cost_single_ts = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hybrid_cost_ts[1]), TimeSeries.timestamp(hybrid_cost_ts[2])),
+    vcat(TimeSeries.values(hybrid_cost_ts[1]), TimeSeries.values(hybrid_cost_ts[2]))
+)
+
+
 Reserve_ts = [TimeSeries.TimeArray(DayAhead, rand(24)), TimeSeries.TimeArray(DayAhead + Day(1), rand(24))]
+
+Reserve_single_ts = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(Reserve_ts[1]), TimeSeries.timestamp(Reserve_ts[2])),
+    vcat(TimeSeries.values(Reserve_ts[1]), TimeSeries.values(Reserve_ts[2]))
+)
 
 hydro_timeseries_DA = [
     [TimeSeries.TimeArray(DayAhead, hydro_inflow_ts_DA)],
     [TimeSeries.TimeArray(DayAhead + Day(1), ones(24) * 0.1 + hydro_inflow_ts_DA)],
 ];
+
+hydro_single_timeseries_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_timeseries_DA[1][1]), TimeSeries.timestamp(hydro_timeseries_DA[2][1])),
+    vcat(TimeSeries.values(hydro_timeseries_DA[1][1]), TimeSeries.values(hydro_timeseries_DA[2][1]))
+)
 
 storage_target = zeros(24)
 storage_target[end] = 0.1
@@ -996,10 +1011,20 @@ storage_target_DA = [
    [TimeSeries.TimeArray(DayAhead + Day(1), storage_target)],
 ];
 
+storage_target_single_ts_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(storage_target_DA[1][1]), TimeSeries.timestamp(storage_target_DA[2][1])),
+    vcat(TimeSeries.values(storage_target_DA[1][1]), TimeSeries.values(storage_target_DA[2][1]))
+);
+
 hydro_budget_DA = [
     [TimeSeries.TimeArray(DayAhead, hydro_inflow_ts_DA * 0.8)],
     [TimeSeries.TimeArray(DayAhead + Day(1), hydro_inflow_ts_DA * 0.8)],
 ];
+
+hydro_budget_single_ts_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_budget_DA[1][1]), TimeSeries.timestamp(hydro_budget_DA[2][1])),
+    vcat(TimeSeries.values(hydro_budget_DA[1][1]), TimeSeries.values(hydro_budget_DA[2][1]))
+);
 
 RealTime = collect(
     DateTime("1/1/2024 0:00:00", "d/m/y H:M:S"):Minute(5):DateTime(
@@ -1013,21 +1038,41 @@ hydro_timeseries_RT = [
     [TimeSeries.TimeArray(RealTime + Day(1), ones(288) * 0.1 + repeat(hydro_inflow_ts_DA, inner = 12))],
 ];
 
+hydro_single_timeseries_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_timeseries_RT[1][1]), TimeSeries.timestamp(hydro_timeseries_RT[2][1])),
+    vcat(TimeSeries.values(hydro_timeseries_RT[1][1]), TimeSeries.values(hydro_timeseries_RT[2][1]))
+);
+
 storage_target_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(storage_target, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), repeat(storage_target, inner = 12))],
 ];
+
+storage_target_single_ts_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(storage_target_RT[1][1]), TimeSeries.timestamp(storage_target_RT[2][1])),
+    vcat(TimeSeries.values(storage_target_RT[1][1]), TimeSeries.values(storage_target_RT[2][1]))
+)
 
 hydro_budget_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(hydro_inflow_ts_DA  * 0.8, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), repeat(hydro_inflow_ts_DA  * 0.8, inner = 12))],
 ];
 
+hydro_budget_single_ts_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_budget_RT[1][1]), TimeSeries.timestamp(hydro_budget_RT[2][1])),
+    vcat(TimeSeries.values(hydro_budget_RT[1][1]), TimeSeries.values(hydro_budget_RT[2][1]))
+);
+
 hybrid_cost_RT = hybrid_cost = PiecewiseStepData([0.0, 1.0], [0.0])
 hybrid_cost_ts_RT = [
     [TimeSeries.TimeArray(RealTime, repeat([hybrid_cost], 288))],
     [TimeSeries.TimeArray(RealTime + Day(1), repeat([hybrid_cost_RT], 288))],
 ];
+
+hybrid_cost_single_ts_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hybrid_cost_ts_RT[1][1]), TimeSeries.timestamp(hybrid_cost_ts_RT[2][1])),
+    vcat(TimeSeries.values(hybrid_cost_ts_RT[1][1]), TimeSeries.values(hybrid_cost_ts_RT[2][1]))
+);
 
 load_timeseries_RT = [
     [
@@ -1042,6 +1087,11 @@ load_timeseries_RT = [
     ],
 ]
 
+load_single_timeseries_RT = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(load_timeseries_RT[1][ix]), TimeSeries.timestamp(load_timeseries_RT[2][ix])),
+    vcat(TimeSeries.values(load_timeseries_RT[1][ix]), TimeSeries.values(load_timeseries_RT[2][ix])),
+) for ix in 1:3];
+
 ren_timeseries_RT = [
     [
         TimeSeries.TimeArray(RealTime, repeat(solar_ts_DA, inner = 12)),
@@ -1055,10 +1105,20 @@ ren_timeseries_RT = [
     ],
 ]
 
+ren_single_timeseries_RT = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(ren_timeseries_RT[1][ix]), TimeSeries.timestamp(ren_timeseries_RT[2][ix])),
+    vcat(TimeSeries.values(ren_timeseries_RT[1][ix]), TimeSeries.values(ren_timeseries_RT[2][ix])),
+) for ix in 1:3];
+
 Iload_timeseries_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(loadbus4_ts_DA, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), rand(288) * 0.1 + repeat(loadbus4_ts_DA, inner = 12))],
 ]
+
+Iload_single_timeseries_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(Iload_timeseries_RT[1][1]), TimeSeries.timestamp(Iload_timeseries_RT[2][1])),
+    vcat(TimeSeries.values(Iload_timeseries_RT[1][1]), TimeSeries.values(Iload_timeseries_RT[2][1]))
+)
 
 load_timeseries_DA = [
     [
@@ -1073,6 +1133,11 @@ load_timeseries_DA = [
     ],
 ];
 
+load_single_timeseries_RT = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(load_timeseries_DA[1][ix]), TimeSeries.timestamp(load_timeseries_DA[2][ix])),
+    vcat(TimeSeries.values(load_timeseries_DA[1][ix]), TimeSeries.values(load_timeseries_DA[2][ix])),
+) for ix in 1:3];
+
 ren_timeseries_DA = [
     [
         TimeSeries.TimeArray(DayAhead, solar_ts_DA),
@@ -1086,10 +1151,20 @@ ren_timeseries_DA = [
     ],
 ];
 
+ren_single_timeseries_DA = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(ren_timeseries_DA[1][ix]), TimeSeries.timestamp(ren_timeseries_DA[2][ix])),
+    vcat(TimeSeries.values(ren_timeseries_DA[1][ix]), TimeSeries.values(ren_timeseries_DA[2][ix])),
+) for ix in 1:3];
+
 Iload_timeseries_DA = [
     [TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA)],
     [TimeSeries.TimeArray(DayAhead + Day(1), loadbus4_ts_DA + 0.1 * rand(24))],
-]
+];
+
+Iload_single_timeseries_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(Iload_timeseries_DA[1][1]), TimeSeries.timestamp(Iload_timeseries_DA[2][1])),
+    vcat(TimeSeries.values(Iload_timeseries_DA[1][1]), TimeSeries.values(Iload_timeseries_DA[2][1]))
+);
 
 
 ### New Hydro Data ###
@@ -1116,15 +1191,30 @@ inflow_ts_DA_energy = [
     [TimeSeries.TimeArray(DayAhead + Day(1), day_hydro_reservoir_inflow_energy_pu + 0.1 * rand(24))],
 ]
 
+inflow_single_ts_DA_energy = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(inflow_ts_DA_energy[1][1]), TimeSeries.timestamp(inflow_ts_DA_energy[2][1])),
+    vcat(TimeSeries.values(inflow_ts_DA_energy[1][1]), TimeSeries.values(inflow_ts_DA_energy[2][1]))
+)
+
 inflow_ts_DA_water = [
     [TimeSeries.TimeArray(DayAhead, day_hydro_reservoir_inflow_water_m3_s)],
     [TimeSeries.TimeArray(DayAhead + Day(1), day_hydro_reservoir_inflow_water_m3_s + 0.05 * rand(24))],
 ]
 
+inflow_single_ts_DA_water = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(inflow_ts_DA_water[1][1]), TimeSeries.timestamp(inflow_ts_DA_water[2][1])),
+    vcat(TimeSeries.values(inflow_ts_DA_water[1][1]), TimeSeries.values(inflow_ts_DA_water[2][1]))
+)
+
 outflow_ts_DA_water = [
     [TimeSeries.TimeArray(DayAhead, zeros(24))], # No outflow in the first day
     [TimeSeries.TimeArray(DayAhead + Day(1), zeros(24))], # No outflow in the second day
 ]
+
+outflow_single_ts_DA_water = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(outflow_ts_DA_water[1][1]), TimeSeries.timestamp(outflow_ts_DA_water[2][1])),
+    vcat(TimeSeries.values(outflow_ts_DA_water[1][1]), TimeSeries.values(outflow_ts_DA_water[2][1]))
+)
 
 hydro_turbines5_energy(nodes5) = [
     HydroTurbine(;
@@ -1155,9 +1245,8 @@ hydro_reservoir5_energy() = [
         inflow = 4.0, # in MW
         outflow = 0.0, # in MW
         level_targets = 1.0,
-        travel_time = nothing,
         intake_elevation = 0.0,
-        head_to_volume_factor = 0.0,
+        head_to_volume_factor = LinearCurve(0.0),
         level_data_type = PowerSystems.ReservoirDataType.ENERGY,
     )
 ]
@@ -1192,9 +1281,8 @@ hydro_reservoir5_head() = [
         inflow = 0.0, # added in time series
         outflow = 0.0, # no outflow time series
         level_targets = 1.0,
-        travel_time = nothing,
         intake_elevation = 463.3,
-        head_to_volume_factor = 302376.2, # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
+        head_to_volume_factor = LinearCurve(302376.2), # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
         level_data_type = PowerSystems.ReservoirDataType.HEAD,
     )
 ]
