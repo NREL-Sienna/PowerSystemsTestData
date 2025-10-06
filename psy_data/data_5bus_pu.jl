@@ -1277,13 +1277,142 @@ hydro_reservoir5_head() = [
         initial_level = 0.9, # 500 m
         storage_level_limits = (min = 463.5, max = 555.5), # in meters
         spillage_limits = nothing,
-        inflow = 0.0, # added in time series
+        inflow = 1.0, # added in time series
         outflow = 0.0, # no outflow time series
         level_targets = 1.0,
         intake_elevation = 463.3,
         head_to_volume_factor = LinearCurve(302376.2), # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
         level_data_type = PowerSystems.ReservoirDataType.HEAD,
     )
+]
+
+hydro_turbines5_cascading_energy(nodes5) = [
+    HydroTurbine(;
+        name = "HydroEnergyReservoir_turbine_upstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 7.0,
+        active_power_limits = (min = 0.0, max = 7.0),
+        reactive_power_limits = (min = 0.0, max = 7.0),
+        outflow_limits = nothing,
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 0.0,
+        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
+    ),
+    HydroTurbine(;
+        name = "HydroEnergyReservoir_turbine_downstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 7.0,
+        active_power_limits = (min = 0.0, max = 7.0),
+        reactive_power_limits = (min = 0.0, max = 7.0),
+        outflow_limits = nothing,
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 0.0,
+        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
+    ),
+]
+
+hydro_reservoir5_cascading_energy() = [
+    HydroReservoir(;
+        name = "HydroEnergyReservoir__reservoir_head",
+        available = true,
+        initial_level = 0.5,
+        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh
+        spillage_limits = nothing,
+        inflow = 4.0, # in MW
+        outflow = 0.0, # in MW
+        level_targets = 1.0,
+        intake_elevation = 0.0,
+        head_to_volume_factor = LinearCurve(0.0),
+        level_data_type = PowerSystems.ReservoirDataType.ENERGY,
+    ),
+    HydroReservoir(;
+        name = "HydroEnergyReservoir__reservoir_tail",
+        available = true,
+        initial_level = 0.5,
+        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh
+        spillage_limits = nothing,
+        inflow = 4.0, # in MW
+        outflow = 0.0, # in MW
+        level_targets = 1.0,
+        intake_elevation = 0.0,
+        head_to_volume_factor = LinearCurve(0.0),
+        level_data_type = PowerSystems.ReservoirDataType.ENERGY,
+    ),
+]
+
+
+hydro_turbines5_cascading_head(nodes5) = [
+    HydroTurbine(;
+        name = "Water_Turbine_upstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 5.2,
+        active_power_limits = (min = 0.0, max = 5.2),
+        reactive_power_limits = (min = -3.9, max = 3.9),
+        outflow_limits = (min = 0.0, max = 30.0), # in m³/s
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 317.12, # elevation in meters for Jiguey dam
+        operation_cost = HydroGenerationCost(nothing),
+    ),
+    HydroTurbine(;
+        name = "Water_Turbine_downstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 5.2,
+        active_power_limits = (min = 0.0, max = 5.2),
+        reactive_power_limits = (min = -3.9, max = 3.9),
+        outflow_limits = (min = 0.0, max = 30.0), # in m³/s
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 117.12, 
+        operation_cost = HydroGenerationCost(nothing),
+    ),
+]
+
+hydro_reservoir5_cascading_head() = [
+    HydroReservoir(;
+        name = "Water_Reservoir_head",
+        available = true,
+        initial_level = 0.9, # 500 m
+        storage_level_limits = (min = 463.5, max = 555.5), # in meters
+        spillage_limits = nothing,
+        inflow = 1.0, # added in time series
+        outflow = 0.0, # no outflow time series
+        level_targets = 1.0,
+        intake_elevation = 463.3,
+        head_to_volume_factor = LinearCurve(302376.2), # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
+        level_data_type = PowerSystems.ReservoirDataType.HEAD,
+    ),
+    HydroReservoir(;
+        name = "Water_Reservoir_tail",
+        available = true,
+        initial_level = 0.9, 
+        storage_level_limits = (min = 180.5, max = 315.5), # in meters
+        spillage_limits = nothing,
+        inflow = 1.0, # added in time series
+        outflow = 0.0, # no outflow time series
+        level_targets = 1.0,
+        intake_elevation = 180.5,
+        head_to_volume_factor = LinearCurve(302376.2), # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
+        level_data_type = PowerSystems.ReservoirDataType.HEAD,
+    ),
 ]
 
 shiftable5(nodes5) = [
