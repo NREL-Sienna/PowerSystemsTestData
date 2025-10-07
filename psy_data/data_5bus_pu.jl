@@ -1132,7 +1132,7 @@ load_timeseries_DA = [
     ],
 ];
 
-load_single_timeseries_RT = [TimeSeries.TimeArray(
+load_single_timeseries_DA = [TimeSeries.TimeArray(
     vcat(TimeSeries.timestamp(load_timeseries_DA[1][ix]), TimeSeries.timestamp(load_timeseries_DA[2][ix])),
     vcat(TimeSeries.values(load_timeseries_DA[1][ix]), TimeSeries.values(load_timeseries_DA[2][ix])),
 ) for ix in 1:3];
