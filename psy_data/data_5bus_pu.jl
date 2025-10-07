@@ -1032,6 +1032,11 @@ RealTime = collect(
     ),
 )
 
+Reserve_single_ts_RT = TimeSeries.TimeArray(
+    vcat(RealTime, RealTime .+ Day(1)),
+    repeat(values(Reserve_single_ts); inner = 12)
+)
+
 hydro_timeseries_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(hydro_inflow_ts_DA, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), ones(288) * 0.1 + repeat(hydro_inflow_ts_DA, inner = 12))],
