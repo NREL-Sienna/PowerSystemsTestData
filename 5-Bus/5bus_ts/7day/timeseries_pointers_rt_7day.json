@@ -41,7 +41,7 @@
     {
         "simulation": "REAL_TIME",
         "resolution": 3600,
-        "category": "Generator",
+        "category": "Component",
         "component_name": "HydroReservoir1_head",
         "module": "PowerSystems",
         "type": "SingleTimeSeries",
@@ -54,7 +54,7 @@
     {
         "simulation": "REAL_TIME",
         "resolution": 3600,
-        "category": "Generator",
+        "category": "Component",
         "component_name": "HydroReservoir2_head",
         "module": "PowerSystems",
         "type": "SingleTimeSeries",
