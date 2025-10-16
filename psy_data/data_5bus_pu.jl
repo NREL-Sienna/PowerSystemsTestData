@@ -686,34 +686,6 @@ hydro_generators5(nodes5) = [
 
 # Modeling a 50 MW with 10 hours of duration.
 function phes5(nodes5)
-    head_reservoir = HydroReservoir(;
-        name = "Head Reservoir",
-        available = true,
-        initial_level = 0.,
-        storage_level_limits = (min = 0.0, max = 2.0),
-        spillage_limits = nothing,
-        inflow = 0.0,
-        outflow = 0.0,
-        level_targets = 0.15,
-        travel_time = nothing,
-        head_to_volume_factor = 1.0,
-        intake_elevation = 100.0,
-    )
-
-    tail_reservoir = HydroReservoir(;
-        name = "Tail Reservoir",
-        available = true,
-        initial_level = 0.,
-        storage_level_limits = (min = 0.0, max = 2.0),
-        spillage_limits = nothing,
-        inflow = 0.0,
-        outflow = 0.0,
-        level_targets = 0.15,
-        travel_time = nothing,
-        head_to_volume_factor = 1.0,
-        intake_elevation = 0.0,
-    )
-
     turbine = HydroPumpTurbine(;
         name="HydroPumpTurbine",
         available=true,
@@ -725,8 +697,6 @@ function phes5(nodes5)
         reactive_power_limits=(min=0.0, max=1.0),
         active_power_limits_pump=(min=0.0, max=1.0),
         outflow_limits=(min=0.0, max=1.0),
-        head_reservoir=head_reservoir,
-        tail_reservoir=tail_reservoir,
         powerhouse_elevation=0.0,
         ramp_limits=(up = 0.1, down = 0.1),
         time_limits=nothing,
@@ -741,6 +711,34 @@ function phes5(nodes5)
         services=Device[],
         dynamic_injector=nothing,
         ext=Dict{String, Any}(),
+    )
+
+    head_reservoir = HydroReservoir(;
+        name = "Head Reservoir",
+        available = true,
+        initial_level = 0.,
+        storage_level_limits = (min = 0.0, max = 2.0),
+        spillage_limits = nothing,
+        inflow = 0.0,
+        outflow = 0.0,
+        level_targets = 0.15,
+        head_to_volume_factor = LinearCurve(1.0),
+        intake_elevation = 100.0,
+        downstream_turbines = [turbine],
+    )
+
+    tail_reservoir = HydroReservoir(;
+        name = "Tail Reservoir",
+        available = true,
+        initial_level = 0.,
+        storage_level_limits = (min = 0.0, max = 2.0),
+        spillage_limits = nothing,
+        inflow = 0.0,
+        outflow = 0.0,
+        level_targets = 0.15,
+        head_to_volume_factor = LinearCurve(1.0),
+        intake_elevation = 0.0,
+        upstream_turbines = [turbine],
     )
 
     return [turbine, head_reservoir, tail_reservoir]
@@ -982,12 +980,28 @@ hybrid_cost_ts = [
     TimeSeries.TimeArray(DayAhead + Day(1), repeat([hybrid_cost], 24)),
 ]
 
+hybrid_cost_single_ts = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hybrid_cost_ts[1]), TimeSeries.timestamp(hybrid_cost_ts[2])),
+    vcat(TimeSeries.values(hybrid_cost_ts[1]), TimeSeries.values(hybrid_cost_ts[2]))
+)
+
+
 Reserve_ts = [TimeSeries.TimeArray(DayAhead, rand(24)), TimeSeries.TimeArray(DayAhead + Day(1), rand(24))]
+
+Reserve_single_ts = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(Reserve_ts[1]), TimeSeries.timestamp(Reserve_ts[2])),
+    vcat(TimeSeries.values(Reserve_ts[1]), TimeSeries.values(Reserve_ts[2]))
+)
 
 hydro_timeseries_DA = [
     [TimeSeries.TimeArray(DayAhead, hydro_inflow_ts_DA)],
     [TimeSeries.TimeArray(DayAhead + Day(1), ones(24) * 0.1 + hydro_inflow_ts_DA)],
 ];
+
+hydro_single_timeseries_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_timeseries_DA[1][1]), TimeSeries.timestamp(hydro_timeseries_DA[2][1])),
+    vcat(TimeSeries.values(hydro_timeseries_DA[1][1]), TimeSeries.values(hydro_timeseries_DA[2][1]))
+)
 
 storage_target = zeros(24)
 storage_target[end] = 0.1
@@ -996,10 +1010,20 @@ storage_target_DA = [
    [TimeSeries.TimeArray(DayAhead + Day(1), storage_target)],
 ];
 
+storage_target_single_ts_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(storage_target_DA[1][1]), TimeSeries.timestamp(storage_target_DA[2][1])),
+    vcat(TimeSeries.values(storage_target_DA[1][1]), TimeSeries.values(storage_target_DA[2][1]))
+);
+
 hydro_budget_DA = [
     [TimeSeries.TimeArray(DayAhead, hydro_inflow_ts_DA * 0.8)],
     [TimeSeries.TimeArray(DayAhead + Day(1), hydro_inflow_ts_DA * 0.8)],
 ];
+
+hydro_budget_single_ts_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_budget_DA[1][1]), TimeSeries.timestamp(hydro_budget_DA[2][1])),
+    vcat(TimeSeries.values(hydro_budget_DA[1][1]), TimeSeries.values(hydro_budget_DA[2][1]))
+);
 
 RealTime = collect(
     DateTime("1/1/2024 0:00:00", "d/m/y H:M:S"):Minute(5):DateTime(
@@ -1008,26 +1032,51 @@ RealTime = collect(
     ),
 )
 
+Reserve_single_ts_RT = TimeSeries.TimeArray(
+    vcat(RealTime, RealTime .+ Day(1)),
+    repeat(values(Reserve_single_ts); inner = 12)
+)
+
 hydro_timeseries_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(hydro_inflow_ts_DA, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), ones(288) * 0.1 + repeat(hydro_inflow_ts_DA, inner = 12))],
 ];
+
+hydro_single_timeseries_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_timeseries_RT[1][1]), TimeSeries.timestamp(hydro_timeseries_RT[2][1])),
+    vcat(TimeSeries.values(hydro_timeseries_RT[1][1]), TimeSeries.values(hydro_timeseries_RT[2][1]))
+);
 
 storage_target_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(storage_target, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), repeat(storage_target, inner = 12))],
 ];
 
+storage_target_single_ts_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(storage_target_RT[1][1]), TimeSeries.timestamp(storage_target_RT[2][1])),
+    vcat(TimeSeries.values(storage_target_RT[1][1]), TimeSeries.values(storage_target_RT[2][1]))
+)
+
 hydro_budget_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(hydro_inflow_ts_DA  * 0.8, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), repeat(hydro_inflow_ts_DA  * 0.8, inner = 12))],
 ];
+
+hydro_budget_single_ts_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hydro_budget_RT[1][1]), TimeSeries.timestamp(hydro_budget_RT[2][1])),
+    vcat(TimeSeries.values(hydro_budget_RT[1][1]), TimeSeries.values(hydro_budget_RT[2][1]))
+);
 
 hybrid_cost_RT = hybrid_cost = PiecewiseStepData([0.0, 1.0], [0.0])
 hybrid_cost_ts_RT = [
     [TimeSeries.TimeArray(RealTime, repeat([hybrid_cost], 288))],
     [TimeSeries.TimeArray(RealTime + Day(1), repeat([hybrid_cost_RT], 288))],
 ];
+
+hybrid_cost_single_ts_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(hybrid_cost_ts_RT[1][1]), TimeSeries.timestamp(hybrid_cost_ts_RT[2][1])),
+    vcat(TimeSeries.values(hybrid_cost_ts_RT[1][1]), TimeSeries.values(hybrid_cost_ts_RT[2][1]))
+);
 
 load_timeseries_RT = [
     [
@@ -1042,6 +1091,11 @@ load_timeseries_RT = [
     ],
 ]
 
+load_single_timeseries_RT = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(load_timeseries_RT[1][ix]), TimeSeries.timestamp(load_timeseries_RT[2][ix])),
+    vcat(TimeSeries.values(load_timeseries_RT[1][ix]), TimeSeries.values(load_timeseries_RT[2][ix])),
+) for ix in 1:3];
+
 ren_timeseries_RT = [
     [
         TimeSeries.TimeArray(RealTime, repeat(solar_ts_DA, inner = 12)),
@@ -1055,10 +1109,20 @@ ren_timeseries_RT = [
     ],
 ]
 
+ren_single_timeseries_RT = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(ren_timeseries_RT[1][ix]), TimeSeries.timestamp(ren_timeseries_RT[2][ix])),
+    vcat(TimeSeries.values(ren_timeseries_RT[1][ix]), TimeSeries.values(ren_timeseries_RT[2][ix])),
+) for ix in 1:3];
+
 Iload_timeseries_RT = [
     [TimeSeries.TimeArray(RealTime, repeat(loadbus4_ts_DA, inner = 12))],
     [TimeSeries.TimeArray(RealTime + Day(1), rand(288) * 0.1 + repeat(loadbus4_ts_DA, inner = 12))],
 ]
+
+Iload_single_timeseries_RT = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(Iload_timeseries_RT[1][1]), TimeSeries.timestamp(Iload_timeseries_RT[2][1])),
+    vcat(TimeSeries.values(Iload_timeseries_RT[1][1]), TimeSeries.values(Iload_timeseries_RT[2][1]))
+)
 
 load_timeseries_DA = [
     [
@@ -1073,6 +1137,11 @@ load_timeseries_DA = [
     ],
 ];
 
+load_single_timeseries_DA = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(load_timeseries_DA[1][ix]), TimeSeries.timestamp(load_timeseries_DA[2][ix])),
+    vcat(TimeSeries.values(load_timeseries_DA[1][ix]), TimeSeries.values(load_timeseries_DA[2][ix])),
+) for ix in 1:3];
+
 ren_timeseries_DA = [
     [
         TimeSeries.TimeArray(DayAhead, solar_ts_DA),
@@ -1086,10 +1155,20 @@ ren_timeseries_DA = [
     ],
 ];
 
+ren_single_timeseries_DA = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(ren_timeseries_DA[1][ix]), TimeSeries.timestamp(ren_timeseries_DA[2][ix])),
+    vcat(TimeSeries.values(ren_timeseries_DA[1][ix]), TimeSeries.values(ren_timeseries_DA[2][ix])),
+) for ix in 1:3];
+
 Iload_timeseries_DA = [
     [TimeSeries.TimeArray(DayAhead, loadbus4_ts_DA)],
     [TimeSeries.TimeArray(DayAhead + Day(1), loadbus4_ts_DA + 0.1 * rand(24))],
-]
+];
+
+Iload_single_timeseries_DA = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(Iload_timeseries_DA[1][1]), TimeSeries.timestamp(Iload_timeseries_DA[2][1])),
+    vcat(TimeSeries.values(Iload_timeseries_DA[1][1]), TimeSeries.values(Iload_timeseries_DA[2][1]))
+);
 
 
 ### New Hydro Data ###
@@ -1116,15 +1195,30 @@ inflow_ts_DA_energy = [
     [TimeSeries.TimeArray(DayAhead + Day(1), day_hydro_reservoir_inflow_energy_pu + 0.1 * rand(24))],
 ]
 
+inflow_single_ts_DA_energy = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(inflow_ts_DA_energy[1][1]), TimeSeries.timestamp(inflow_ts_DA_energy[2][1])),
+    vcat(TimeSeries.values(inflow_ts_DA_energy[1][1]), TimeSeries.values(inflow_ts_DA_energy[2][1]))
+)
+
 inflow_ts_DA_water = [
     [TimeSeries.TimeArray(DayAhead, day_hydro_reservoir_inflow_water_m3_s)],
     [TimeSeries.TimeArray(DayAhead + Day(1), day_hydro_reservoir_inflow_water_m3_s + 0.05 * rand(24))],
 ]
 
+inflow_single_ts_DA_water = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(inflow_ts_DA_water[1][1]), TimeSeries.timestamp(inflow_ts_DA_water[2][1])),
+    vcat(TimeSeries.values(inflow_ts_DA_water[1][1]), TimeSeries.values(inflow_ts_DA_water[2][1]))
+)
+
 outflow_ts_DA_water = [
     [TimeSeries.TimeArray(DayAhead, zeros(24))], # No outflow in the first day
     [TimeSeries.TimeArray(DayAhead + Day(1), zeros(24))], # No outflow in the second day
 ]
+
+outflow_single_ts_DA_water = TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(outflow_ts_DA_water[1][1]), TimeSeries.timestamp(outflow_ts_DA_water[2][1])),
+    vcat(TimeSeries.values(outflow_ts_DA_water[1][1]), TimeSeries.values(outflow_ts_DA_water[2][1]))
+)
 
 hydro_turbines5_energy(nodes5) = [
     HydroTurbine(;
@@ -1155,9 +1249,8 @@ hydro_reservoir5_energy() = [
         inflow = 4.0, # in MW
         outflow = 0.0, # in MW
         level_targets = 1.0,
-        travel_time = nothing,
         intake_elevation = 0.0,
-        head_to_volume_factor = 0.0,
+        head_to_volume_factor = LinearCurve(0.0),
         level_data_type = PowerSystems.ReservoirDataType.ENERGY,
     )
 ]
@@ -1189,14 +1282,142 @@ hydro_reservoir5_head() = [
         initial_level = 0.9, # 500 m
         storage_level_limits = (min = 463.5, max = 555.5), # in meters
         spillage_limits = nothing,
-        inflow = 0.0, # added in time series
+        inflow = 1.0, # added in time series
         outflow = 0.0, # no outflow time series
         level_targets = 1.0,
-        travel_time = nothing,
         intake_elevation = 463.3,
-        head_to_volume_factor = 302376.2, # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
+        head_to_volume_factor = LinearCurve(302376.2), # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
         level_data_type = PowerSystems.ReservoirDataType.HEAD,
     )
+]
+
+hydro_turbines5_cascading_energy(nodes5) = [
+    HydroTurbine(;
+        name = "HydroEnergyReservoir_turbine_upstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 7.0,
+        active_power_limits = (min = 0.0, max = 7.0),
+        reactive_power_limits = (min = 0.0, max = 7.0),
+        outflow_limits = nothing,
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 0.0,
+        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
+    ),
+    HydroTurbine(;
+        name = "HydroEnergyReservoir_turbine_downstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 7.0,
+        active_power_limits = (min = 0.0, max = 7.0),
+        reactive_power_limits = (min = 0.0, max = 7.0),
+        outflow_limits = nothing,
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 0.0,
+        operation_cost = HydroGenerationCost(CostCurve(LinearCurve(0.15)), 0.0),
+    ),
+]
+
+hydro_reservoir5_cascading_energy() = [
+    HydroReservoir(;
+        name = "HydroEnergyReservoir__reservoir_head",
+        available = true,
+        initial_level = 0.5,
+        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh
+        spillage_limits = nothing,
+        inflow = 4.0, # in MW
+        outflow = 0.0, # in MW
+        level_targets = 1.0,
+        intake_elevation = 0.0,
+        head_to_volume_factor = LinearCurve(0.0),
+        level_data_type = PowerSystems.ReservoirDataType.ENERGY,
+    ),
+    HydroReservoir(;
+        name = "HydroEnergyReservoir__reservoir_tail",
+        available = true,
+        initial_level = 0.5,
+        storage_level_limits = (min = 0.0, max = 5000.0), # in MWh
+        spillage_limits = nothing,
+        inflow = 4.0, # in MW
+        outflow = 0.0, # in MW
+        level_targets = 1.0,
+        intake_elevation = 0.0,
+        head_to_volume_factor = LinearCurve(0.0),
+        level_data_type = PowerSystems.ReservoirDataType.ENERGY,
+    ),
+]
+
+
+hydro_turbines5_cascading_head(nodes5) = [
+    HydroTurbine(;
+        name = "Water_Turbine_upstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 5.2,
+        active_power_limits = (min = 0.0, max = 5.2),
+        reactive_power_limits = (min = -3.9, max = 3.9),
+        outflow_limits = (min = 0.0, max = 30.0), # in m³/s
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 317.12, # elevation in meters for Jiguey dam
+        operation_cost = HydroGenerationCost(nothing),
+    ),
+    HydroTurbine(;
+        name = "Water_Turbine_downstream",
+        available = true,
+        bus = nodes5[3],
+        active_power = 0.0,
+        reactive_power = 0.0,
+        rating = 5.2,
+        active_power_limits = (min = 0.0, max = 5.2),
+        reactive_power_limits = (min = -3.9, max = 3.9),
+        outflow_limits = (min = 0.0, max = 30.0), # in m³/s
+        ramp_limits = nothing,
+        time_limits = nothing,
+        base_power = 100.0,
+        powerhouse_elevation = 117.12, 
+        operation_cost = HydroGenerationCost(nothing),
+    ),
+]
+
+hydro_reservoir5_cascading_head() = [
+    HydroReservoir(;
+        name = "Water_Reservoir_head",
+        available = true,
+        initial_level = 0.9, # 500 m
+        storage_level_limits = (min = 463.5, max = 555.5), # in meters
+        spillage_limits = nothing,
+        inflow = 1.0, # added in time series
+        outflow = 0.0, # no outflow time series
+        level_targets = 1.0,
+        intake_elevation = 463.3,
+        head_to_volume_factor = LinearCurve(302376.2), # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
+        level_data_type = PowerSystems.ReservoirDataType.HEAD,
+    ),
+    HydroReservoir(;
+        name = "Water_Reservoir_tail",
+        available = true,
+        initial_level = 0.9, 
+        storage_level_limits = (min = 180.5, max = 315.5), # in meters
+        spillage_limits = nothing,
+        inflow = 1.0, # added in time series
+        outflow = 0.0, # no outflow time series
+        level_targets = 1.0,
+        intake_elevation = 180.5,
+        head_to_volume_factor = LinearCurve(302376.2), # conversion factor from meters to m³ based on 167.97 million m³ capacity at 555.5 m
+        level_data_type = PowerSystems.ReservoirDataType.HEAD,
+    ),
 ]
 
 shiftable5(nodes5) = [

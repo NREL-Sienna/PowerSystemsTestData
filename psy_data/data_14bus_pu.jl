@@ -872,6 +872,11 @@ timeseries_DA14 = [
     ]
 ];
 
+single_timeseries_DA14 = [TimeSeries.TimeArray(
+    vcat(TimeSeries.timestamp(timeseries_DA14[1][ix]), TimeSeries.timestamp(timeseries_DA14[2][ix])),
+    vcat(TimeSeries.values(timeseries_DA14[1][ix]), TimeSeries.values(timeseries_DA14[2][ix])),
+) for ix in 1:length(timeseries_DA14[1])]
+
 battery14(nodes14_nodes) = [
     EnergyReservoirStorage(;
         name = "Bat",
