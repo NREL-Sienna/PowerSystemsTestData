@@ -10,6 +10,7 @@ for number in T7_numbers_150kV
     dcbus = DCBus(;
         number = number,
         name = string(number),
+        available = true,
         magnitude = 1.0,
         voltage_limits = (min = 0.9, max = 1.1),
         base_voltage = 150.0,
@@ -20,6 +21,7 @@ for number in T7_numbers_300kV
     dcbus = DCBus(;
         number = number,
         name = string(number),
+        available = true,
         magnitude = 1.0,
         voltage_limits = (min = 0.9, max = 1.1),
         base_voltage = 300.0,
@@ -32,6 +34,7 @@ for number in T9_numbers_300kV
     dcbus = DCBus(;
         number = number,
         name = string(number),
+        available = true,
         magnitude = 1.0,
         voltage_limits = (min = 0.9, max = 1.1),
         base_voltage = 300.0,

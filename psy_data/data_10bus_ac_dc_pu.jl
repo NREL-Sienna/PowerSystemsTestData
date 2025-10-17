@@ -18,14 +18,13 @@ nodes10() = [
 ];
 
 nodes10_dc() = [
-    DCBus(1, "nodeC_DC", 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
-    DCBus(2, "nodeD_DC", 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
-    DCBus(3, "nodeC2_DC", 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
-    DCBus(4, "nodeD2_DC", 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
+    DCBus(1, "nodeC_DC", true, 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
+    DCBus(2, "nodeD_DC", true, 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
+    DCBus(3, "nodeC2_DC", true, 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
+    DCBus(4, "nodeD2_DC", true, 1.0, (min = 0.9, max = 1.05), 500, nothing, nothing)
 ]
 
 ## Branches ##
-
 branches10_ac(nodes10) = [
     Line(
         "nodeA-nodeB",
