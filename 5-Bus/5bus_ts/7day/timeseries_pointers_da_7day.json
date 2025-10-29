@@ -80,8 +80,8 @@
     {
         "simulation": "DAY_AHEAD",
         "resolution": 3600,
-        "category": "Generator",
-        "component_name": "HydroDispatch1",
+        "category": "Component",
+        "component_name": "HydroReservoir1_head",
         "module": "PowerSystems",
         "type": "SingleTimeSeries",
         "name": "storage_target",
@@ -93,8 +93,8 @@
     {
         "simulation": "DAY_AHEAD",
         "resolution": 3600,
-        "category": "Generator",
-        "component_name": "HydroDispatch3",
+        "category": "Component",
+        "component_name": "HydroReservoir2_head",
         "module": "PowerSystems",
         "type": "SingleTimeSeries",
         "name": "storage_target",

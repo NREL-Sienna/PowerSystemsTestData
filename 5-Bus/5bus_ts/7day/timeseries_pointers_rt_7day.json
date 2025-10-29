@@ -62,13 +62,13 @@
         "scaling_factor_multiplier": "get_inflow",
         "scaling_factor_multiplier_module": "PowerSystems",
         "normalization_factor": 1.0,
-        "data_file": "./rt_hydro5_storage.csv"
+        "data_file": "./rt_hydro5_inflow.csv"
     },
     {
         "simulation": "REAL_TIME",
         "resolution": 3600,
-        "category": "Generator",
-        "component_name": "HydroDispatch1",
+        "category": "Component",
+        "component_name": "HydroReservoir1_head",
         "module": "PowerSystems",
         "type": "SingleTimeSeries",
         "name": "storage_target",
@@ -80,8 +80,8 @@
     {
         "simulation": "REAL_TIME",
         "resolution": 3600,
-        "category": "Generator",
-        "component_name": "HydroDispatch3",
+        "category": "Component",
+        "component_name": "HydroReservoir2_head",
         "module": "PowerSystems",
         "type": "SingleTimeSeries",
         "name": "storage_target",
